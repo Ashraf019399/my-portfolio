@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Muhammad Ashraf | Brand Identity, Logo & Packaging Designer</title>
-  <meta name="description" content="Portfolio of Muhammad Ashraf — Creative Graphic Designer specializing in Brand Identity, Logo Design, Packaging, and High-Converting Social Media Creatives with 2+ years of experience.">
+  <title>Muhammad Ashraf — Brand Identity & Visual Designer</title>
+  <meta name="description" content="Portfolio of Muhammad Ashraf — Creative Graphic Designer specializing in Brand Identity, Logo Design, Product Packaging, and High-Converting Social Media Creatives.">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -21,14 +21,15 @@
           colors: {
             brand: {
               orange: '#ff6b00',
+              orangeHover: '#ff7a1a',
               amber: '#ffaa00',
               dark: '#08080b',
-              darker: '#050507',
-              card: '#121217',
+              surface: '#101117',
+              card: '#12131a',
             }
           },
           fontFamily: {
-            heading: ['Syne', 'sans-serif'],
+            heading: ['Outfit', 'sans-serif'],
             sans: ['Plus Jakarta Sans', 'sans-serif'],
           }
         }
@@ -42,51 +43,51 @@
   <!-- Custom Styles -->
   <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-[#08080b] text-gray-200 antialiased relative selection:bg-[#ff6b00] selection:text-white">
+<body class="bg-[#08080b] text-[#f4f4f7] antialiased relative selection:bg-[#ff6b00] selection:text-white">
 
-  <!-- Ambient Glowing Orbs Background (Brand Orange & Amber) -->
-  <div class="glow-orb glow-orb-orange w-[550px] h-[550px] top-[-100px] left-[-150px]"></div>
-  <div class="glow-orb glow-orb-amber w-[600px] h-[600px] top-[40%] right-[-150px]"></div>
-  <div class="glow-orb glow-orb-orange w-[700px] h-[700px] bottom-[10%] left-[-200px]"></div>
+  <!-- Ambient Glowing Atmosphere -->
+  <div class="ambient-glow ambient-glow-1"></div>
+  <div class="ambient-glow ambient-glow-2"></div>
+  <div class="ambient-glow ambient-glow-3"></div>
 
   <!-- Header / Navigation -->
   <header class="fixed top-0 left-0 right-0 z-50 glass-nav transition-all duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       
-      <!-- Logo -->
+      <!-- Brand Logo -->
       <a href="#" class="flex items-center gap-3 group">
-        <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-[#ff6b00] to-[#ffaa00] p-[2px] shadow-lg shadow-[#ff6b00]/30 group-hover:shadow-[#ff6b00]/60 transition-all">
-          <div class="w-full h-full bg-[#08080b] rounded-[10px] flex items-center justify-center font-black text-[#ff6b00] font-heading text-xl">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#ff6b00] to-[#ffaa00] p-[2px] shadow-lg shadow-[#ff6b00]/25 group-hover:shadow-[#ff6b00]/50 transition-all">
+          <div class="w-full h-full bg-[#08080b] rounded-[10px] flex items-center justify-center font-bold text-[#ff6b00] font-heading text-lg">
             MA
           </div>
         </div>
         <div class="flex flex-col">
-          <span class="font-heading font-extrabold text-lg tracking-wider text-white group-hover:text-[#ff6b00] transition-colors">
+          <span class="font-heading font-bold text-lg tracking-tight text-white group-hover:text-[#ff6b00] transition-colors">
             ASHRAF<span class="text-[#ff6b00]">.</span>DESIGN
           </span>
-          <span class="text-[10px] font-semibold text-gray-400 tracking-widest uppercase">Brand & Visual Identity</span>
+          <span class="text-[10px] font-semibold text-gray-400 tracking-wider uppercase">Brand Identity & Visuals</span>
         </div>
       </a>
 
-      <!-- Desktop Nav Menu -->
+      <!-- Desktop Navigation Links -->
       <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-300">
         <a href="#home" class="hover:text-[#ff6b00] transition-colors">Home</a>
         <a href="#services" class="hover:text-[#ff6b00] transition-colors">Services</a>
         <a href="#showcase" class="hover:text-[#ff6b00] transition-colors">Portfolio</a>
-        <a href="#process" class="hover:text-[#ff6b00] transition-colors">Process</a>
+        <a href="#before-after" class="hover:text-[#ff6b00] transition-colors">Workflow</a>
         <a href="#pricing" class="hover:text-[#ff6b00] transition-colors">Packages</a>
         <a href="#reviews" class="hover:text-[#ff6b00] transition-colors">Reviews</a>
       </nav>
 
-      <!-- Action Button -->
+      <!-- CTA Button -->
       <div class="hidden md:flex items-center gap-4">
-        <a href="#contact" class="px-6 py-2.5 rounded-full bg-gradient-to-r from-[#ff6b00] to-[#e05300] hover:from-[#ff7a1a] hover:to-[#ff5500] text-white font-semibold text-sm shadow-lg shadow-[#ff6b00]/30 hover:shadow-[#ff6b00]/60 transition-all transform hover:-translate-y-0.5 flex items-center gap-2">
+        <a href="#contact" class="px-5 py-2.5 rounded-full bg-[#ff6b00] hover:bg-[#ff7a1a] text-white font-semibold text-sm shadow-lg shadow-[#ff6b00]/25 hover:shadow-[#ff6b00]/40 transition-all transform hover:-translate-y-0.5 flex items-center gap-2">
           <span>Let's Talk</span>
           <i class="fa-solid fa-arrow-right text-xs"></i>
         </a>
       </div>
 
-      <!-- Mobile Hamburger Button -->
+      <!-- Mobile Menu Toggle Button -->
       <button id="mobileMenuToggle" class="md:hidden text-gray-300 hover:text-white text-2xl focus:outline-none" aria-label="Toggle Navigation">
         <i class="fa-solid fa-bars-staggered"></i>
       </button>
@@ -94,102 +95,90 @@
     </div>
 
     <!-- Mobile Dropdown Menu -->
-    <div id="mobileMenu" class="hidden md:hidden glass-panel border-t border-white/10 px-6 py-6 space-y-4">
+    <div id="mobileMenu" class="hidden md:hidden editorial-card border-t border-white/10 mx-4 mt-2 px-6 py-6 space-y-4">
       <a href="#home" class="block text-gray-300 hover:text-[#ff6b00] font-medium">Home</a>
       <a href="#services" class="block text-gray-300 hover:text-[#ff6b00] font-medium">Services</a>
-      <a href="#showcase" class="block text-gray-300 hover:text-[#ff6b00] font-medium">Portfolio Showcase</a>
-      <a href="#process" class="block text-gray-300 hover:text-[#ff6b00] font-medium">Process</a>
-      <a href="#pricing" class="block text-gray-300 hover:text-[#ff6b00] font-medium">Pricing</a>
-      <a href="#reviews" class="block text-gray-300 hover:text-[#ff6b00] font-medium">Client Reviews</a>
-      <a href="#contact" class="block w-full text-center py-2.5 rounded-lg bg-[#ff6b00] text-white font-semibold shadow-md">
+      <a href="#showcase" class="block text-gray-300 hover:text-[#ff6b00] font-medium">Portfolio</a>
+      <a href="#before-after" class="block text-gray-300 hover:text-[#ff6b00] font-medium">Workflow</a>
+      <a href="#pricing" class="block text-gray-300 hover:text-[#ff6b00] font-medium">Packages</a>
+      <a href="#reviews" class="block text-gray-300 hover:text-[#ff6b00] font-medium">Reviews</a>
+      <a href="#contact" class="block w-full text-center py-3 rounded-xl bg-[#ff6b00] text-white font-semibold shadow-md">
         Get in Touch
       </a>
     </div>
   </header>
 
-  <!-- Hero Section with Muhammad Ashraf's Profile & Brand Details -->
-  <section id="home" class="relative pt-36 pb-20 md:pt-44 md:pb-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-grid-pattern">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+  <!-- Hero Section: Masterclass Balanced 2-Column Layout -->
+  <section id="home" class="relative pt-36 pb-20 md:pt-48 md:pb-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-dot-grid">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
       
-      <!-- Left Content (7 Cols) -->
+      <!-- Left Column: Editorial Headline & Value Proposition (7 Cols) -->
       <div class="lg:col-span-7 text-center lg:text-left">
         
-        <!-- Brand Badge -->
-        <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-[#ff6b00]/10 border border-[#ff6b00]/30 backdrop-blur-md mb-6">
-          <span class="w-2.5 h-2.5 rounded-full bg-[#ff6b00] animate-ping"></span>
-          <span class="w-2.5 h-2.5 rounded-full bg-[#ff6b00] absolute"></span>
-          <span class="text-xs font-bold tracking-wider text-[#ffaa4d] uppercase pl-3">
-            Available for Freelance & Contract Projects
+        <!-- Status Pill -->
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.04] border border-white/10 backdrop-blur-md mb-6">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span class="text-xs font-semibold tracking-wide text-gray-300">
+            Available for Brand Identity & Packaging Projects
           </span>
         </div>
 
-        <!-- Main Headline -->
-        <h1 class="font-heading text-4xl sm:text-6xl lg:text-6xl font-extrabold tracking-tight leading-[1.15] mb-6">
-          BUILDING ICONIC <span class="text-gradient-orange">BRANDS</span> THROUGH STRATEGIC DESIGN
+        <!-- Master Headline -->
+        <h1 class="font-heading text-4xl sm:text-6xl lg:text-6xl font-extrabold tracking-tight leading-[1.12] mb-6 text-white">
+          Crafting Iconic <span class="gradient-text-orange">Brand Identities</span> & High-Impact Visuals.
         </h1>
 
         <!-- Subtitle -->
-        <p class="text-lg sm:text-xl text-gray-300 max-w-2xl leading-relaxed mb-8">
-          Hi, I'm <strong class="text-white font-bold">Muhammad Ashraf</strong>. A passionate Graphic Designer with 2+ years of hands-on experience crafting timeless logos, cohesive brand identities, modern packaging, and high-converting social media creatives.
+        <p class="text-base sm:text-lg text-gray-300 max-w-2xl font-normal leading-relaxed mb-8">
+          I'm <strong class="text-white font-semibold">Muhammad Ashraf</strong>, a graphic designer with 2+ years of professional experience specializing in timeless logos, comprehensive visual identities, retail packaging, and stop-scrolling social media creatives.
         </p>
 
         <!-- CTA Buttons -->
-        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-12">
-          <a href="#showcase" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-[#ff6b00] via-[#ff7a1a] to-[#e05300] text-white font-bold text-base shadow-xl shadow-[#ff6b00]/30 hover:shadow-[#ff6b00]/50 hover:scale-[1.02] transition-all flex items-center justify-center gap-3">
+        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-10">
+          <a href="#showcase" class="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-[#ff6b00] hover:bg-[#ff7a1a] text-white font-semibold text-sm shadow-xl shadow-[#ff6b00]/25 hover:shadow-[#ff6b00]/40 hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2.5">
             <span>Explore Portfolio</span>
-            <i class="fa-solid fa-arrow-down text-sm"></i>
+            <i class="fa-solid fa-arrow-down text-xs"></i>
           </a>
-          <a href="mailto:Maashraf221@gmail.com" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-white/5 hover:bg-white/10 text-white font-bold text-base border border-white/10 backdrop-blur-md transition-all flex items-center justify-center gap-3">
-            <i class="fa-solid fa-envelope text-[#ff6b00] text-lg"></i>
-            <span>Maashraf221@gmail.com</span>
+          <a href="#contact" class="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] text-white font-semibold text-sm border border-white/10 backdrop-blur-md transition-all flex items-center justify-center gap-2.5">
+            <i class="fa-solid fa-envelope text-[#ff6b00]"></i>
+            <span>Get in Touch</span>
           </a>
         </div>
 
-        <!-- Social Proof Handles -->
+        <!-- Social Links Strip -->
         <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3">
-          <span class="text-xs font-semibold text-gray-500 uppercase tracking-wider mr-2">Profiles:</span>
-          <a href="https://www.behance.net/ashraf012" target="_blank" class="px-3.5 py-1.5 rounded-lg bg-white/5 hover:bg-[#0057ff] border border-white/10 text-xs font-semibold text-gray-300 hover:text-white transition-all flex items-center gap-2">
+          <span class="text-xs font-medium text-gray-400 mr-1">Profiles:</span>
+          <a href="https://www.behance.net/ashraf012" target="_blank" class="px-3 py-1.5 rounded-lg bg-white/[0.03] hover:bg-[#0057ff] border border-white/[0.08] text-xs font-medium text-gray-300 hover:text-white transition-all flex items-center gap-2">
             <i class="fa-brands fa-behance"></i> Behance
           </a>
-          <a href="https://www.pinterest.com/maashraf221/" target="_blank" class="px-3.5 py-1.5 rounded-lg bg-white/5 hover:bg-[#E60023] border border-white/10 text-xs font-semibold text-gray-300 hover:text-white transition-all flex items-center gap-2">
+          <a href="https://www.pinterest.com/maashraf221/" target="_blank" class="px-3 py-1.5 rounded-lg bg-white/[0.03] hover:bg-[#E60023] border border-white/[0.08] text-xs font-medium text-gray-300 hover:text-white transition-all flex items-center gap-2">
             <i class="fa-brands fa-pinterest"></i> Pinterest
           </a>
-          <a href="https://www.facebook.com/muhammad.ashraf.707469" target="_blank" class="px-3.5 py-1.5 rounded-lg bg-white/5 hover:bg-[#1877F2] border border-white/10 text-xs font-semibold text-gray-300 hover:text-white transition-all flex items-center gap-2">
+          <a href="https://www.facebook.com/muhammad.ashraf.707469" target="_blank" class="px-3 py-1.5 rounded-lg bg-white/[0.03] hover:bg-[#1877F2] border border-white/[0.08] text-xs font-medium text-gray-300 hover:text-white transition-all flex items-center gap-2">
             <i class="fa-brands fa-facebook-f"></i> Facebook
           </a>
         </div>
 
       </div>
 
-      <!-- Right Profile Showcase (5 Cols) -->
+      <!-- Right Column: Cinematic Portrait Presentation (5 Cols) -->
       <div class="lg:col-span-5 flex justify-center">
-        <div class="relative w-full max-w-md">
+        <div class="portrait-container w-full max-w-sm sm:max-w-md">
           
-          <!-- Profile Card -->
-          <div class="profile-frame rounded-3xl overflow-hidden glass-panel border border-[#ff6b00]/30 p-2 shadow-2xl">
-            <div class="relative rounded-2xl overflow-hidden aspect-[4/5] bg-black">
-              <img src="assets/profile.jpg" alt="Muhammad Ashraf - Graphic & Brand Designer" class="w-full h-full object-cover">
+          <!-- Portrait Card -->
+          <div class="relative rounded-3xl overflow-hidden bg-[#111218] border border-white/10 shadow-2xl">
+            <div class="relative aspect-[4/5] overflow-hidden bg-black">
+              <img src="assets/profile.jpg" alt="Muhammad Ashraf — Brand & Visual Designer" class="w-full h-full object-cover">
               
-              <!-- Gradient Overlay at bottom -->
-              <div class="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-[#08080b] via-[#08080b]/80 to-transparent">
+              <!-- Subtle Bottom Vignette & Metadata -->
+              <div class="absolute inset-x-0 bottom-0 p-5 bg-gradient-to-t from-[#08080b] via-[#08080b]/80 to-transparent">
                 <div class="flex items-center gap-2 mb-1">
-                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
-                  <span class="text-xs font-bold text-[#ffaa4d] uppercase tracking-wider">Brand Identity Designer</span>
+                  <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                  <span class="text-[11px] font-bold text-[#ffaa4d] uppercase tracking-wider">Brand & Visual Designer</span>
                 </div>
-                <h3 class="font-heading font-extrabold text-2xl text-white">Muhammad Ashraf</h3>
-                <p class="text-xs text-gray-400 mt-1">Logo Design • Packaging • Social Media Creatives</p>
+                <h3 class="font-heading font-bold text-xl text-white">Muhammad Ashraf</h3>
+                <p class="text-xs text-gray-400 mt-0.5">2+ Years Industry Experience</p>
               </div>
-            </div>
-          </div>
-
-          <!-- Floating Experience Badge -->
-          <div class="absolute -bottom-6 -left-6 glass-panel px-5 py-3 rounded-2xl border border-[#ff6b00]/40 shadow-xl flex items-center gap-3">
-            <div class="w-10 h-10 rounded-xl bg-[#ff6b00] text-white flex items-center justify-center font-bold text-lg shadow-md shadow-[#ff6b00]/50">
-              <i class="fa-solid fa-award"></i>
-            </div>
-            <div>
-              <span class="text-xs text-gray-400 block font-semibold">Track Record</span>
-              <span class="text-sm font-extrabold text-white font-heading">2+ Years Industry Experience</span>
             </div>
           </div>
 
@@ -198,212 +187,224 @@
 
     </div>
 
-    <!-- Quick Stats Strip -->
-    <div id="statsSection" class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto mt-20 pt-8 border-t border-white/10">
-      <div class="p-5 rounded-2xl bg-white/[0.02] border border-white/5 text-center">
-        <div class="text-3xl sm:text-4xl font-extrabold text-white font-heading counter-val" data-target="150" data-suffix="+">0</div>
-        <div class="text-xs text-gray-400 mt-1 uppercase tracking-wider">Designs Delivered</div>
+    <!-- Sleek Minimalist Stats Strip (Integrated, not heavy blocky cards) -->
+    <div id="statsSection" class="mt-20 pt-8 border-t border-white/[0.08] grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      <div class="py-2">
+        <div class="font-heading text-3xl sm:text-4xl font-extrabold text-white counter-val" data-target="150" data-suffix="+">0</div>
+        <p class="text-xs text-gray-400 font-medium mt-1">Projects Delivered</p>
       </div>
-      <div class="p-5 rounded-2xl bg-white/[0.02] border border-white/5 text-center">
-        <div class="text-3xl sm:text-4xl font-extrabold text-[#ff6b00] font-heading counter-val" data-target="100" data-suffix="%">0</div>
-        <div class="text-xs text-gray-400 mt-1 uppercase tracking-wider">Client Satisfaction</div>
+      <div class="py-2 border-l border-white/[0.06]">
+        <div class="font-heading text-3xl sm:text-4xl font-extrabold text-[#ff6b00] counter-val" data-target="100" data-suffix="%">0</div>
+        <p class="text-xs text-gray-400 font-medium mt-1">Client Satisfaction</p>
       </div>
-      <div class="p-5 rounded-2xl bg-white/[0.02] border border-white/5 text-center">
-        <div class="text-3xl sm:text-4xl font-extrabold text-[#ffaa00] font-heading counter-val" data-target="2" data-suffix="+ Years">0</div>
-        <div class="text-xs text-gray-400 mt-1 uppercase tracking-wider">Proven Experience</div>
+      <div class="py-2 border-l border-white/[0.06]">
+        <div class="font-heading text-3xl sm:text-4xl font-extrabold text-[#ffaa00] counter-val" data-target="2" data-suffix="+ Years">0</div>
+        <p class="text-xs text-gray-400 font-medium mt-1">Industry Experience</p>
       </div>
-      <div class="p-5 rounded-2xl bg-white/[0.02] border border-white/5 text-center">
-        <div class="text-3xl sm:text-4xl font-extrabold text-[#ff8533] font-heading counter-val" data-target="40" data-suffix="+">0</div>
-        <div class="text-xs text-gray-400 mt-1 uppercase tracking-wider">Happy Brand Clients</div>
+      <div class="py-2 border-l border-white/[0.06]">
+        <div class="font-heading text-3xl sm:text-4xl font-extrabold text-white counter-val" data-target="40" data-suffix="+">0</div>
+        <p class="text-xs text-gray-400 font-medium mt-1">Brands Collaborated</p>
       </div>
     </div>
 
   </section>
 
-  <!-- Marquee / Ticker Strip -->
-  <div class="py-6 border-y border-white/10 bg-black/60 overflow-hidden">
+  <!-- Marquee Ticker -->
+  <div class="py-5 border-y border-white/[0.08] bg-[#0c0d12]/70 overflow-hidden">
     <div class="marquee-container">
-      <div class="marquee-content text-sm uppercase tracking-widest font-heading font-bold text-gray-400">
-        <span><i class="fa-solid fa-sparkles text-[#ff6b00] mr-2"></i> Brand Identity Design</span>
-        <span><i class="fa-solid fa-sparkles text-[#ffaa00] mr-2"></i> Minimalist & Modern Logo Design</span>
-        <span><i class="fa-solid fa-sparkles text-[#ff6b00] mr-2"></i> Product Packaging & Labeling</span>
-        <span><i class="fa-solid fa-sparkles text-[#ffaa00] mr-2"></i> High-CTR Social Media Creatives</span>
-        <span><i class="fa-solid fa-sparkles text-[#ff6b00] mr-2"></i> 3D Product Mockups</span>
-        <span><i class="fa-solid fa-sparkles text-[#ffaa00] mr-2"></i> Visual Brand Guidelines</span>
-        <span><i class="fa-solid fa-sparkles text-[#ff6b00] mr-2"></i> Brand Identity Design</span>
-        <span><i class="fa-solid fa-sparkles text-[#ffaa00] mr-2"></i> Minimalist & Modern Logo Design</span>
+      <div class="marquee-track text-xs uppercase tracking-widest font-heading font-bold text-gray-400">
+        <span><i class="fa-solid fa-circle text-[#ff6b00] text-[6px] mr-3"></i> Brand Identity Design</span>
+        <span><i class="fa-solid fa-circle text-[#ffaa00] text-[6px] mr-3"></i> Minimalist Logo Systems</span>
+        <span><i class="fa-solid fa-circle text-[#ff6b00] text-[6px] mr-3"></i> Product Packaging & Dielines</span>
+        <span><i class="fa-solid fa-circle text-[#ffaa00] text-[6px] mr-3"></i> High-CTR Social Media Creatives</span>
+        <span><i class="fa-solid fa-circle text-[#ff6b00] text-[6px] mr-3"></i> 3D Product Mockups</span>
+        <span><i class="fa-solid fa-circle text-[#ffaa00] text-[6px] mr-3"></i> Commercial Photo Manipulation</span>
+        <span><i class="fa-solid fa-circle text-[#ff6b00] text-[6px] mr-3"></i> Brand Identity Design</span>
+        <span><i class="fa-solid fa-circle text-[#ffaa00] text-[6px] mr-3"></i> Minimalist Logo Systems</span>
       </div>
     </div>
   </div>
 
-  <!-- Services Section Focused on Ashraf's 4 Core Pillars -->
+  <!-- Services Section -->
   <section id="services" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
     <div class="text-center max-w-3xl mx-auto mb-16">
-      <div class="inline-block px-3 py-1 rounded-md bg-[#ff6b00]/10 text-[#ffaa4d] border border-[#ff6b00]/30 text-xs font-bold uppercase tracking-wider mb-3">
-        Core Specializations
+      <div class="inline-block px-3 py-1 rounded-full bg-[#ff6b00]/10 text-[#ffaa4d] border border-[#ff6b00]/25 text-xs font-semibold uppercase tracking-wider mb-3">
+        Specializations
       </div>
-      <h2 class="font-heading text-3xl sm:text-5xl font-extrabold text-white mb-4">
-        SERVICES I DELIVER
+      <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-white mb-4">
+        Core Design Services
       </h2>
-      <p class="text-gray-400 text-base sm:text-lg">
-        Strategic, research-driven design solutions designed to elevate your brand's presence and drive business results.
+      <p class="text-gray-400 text-base max-w-xl mx-auto">
+        Strategic, research-backed visual solutions built to give your brand an unfair advantage in the market.
       </p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
       
-      <!-- Service 1: Brand Identity -->
-      <div class="glass-panel p-8 rounded-2xl border border-white/10 hover:border-[#ff6b00]/50 transition-all group flex flex-col justify-between">
+      <!-- 01 Brand Identity -->
+      <div class="editorial-card p-7 flex flex-col justify-between">
         <div>
-          <div class="w-14 h-14 rounded-xl bg-[#ff6b00]/10 border border-[#ff6b00]/30 flex items-center justify-center text-[#ff6b00] text-2xl mb-6 group-hover:scale-110 group-hover:bg-[#ff6b00] group-hover:text-white transition-all">
-            <i class="fa-solid fa-gem"></i>
+          <div class="flex items-center justify-between mb-6">
+            <div class="w-12 h-12 rounded-xl bg-[#ff6b00]/10 border border-[#ff6b00]/25 flex items-center justify-center text-[#ff6b00] text-xl">
+              <i class="fa-solid fa-gem"></i>
+            </div>
+            <span class="text-xs font-heading font-extrabold text-gray-500">01</span>
           </div>
-          <h3 class="font-heading text-xl font-bold text-white mb-3">Brand Identity Design</h3>
-          <p class="text-gray-400 text-sm leading-relaxed mb-4">
-            Complete visual identity systems including color palettes, typography rules, stationery, and comprehensive brand guideline books.
+          <h3 class="font-heading text-lg font-bold text-white mb-2.5">Brand Identity</h3>
+          <p class="text-gray-400 text-xs leading-relaxed mb-6">
+            Complete visual identity frameworks: custom color systems, typography pairings, stationery kits, and brand guideline manuals.
           </p>
         </div>
-        <ul class="text-xs text-gray-400 space-y-2 border-t border-white/5 pt-4">
-          <li><i class="fa-solid fa-check text-[#ff6b00] mr-2"></i> Complete Brand Styleguides</li>
-          <li><i class="fa-solid fa-check text-[#ff6b00] mr-2"></i> Typography & Color Systems</li>
-          <li><i class="fa-solid fa-check text-[#ff6b00] mr-2"></i> Business Stationery Suite</li>
-        </ul>
+        <div class="flex flex-wrap gap-1.5 pt-4 border-t border-white/[0.06]">
+          <span class="px-2 py-0.5 rounded-md bg-white/[0.04] text-[10px] text-gray-300">Styleguides</span>
+          <span class="px-2 py-0.5 rounded-md bg-white/[0.04] text-[10px] text-gray-300">Stationery</span>
+          <span class="px-2 py-0.5 rounded-md bg-white/[0.04] text-[10px] text-gray-300">Color Systems</span>
+        </div>
       </div>
 
-      <!-- Service 2: Logo Design -->
-      <div class="glass-panel p-8 rounded-2xl border border-white/10 hover:border-[#ffaa00]/50 transition-all group flex flex-col justify-between">
+      <!-- 02 Logo Design -->
+      <div class="editorial-card p-7 flex flex-col justify-between">
         <div>
-          <div class="w-14 h-14 rounded-xl bg-[#ffaa00]/10 border border-[#ffaa00]/30 flex items-center justify-center text-[#ffaa00] text-2xl mb-6 group-hover:scale-110 group-hover:bg-[#ffaa00] group-hover:text-white transition-all">
-            <i class="fa-solid fa-pen-nib"></i>
+          <div class="flex items-center justify-between mb-6">
+            <div class="w-12 h-12 rounded-xl bg-[#ffaa00]/10 border border-[#ffaa00]/25 flex items-center justify-center text-[#ffaa00] text-xl">
+              <i class="fa-solid fa-pen-nib"></i>
+            </div>
+            <span class="text-xs font-heading font-extrabold text-gray-500">02</span>
           </div>
-          <h3 class="font-heading text-xl font-bold text-white mb-3">Logo Design</h3>
-          <p class="text-gray-400 text-sm leading-relaxed mb-4">
-            Timeless, memorable, and minimalist vector logos tailored to resonate with your audience and look sharp at any scale.
+          <h3 class="font-heading text-lg font-bold text-white mb-2.5">Logo Design</h3>
+          <p class="text-gray-400 text-xs leading-relaxed mb-6">
+            Distinctive, timeless, and mathematically balanced vector logos engineered to look sharp across mobile icons and giant billboards.
           </p>
         </div>
-        <ul class="text-xs text-gray-400 space-y-2 border-t border-white/5 pt-4">
-          <li><i class="fa-solid fa-check text-[#ffaa00] mr-2"></i> Unique Custom Vector Concepts</li>
-          <li><i class="fa-solid fa-check text-[#ffaa00] mr-2"></i> Full Scalability (SVG, AI, EPS)</li>
-          <li><i class="fa-solid fa-check text-[#ffaa00] mr-2"></i> Monogram, Wordmark, Symbol</li>
-        </ul>
+        <div class="flex flex-wrap gap-1.5 pt-4 border-t border-white/[0.06]">
+          <span class="px-2 py-0.5 rounded-md bg-white/[0.04] text-[10px] text-gray-300">Vector Scalable</span>
+          <span class="px-2 py-0.5 rounded-md bg-white/[0.04] text-[10px] text-gray-300">Monograms</span>
+          <span class="px-2 py-0.5 rounded-md bg-white/[0.04] text-[10px] text-gray-300">Wordmarks</span>
+        </div>
       </div>
 
-      <!-- Service 3: Packaging Design -->
-      <div class="glass-panel p-8 rounded-2xl border border-white/10 hover:border-[#ff8533]/50 transition-all group flex flex-col justify-between">
+      <!-- 03 Product Packaging -->
+      <div class="editorial-card p-7 flex flex-col justify-between">
         <div>
-          <div class="w-14 h-14 rounded-xl bg-[#ff8533]/10 border border-[#ff8533]/30 flex items-center justify-center text-[#ff8533] text-2xl mb-6 group-hover:scale-110 group-hover:bg-[#ff8533] group-hover:text-white transition-all">
-            <i class="fa-solid fa-box-open"></i>
+          <div class="flex items-center justify-between mb-6">
+            <div class="w-12 h-12 rounded-xl bg-[#ff8533]/10 border border-[#ff8533]/25 flex items-center justify-center text-[#ff8533] text-xl">
+              <i class="fa-solid fa-box-open"></i>
+            </div>
+            <span class="text-xs font-heading font-extrabold text-gray-500">03</span>
           </div>
-          <h3 class="font-heading text-xl font-bold text-white mb-3">Product Packaging</h3>
-          <p class="text-gray-400 text-sm leading-relaxed mb-4">
-            Eye-catching product boxes, pouch pouches, bottle labels, and print-ready dielines paired with photorealistic 3D mockups.
+          <h3 class="font-heading text-lg font-bold text-white mb-2.5">Product Packaging</h3>
+          <p class="text-gray-400 text-xs leading-relaxed mb-6">
+            Shelf-popping boxes, pouch packaging, bottle labels, factory dielines, and ultra-realistic 3D mockups for e-commerce.
           </p>
         </div>
-        <ul class="text-xs text-gray-400 space-y-2 border-t border-white/5 pt-4">
-          <li><i class="fa-solid fa-check text-[#ff8533] mr-2"></i> Print-Ready Dieline Layouts</li>
-          <li><i class="fa-solid fa-check text-[#ff8533] mr-2"></i> Premium 3D Photoreal Renders</li>
-          <li><i class="fa-solid fa-check text-[#ff8533] mr-2"></i> Foil, Emboss, Matte Finishes</li>
-        </ul>
+        <div class="flex flex-wrap gap-1.5 pt-4 border-t border-white/[0.06]">
+          <span class="px-2 py-0.5 rounded-md bg-white/[0.04] text-[10px] text-gray-300">Dielines</span>
+          <span class="px-2 py-0.5 rounded-md bg-white/[0.04] text-[10px] text-gray-300">3D Mockups</span>
+          <span class="px-2 py-0.5 rounded-md bg-white/[0.04] text-[10px] text-gray-300">Print CMYK</span>
+        </div>
       </div>
 
-      <!-- Service 4: Social Media Creatives -->
-      <div class="glass-panel p-8 rounded-2xl border border-white/10 hover:border-[#ff6b00]/50 transition-all group flex flex-col justify-between">
+      <!-- 04 Social Media Creatives -->
+      <div class="editorial-card p-7 flex flex-col justify-between">
         <div>
-          <div class="w-14 h-14 rounded-xl bg-[#ff6b00]/10 border border-[#ff6b00]/30 flex items-center justify-center text-[#ff6b00] text-2xl mb-6 group-hover:scale-110 group-hover:bg-[#ff6b00] group-hover:text-white transition-all">
-            <i class="fa-solid fa-bullhorn"></i>
+          <div class="flex items-center justify-between mb-6">
+            <div class="w-12 h-12 rounded-xl bg-[#ff6b00]/10 border border-[#ff6b00]/25 flex items-center justify-center text-[#ff6b00] text-xl">
+              <i class="fa-solid fa-bullhorn"></i>
+            </div>
+            <span class="text-xs font-heading font-extrabold text-gray-500">04</span>
           </div>
-          <h3 class="font-heading text-xl font-bold text-white mb-3">Social Media Creatives</h3>
-          <p class="text-gray-400 text-sm leading-relaxed mb-4">
-            Stop-scrolling promotional banners, Instagram carousels, and Meta ad campaign graphics engineered for high engagement and conversions.
+          <h3 class="font-heading text-lg font-bold text-white mb-2.5">Social Media Creatives</h3>
+          <p class="text-gray-400 text-xs leading-relaxed mb-6">
+            High-converting ad banners, multi-slide carousels, and promotional graphics optimized to stop users from scrolling on Meta and Google.
           </p>
         </div>
-        <ul class="text-xs text-gray-400 space-y-2 border-t border-white/5 pt-4">
-          <li><i class="fa-solid fa-check text-[#ff6b00] mr-2"></i> High-CTR Ad Campaigns</li>
-          <li><i class="fa-solid fa-check text-[#ff6b00] mr-2"></i> Carousel & Story Formats</li>
-          <li><i class="fa-solid fa-check text-[#ff6b00] mr-2"></i> E-Commerce Promotion Posts</li>
-        </ul>
+        <div class="flex flex-wrap gap-1.5 pt-4 border-t border-white/[0.06]">
+          <span class="px-2 py-0.5 rounded-md bg-white/[0.04] text-[10px] text-gray-300">High-CTR Ads</span>
+          <span class="px-2 py-0.5 rounded-md bg-white/[0.04] text-[10px] text-gray-300">Carousels</span>
+          <span class="px-2 py-0.5 rounded-md bg-white/[0.04] text-[10px] text-gray-300">Story Formats</span>
+        </div>
       </div>
 
     </div>
   </section>
 
   <!-- Interactive Before & After Showcase -->
-  <section id="before-after" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-white/10 relative">
+  <section id="before-after" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-white/[0.08]">
     <div class="text-center max-w-3xl mx-auto mb-14">
-      <div class="inline-block px-3 py-1 rounded-md bg-[#ff6b00]/10 text-[#ffaa4d] border border-[#ff6b00]/30 text-xs font-bold uppercase tracking-wider mb-3">
-        Visual Transformation
+      <div class="inline-block px-3 py-1 rounded-full bg-[#ff6b00]/10 text-[#ffaa4d] border border-[#ff6b00]/25 text-xs font-semibold uppercase tracking-wider mb-3">
+        Process Demo
       </div>
-      <h2 class="font-heading text-3xl sm:text-5xl font-extrabold text-white mb-4">
-        BEFORE & AFTER WORKFLOW
+      <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-white mb-4">
+        Before & After Transformation
       </h2>
-      <p class="text-gray-400 text-base sm:text-lg">
-        Drag the interactive slider handle left and right to see how raw assets and sketches are elevated into polished commercial artwork.
+      <p class="text-gray-400 text-base max-w-xl mx-auto">
+        Drag the interactive slider handle left and right to inspect how raw assets are composited and polished into high-end commercial artwork.
       </p>
     </div>
 
     <!-- The Interactive Slider Widget -->
     <div class="max-w-4xl mx-auto">
-      <div id="baSlider" class="ba-slider-container">
+      <div id="baSlider" class="ba-container">
         
         <!-- After Image (Background) -->
         <img src="https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?q=80&w=1200&auto=format&fit=crop" 
-             alt="Final Polished Design" 
-             class="ba-slider-image">
+             alt="Final Polished Commercial Artwork" 
+             class="ba-image">
         
-        <!-- After Badge -->
-        <div class="ba-badge ba-badge-after">
-          <i class="fa-solid fa-wand-magic-sparkles mr-1.5 text-[#ffaa00]"></i> FINAL POLISHED ARTWORK
+        <!-- After Pill Badge -->
+        <div class="absolute top-4 right-4 px-3 py-1 rounded-full bg-[#ff6b00]/80 backdrop-blur-md text-white text-xs font-bold uppercase tracking-wider z-10 border border-white/20">
+          Final Polished Design
         </div>
 
         <!-- Before Image (Clipped Overlay) -->
-        <div class="ba-slider-before">
+        <div class="ba-before-layer">
           <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1200&auto=format&fit=crop" 
-               alt="Raw Base Concept">
+               alt="Raw Base Assets">
         </div>
 
-        <!-- Before Badge -->
-        <div class="ba-badge ba-badge-before">
-          <i class="fa-solid fa-camera mr-1.5 text-gray-400"></i> RAW BASE PHOTO / SKETCH
+        <!-- Before Pill Badge -->
+        <div class="absolute top-4 left-4 px-3 py-1 rounded-full bg-black/70 backdrop-blur-md text-gray-300 text-xs font-bold uppercase tracking-wider z-10 border border-white/10">
+          Raw Assets / Concept
         </div>
 
-        <!-- Slider Draggable Handle -->
-        <div class="ba-slider-handle">
-          <div class="ba-slider-button">
-            <i class="fa-solid fa-arrows-left-right text-sm"></i>
+        <!-- Draggable Handle -->
+        <div class="ba-handle">
+          <div class="ba-handle-btn">
+            <i class="fa-solid fa-arrows-left-right text-xs"></i>
           </div>
         </div>
 
       </div>
 
-      <!-- Feature Highlights under slider -->
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8">
-        <div class="glass-panel p-5 rounded-2xl border border-white/5 flex items-start gap-4">
-          <div class="w-10 h-10 rounded-xl bg-[#ff6b00]/10 border border-[#ff6b00]/30 flex items-center justify-center text-[#ff6b00] shrink-0">
-            <i class="fa-solid fa-vector-square text-lg"></i>
+      <!-- Refined 3 Pillars -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-5 mt-8">
+        <div class="editorial-card p-5 flex items-start gap-3.5">
+          <div class="w-9 h-9 rounded-lg bg-[#ff6b00]/10 flex items-center justify-center text-[#ff6b00] shrink-0 text-sm">
+            <i class="fa-solid fa-bezier-curve"></i>
           </div>
           <div>
-            <h4 class="font-heading font-bold text-white text-sm">Pixel-Perfect Vectors</h4>
-            <p class="text-xs text-gray-400 mt-1">Mathematical precision, clean anchor points, and scalable curves.</p>
+            <h4 class="font-heading font-bold text-white text-sm">Precision Geometry</h4>
+            <p class="text-xs text-gray-400 mt-0.5">Pixel-perfect vector execution with mathematical balance.</p>
           </div>
         </div>
 
-        <div class="glass-panel p-5 rounded-2xl border border-white/5 flex items-start gap-4">
-          <div class="w-10 h-10 rounded-xl bg-[#ffaa00]/10 border border-[#ffaa00]/30 flex items-center justify-center text-[#ffaa00] shrink-0">
-            <i class="fa-solid fa-palette text-lg"></i>
+        <div class="editorial-card p-5 flex items-start gap-3.5">
+          <div class="w-9 h-9 rounded-lg bg-[#ffaa00]/10 flex items-center justify-center text-[#ffaa00] shrink-0 text-sm">
+            <i class="fa-solid fa-palette"></i>
           </div>
           <div>
-            <h4 class="font-heading font-bold text-white text-sm">Harmonious Color Theory</h4>
-            <p class="text-xs text-gray-400 mt-1">Psychologically backed palettes aligned with your industry niche.</p>
+            <h4 class="font-heading font-bold text-white text-sm">Color Science</h4>
+            <p class="text-xs text-gray-400 mt-0.5">Psychology-backed color palettes aligned with brand personality.</p>
           </div>
         </div>
 
-        <div class="glass-panel p-5 rounded-2xl border border-white/5 flex items-start gap-4">
-          <div class="w-10 h-10 rounded-xl bg-[#ff8533]/10 border border-[#ff8533]/30 flex items-center justify-center text-[#ff8533] shrink-0">
-            <i class="fa-solid fa-cube text-lg"></i>
+        <div class="editorial-card p-5 flex items-start gap-3.5">
+          <div class="w-9 h-9 rounded-lg bg-[#ff8533]/10 flex items-center justify-center text-[#ff8533] shrink-0 text-sm">
+            <i class="fa-solid fa-layer-group"></i>
           </div>
           <div>
-            <h4 class="font-heading font-bold text-white text-sm">Photorealistic Mockups</h4>
-            <p class="text-xs text-gray-400 mt-1">Realistic lighting, reflections, and materials for print & screen.</p>
+            <h4 class="font-heading font-bold text-white text-sm">Realistic Renders</h4>
+            <p class="text-xs text-gray-400 mt-0.5">High-end lighting, reflections, and material textures.</p>
           </div>
         </div>
       </div>
@@ -411,34 +412,34 @@
     </div>
   </section>
 
-  <!-- Portfolio Showcase Section -->
-  <section id="showcase" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-white/10">
+  <!-- Curated Portfolio Showcase -->
+  <section id="showcase" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-white/[0.08]">
     <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
       <div>
-        <div class="inline-block px-3 py-1 rounded-md bg-[#ff6b00]/10 text-[#ffaa4d] border border-[#ff6b00]/30 text-xs font-bold uppercase tracking-wider mb-3">
-          Curated Works
+        <div class="inline-block px-3 py-1 rounded-full bg-[#ff6b00]/10 text-[#ffaa4d] border border-[#ff6b00]/25 text-xs font-semibold uppercase tracking-wider mb-3">
+          Selected Work
         </div>
-        <h2 class="font-heading text-3xl sm:text-5xl font-extrabold text-white">
-          PORTFOLIO SHOWCASE
+        <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-white">
+          Portfolio Showcase
         </h2>
       </div>
 
       <!-- Filter Tabs -->
-      <div class="flex flex-wrap gap-2 text-xs sm:text-sm font-semibold">
-        <button class="filter-btn px-4 py-2 rounded-lg bg-[#ff6b00] text-white shadow-lg shadow-[#ff6b00]/30 transition-all" data-filter="all">
+      <div class="flex flex-wrap gap-2 text-xs font-semibold">
+        <button class="filter-btn px-4 py-2 rounded-lg bg-[#ff6b00] text-white shadow-md shadow-[#ff6b00]/25 transition-all" data-filter="all">
           All Works
         </button>
-        <button class="filter-btn px-4 py-2 rounded-lg bg-white/5 text-gray-400 hover:bg-white/10 transition-all" data-filter="branding">
+        <button class="filter-btn px-4 py-2 rounded-lg bg-white/[0.04] text-gray-400 hover:bg-white/[0.08] transition-all" data-filter="branding">
           Brand Identity
         </button>
-        <button class="filter-btn px-4 py-2 rounded-lg bg-white/5 text-gray-400 hover:bg-white/10 transition-all" data-filter="packaging">
+        <button class="filter-btn px-4 py-2 rounded-lg bg-white/[0.04] text-gray-400 hover:bg-white/[0.08] transition-all" data-filter="packaging">
           Packaging
         </button>
-        <button class="filter-btn px-4 py-2 rounded-lg bg-white/5 text-gray-400 hover:bg-white/10 transition-all" data-filter="social">
-          Social Media Ads
+        <button class="filter-btn px-4 py-2 rounded-lg bg-white/[0.04] text-gray-400 hover:bg-white/[0.08] transition-all" data-filter="social">
+          Social Ads
         </button>
-        <button class="filter-btn px-4 py-2 rounded-lg bg-white/5 text-gray-400 hover:bg-white/10 transition-all" data-filter="manipulation">
-          Photo Manipulation
+        <button class="filter-btn px-4 py-2 rounded-lg bg-white/[0.04] text-gray-400 hover:bg-white/[0.08] transition-all" data-filter="manipulation">
+          Manipulation
         </button>
       </div>
     </div>
@@ -446,156 +447,156 @@
     <!-- Portfolio Grid -->
     <div id="portfolioGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       
-      <!-- Project Item 1: Brand Identity -->
-      <div class="portfolio-item group relative glass-panel rounded-2xl overflow-hidden border border-white/10"
+      <!-- Project 1: Brand Identity -->
+      <div class="portfolio-card portfolio-item group"
            data-category="branding"
-           data-title="Aura Luxury Brand Identity & Minimalist Logo"
+           data-title="Aura Luxury Brand Identity & Monogram"
            data-category-label="Brand Identity"
-           data-desc="Complete corporate visual identity featuring a modern geometric monogram, cohesive stationery, and strict brand guidelines."
+           data-desc="Complete corporate visual identity suite featuring a refined monogram, stationery, and comprehensive brand styleguide."
            data-behance="https://www.behance.net/ashraf012">
-        <div class="aspect-[4/3] overflow-hidden bg-black/60 relative">
+        <div class="aspect-[4/3] overflow-hidden relative">
           <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?q=80&w=800&auto=format&fit=crop" 
-               alt="Brand Identity Project" 
+               alt="Aura Luxury Brand Suite" 
                class="w-full h-full object-cover">
-          <div class="overlay absolute inset-0 flex flex-col justify-end p-6">
-            <span class="text-xs font-bold text-[#ffaa4d] uppercase tracking-wider mb-1">Brand Identity & Logo</span>
+          <div class="portfolio-overlay absolute inset-0 flex flex-col justify-end p-6">
+            <span class="text-xs font-bold text-[#ffaa4d] uppercase tracking-wider mb-1">Brand Identity</span>
             <h3 class="font-heading text-lg font-bold text-white mb-3">Aura Luxury Brand Suite</h3>
-            <div class="flex items-center gap-3">
-              <button class="open-lightbox px-3.5 py-1.5 rounded-lg bg-[#ff6b00] hover:bg-[#e05300] text-white text-xs font-semibold flex items-center gap-1.5 transition-all">
-                <i class="fa-solid fa-expand"></i> View Details
+            <div class="flex items-center gap-2.5">
+              <button class="open-lightbox px-3 py-1.5 rounded-lg bg-[#ff6b00] hover:bg-[#ff7a1a] text-white text-xs font-semibold flex items-center gap-1.5 transition-all">
+                <i class="fa-solid fa-expand text-[10px]"></i> View Project
               </button>
-              <a href="https://www.behance.net/ashraf012" target="_blank" class="px-3.5 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-white text-xs font-semibold flex items-center gap-1.5 transition-all">
-                <i class="fa-brands fa-behance"></i> Behance Case
+              <a href="https://www.behance.net/ashraf012" target="_blank" class="px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-white text-xs font-semibold flex items-center gap-1.5 transition-all">
+                <i class="fa-brands fa-behance"></i> Behance
               </a>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Project Item 2: Product Packaging -->
-      <div class="portfolio-item group relative glass-panel rounded-2xl overflow-hidden border border-white/10"
+      <!-- Project 2: Packaging -->
+      <div class="portfolio-card portfolio-item group"
            data-category="packaging"
            data-title="Artisan Organic Coffee Roasters Packaging"
-           data-category-label="Product Packaging"
-           data-desc="Matte foil coffee pouch design with custom typography, origin story storytelling, and photorealistic 3D pouch renders."
+           data-category-label="Packaging & Label"
+           data-desc="Premium matte foil coffee pouch packaging design with clean typography and factory-ready dieline specifications."
            data-behance="https://www.behance.net/ashraf012">
-        <div class="aspect-[4/3] overflow-hidden bg-black/60 relative">
+        <div class="aspect-[4/3] overflow-hidden relative">
           <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?q=80&w=800&auto=format&fit=crop" 
-               alt="Packaging Design" 
+               alt="Artisan Roasters Packaging" 
                class="w-full h-full object-cover">
-          <div class="overlay absolute inset-0 flex flex-col justify-end p-6">
-            <span class="text-xs font-bold text-[#ffaa00] uppercase tracking-wider mb-1">Packaging & Label</span>
+          <div class="portfolio-overlay absolute inset-0 flex flex-col justify-end p-6">
+            <span class="text-xs font-bold text-[#ffaa00] uppercase tracking-wider mb-1">Product Packaging</span>
             <h3 class="font-heading text-lg font-bold text-white mb-3">Artisan Roasters Packaging</h3>
-            <div class="flex items-center gap-3">
-              <button class="open-lightbox px-3.5 py-1.5 rounded-lg bg-[#ff6b00] hover:bg-[#e05300] text-white text-xs font-semibold flex items-center gap-1.5 transition-all">
-                <i class="fa-solid fa-expand"></i> View Details
+            <div class="flex items-center gap-2.5">
+              <button class="open-lightbox px-3 py-1.5 rounded-lg bg-[#ff6b00] hover:bg-[#ff7a1a] text-white text-xs font-semibold flex items-center gap-1.5 transition-all">
+                <i class="fa-solid fa-expand text-[10px]"></i> View Project
               </button>
-              <a href="https://www.behance.net/ashraf012" target="_blank" class="px-3.5 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-white text-xs font-semibold flex items-center gap-1.5 transition-all">
-                <i class="fa-brands fa-behance"></i> Behance Case
+              <a href="https://www.behance.net/ashraf012" target="_blank" class="px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-white text-xs font-semibold flex items-center gap-1.5 transition-all">
+                <i class="fa-brands fa-behance"></i> Behance
               </a>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Project Item 3: Social Media Ads -->
-      <div class="portfolio-item group relative glass-panel rounded-2xl overflow-hidden border border-white/10"
+      <!-- Project 3: Social Media Ads -->
+      <div class="portfolio-card portfolio-item group"
            data-category="social"
-           data-title="High-CTR Sneaker Launch Social Media Campaign"
+           data-title="Velocity Streetwear High-CTR Ad Campaign"
            data-category-label="Social Media Creatives"
-           data-desc="Engaging, conversion-focused promotional Instagram carousels and ad banners designed for an urban streetwear e-commerce brand."
+           data-desc="High-energy urban streetwear campaign banners engineered for high click-through rates across Meta ad placements."
            data-behance="https://www.behance.net/ashraf012">
-        <div class="aspect-[4/3] overflow-hidden bg-black/60 relative">
+        <div class="aspect-[4/3] overflow-hidden relative">
           <img src="https://images.unsplash.com/photo-1552346154-21d32810aba3?q=80&w=800&auto=format&fit=crop" 
-               alt="Social Media Ad Campaign" 
+               alt="Velocity Sneaker Ads" 
                class="w-full h-full object-cover">
-          <div class="overlay absolute inset-0 flex flex-col justify-end p-6">
+          <div class="portfolio-overlay absolute inset-0 flex flex-col justify-end p-6">
             <span class="text-xs font-bold text-[#ff8533] uppercase tracking-wider mb-1">Social Media Campaign</span>
             <h3 class="font-heading text-lg font-bold text-white mb-3">Velocity Sneaker Ads</h3>
-            <div class="flex items-center gap-3">
-              <button class="open-lightbox px-3.5 py-1.5 rounded-lg bg-[#ff6b00] hover:bg-[#e05300] text-white text-xs font-semibold flex items-center gap-1.5 transition-all">
-                <i class="fa-solid fa-expand"></i> View Details
+            <div class="flex items-center gap-2.5">
+              <button class="open-lightbox px-3 py-1.5 rounded-lg bg-[#ff6b00] hover:bg-[#ff7a1a] text-white text-xs font-semibold flex items-center gap-1.5 transition-all">
+                <i class="fa-solid fa-expand text-[10px]"></i> View Project
               </button>
-              <a href="https://www.behance.net/ashraf012" target="_blank" class="px-3.5 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-white text-xs font-semibold flex items-center gap-1.5 transition-all">
-                <i class="fa-brands fa-behance"></i> Behance Case
+              <a href="https://www.behance.net/ashraf012" target="_blank" class="px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-white text-xs font-semibold flex items-center gap-1.5 transition-all">
+                <i class="fa-brands fa-behance"></i> Behance
               </a>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Project Item 4: Brand Identity & Stationery -->
-      <div class="portfolio-item group relative glass-panel rounded-2xl overflow-hidden border border-white/10"
+      <!-- Project 4: Corporate Identity -->
+      <div class="portfolio-card portfolio-item group"
            data-category="branding"
-           data-title="FinTech Nexus Corporate Brand System"
+           data-title="Nexus FinTech Identity System"
            data-category-label="Brand Identity"
-           data-desc="Dynamic identity system developed for a digital banking startup, including custom iconography, color palette, and corporate decks."
+           data-desc="Modern geometric vector branding developed for an emerging digital banking and payment gateway startup."
            data-behance="https://www.behance.net/ashraf012">
-        <div class="aspect-[4/3] overflow-hidden bg-black/60 relative">
+        <div class="aspect-[4/3] overflow-hidden relative">
           <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=800&auto=format&fit=crop" 
-               alt="Corporate Brand Identity" 
+               alt="Nexus FinTech Identity" 
                class="w-full h-full object-cover">
-          <div class="overlay absolute inset-0 flex flex-col justify-end p-6">
+          <div class="portfolio-overlay absolute inset-0 flex flex-col justify-end p-6">
             <span class="text-xs font-bold text-[#ffaa4d] uppercase tracking-wider mb-1">Corporate Identity</span>
             <h3 class="font-heading text-lg font-bold text-white mb-3">Nexus FinTech Identity</h3>
-            <div class="flex items-center gap-3">
-              <button class="open-lightbox px-3.5 py-1.5 rounded-lg bg-[#ff6b00] hover:bg-[#e05300] text-white text-xs font-semibold flex items-center gap-1.5 transition-all">
-                <i class="fa-solid fa-expand"></i> View Details
+            <div class="flex items-center gap-2.5">
+              <button class="open-lightbox px-3 py-1.5 rounded-lg bg-[#ff6b00] hover:bg-[#ff7a1a] text-white text-xs font-semibold flex items-center gap-1.5 transition-all">
+                <i class="fa-solid fa-expand text-[10px]"></i> View Project
               </button>
-              <a href="https://www.behance.net/ashraf012" target="_blank" class="px-3.5 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-white text-xs font-semibold flex items-center gap-1.5 transition-all">
-                <i class="fa-brands fa-behance"></i> Behance Case
+              <a href="https://www.behance.net/ashraf012" target="_blank" class="px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-white text-xs font-semibold flex items-center gap-1.5 transition-all">
+                <i class="fa-brands fa-behance"></i> Behance
               </a>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Project Item 5: Beverage Packaging -->
-      <div class="portfolio-item group relative glass-panel rounded-2xl overflow-hidden border border-white/10"
+      <!-- Project 5: Beverage Packaging -->
+      <div class="portfolio-card portfolio-item group"
            data-category="packaging"
-           data-title="Zenith Botanical Beverage Can & Box Packaging"
-           data-category-label="Product Packaging"
-           data-desc="Vibrant matte drink cans featuring hand-drawn botanical illustrations, barcode compliance, and commercial shelf appeal."
+           data-title="Zenith Botanical Beverage Can Packaging"
+           data-category-label="Packaging & Label"
+           data-desc="Clean matte beverage can labels featuring botanical line art, nutritional zoning, and supermarket shelf impact."
            data-behance="https://www.behance.net/ashraf012">
-        <div class="aspect-[4/3] overflow-hidden bg-black/60 relative">
+        <div class="aspect-[4/3] overflow-hidden relative">
           <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?q=80&w=800&auto=format&fit=crop" 
-               alt="Beverage Packaging" 
+               alt="Zenith Botanical Drinks" 
                class="w-full h-full object-cover">
-          <div class="overlay absolute inset-0 flex flex-col justify-end p-6">
-            <span class="text-xs font-bold text-[#ffaa00] uppercase tracking-wider mb-1">Beverage Packaging</span>
+          <div class="portfolio-overlay absolute inset-0 flex flex-col justify-end p-6">
+            <span class="text-xs font-bold text-[#ffaa00] uppercase tracking-wider mb-1">Product Packaging</span>
             <h3 class="font-heading text-lg font-bold text-white mb-3">Zenith Botanical Drinks</h3>
-            <div class="flex items-center gap-3">
-              <button class="open-lightbox px-3.5 py-1.5 rounded-lg bg-[#ff6b00] hover:bg-[#e05300] text-white text-xs font-semibold flex items-center gap-1.5 transition-all">
-                <i class="fa-solid fa-expand"></i> View Details
+            <div class="flex items-center gap-2.5">
+              <button class="open-lightbox px-3 py-1.5 rounded-lg bg-[#ff6b00] hover:bg-[#ff7a1a] text-white text-xs font-semibold flex items-center gap-1.5 transition-all">
+                <i class="fa-solid fa-expand text-[10px]"></i> View Project
               </button>
-              <a href="https://www.behance.net/ashraf012" target="_blank" class="px-3.5 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-white text-xs font-semibold flex items-center gap-1.5 transition-all">
-                <i class="fa-brands fa-behance"></i> Behance Case
+              <a href="https://www.behance.net/ashraf012" target="_blank" class="px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-white text-xs font-semibold flex items-center gap-1.5 transition-all">
+                <i class="fa-brands fa-behance"></i> Behance
               </a>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Project Item 6: Photo Manipulation & Key Visual -->
-      <div class="portfolio-item group relative glass-panel rounded-2xl overflow-hidden border border-white/10"
+      <!-- Project 6: Key Visual -->
+      <div class="portfolio-card portfolio-item group"
            data-category="manipulation"
            data-title="Cyberpunk Warrior Advertising Key Visual"
            data-category-label="Photo Manipulation"
-           data-desc="Commercial advertising poster featuring composite photography, directional neon lighting physics, and atmospheric storytelling."
+           data-desc="High-impact composite artwork combining character photography, volumetric neon lighting, and rain atmospherics."
            data-behance="https://www.behance.net/ashraf012">
-        <div class="aspect-[4/3] overflow-hidden bg-black/60 relative">
+        <div class="aspect-[4/3] overflow-hidden relative">
           <img src="https://images.unsplash.com/photo-1578632767115-351597cf2477?q=80&w=800&auto=format&fit=crop" 
-               alt="Key Visual Art" 
+               alt="Cyberpunk KV Art" 
                class="w-full h-full object-cover">
-          <div class="overlay absolute inset-0 flex flex-col justify-end p-6">
-            <span class="text-xs font-bold text-[#ff8533] uppercase tracking-wider mb-1">Commercial Key Visual</span>
+          <div class="portfolio-overlay absolute inset-0 flex flex-col justify-end p-6">
+            <span class="text-xs font-bold text-[#ff8533] uppercase tracking-wider mb-1">Key Visual</span>
             <h3 class="font-heading text-lg font-bold text-white mb-3">Cyberpunk KV Art</h3>
-            <div class="flex items-center gap-3">
-              <button class="open-lightbox px-3.5 py-1.5 rounded-lg bg-[#ff6b00] hover:bg-[#e05300] text-white text-xs font-semibold flex items-center gap-1.5 transition-all">
-                <i class="fa-solid fa-expand"></i> View Details
+            <div class="flex items-center gap-2.5">
+              <button class="open-lightbox px-3 py-1.5 rounded-lg bg-[#ff6b00] hover:bg-[#ff7a1a] text-white text-xs font-semibold flex items-center gap-1.5 transition-all">
+                <i class="fa-solid fa-expand text-[10px]"></i> View Project
               </button>
-              <a href="https://www.behance.net/ashraf012" target="_blank" class="px-3.5 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-white text-xs font-semibold flex items-center gap-1.5 transition-all">
-                <i class="fa-brands fa-behance"></i> Behance Case
+              <a href="https://www.behance.net/ashraf012" target="_blank" class="px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-white text-xs font-semibold flex items-center gap-1.5 transition-all">
+                <i class="fa-brands fa-behance"></i> Behance
               </a>
             </div>
           </div>
@@ -604,23 +605,23 @@
 
     </div>
 
-    <!-- Behance & Pinterest Direct Banner -->
-    <div class="mt-14 glass-panel p-8 rounded-2xl border border-white/10 flex flex-col sm:flex-row items-center justify-between gap-6">
+    <!-- Behance Banner -->
+    <div class="mt-14 editorial-card p-8 flex flex-col sm:flex-row items-center justify-between gap-6">
       <div class="flex items-center gap-4">
-        <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-[#ff6b00] to-[#ffaa00] flex items-center justify-center text-white text-2xl shadow-lg shadow-[#ff6b00]/30">
+        <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-[#ff6b00] to-[#ffaa00] flex items-center justify-center text-white text-xl shadow-lg shadow-[#ff6b00]/25">
           <i class="fa-brands fa-behance"></i>
         </div>
         <div>
-          <h4 class="font-heading font-bold text-xl text-white">Explore Full Case Studies on Behance</h4>
-          <p class="text-gray-400 text-sm">Discover detailed design breakdowns, vector wireframes, and high-resolution deliverables on my official profile.</p>
+          <h4 class="font-heading font-bold text-lg text-white">Explore Full Case Studies on Behance</h4>
+          <p class="text-gray-400 text-xs mt-0.5">Vector wireframes, high-resolution presentations, and concept breakdowns on @ashraf012.</p>
         </div>
       </div>
-      <div class="flex gap-3">
-        <a href="https://www.behance.net/ashraf012" target="_blank" class="px-6 py-3.5 rounded-xl bg-[#ff6b00] hover:bg-[#e05300] text-white font-bold text-sm whitespace-nowrap shadow-lg shadow-[#ff6b00]/30 transition-all flex items-center gap-2">
-          <span>Behance (ashraf012)</span>
-          <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+      <div class="flex items-center gap-3">
+        <a href="https://www.behance.net/ashraf012" target="_blank" class="px-5 py-2.5 rounded-xl bg-[#ff6b00] hover:bg-[#ff7a1a] text-white font-semibold text-xs whitespace-nowrap shadow-md shadow-[#ff6b00]/25 transition-all flex items-center gap-2">
+          <span>Behance Profile</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
         </a>
-        <a href="https://www.pinterest.com/maashraf221/" target="_blank" class="px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-sm whitespace-nowrap border border-white/10 transition-all flex items-center gap-2">
+        <a href="https://www.pinterest.com/maashraf221/" target="_blank" class="px-4 py-2.5 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] text-white font-semibold text-xs whitespace-nowrap border border-white/10 transition-all flex items-center gap-2">
           <i class="fa-brands fa-pinterest text-red-500"></i>
           <span>Pinterest</span>
         </a>
@@ -629,96 +630,29 @@
 
   </section>
 
-  <!-- Creative Workflow / Process -->
-  <section id="process" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-white/10">
+  <!-- Engagement Packages / Pricing -->
+  <section id="pricing" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-white/[0.08]">
     <div class="text-center max-w-3xl mx-auto mb-16">
-      <div class="inline-block px-3 py-1 rounded-md bg-[#ff6b00]/10 text-[#ffaa4d] border border-[#ff6b00]/30 text-xs font-bold uppercase tracking-wider mb-3">
-        The Workflow
+      <div class="inline-block px-3 py-1 rounded-full bg-[#ff6b00]/10 text-[#ffaa4d] border border-[#ff6b00]/25 text-xs font-semibold uppercase tracking-wider mb-3">
+        Engagement Tiers
       </div>
-      <h2 class="font-heading text-3xl sm:text-5xl font-extrabold text-white mb-4">
-        HOW I WORK
+      <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-white mb-4">
+        Service Packages
       </h2>
-      <p class="text-gray-400 text-base sm:text-lg">
-        A structured, reliable 4-step creative design process that turns vague concepts into iconic brand visuals.
+      <p class="text-gray-400 text-base max-w-xl mx-auto">
+        Clear deliverables and predictable timelines. Custom scopes available upon request.
       </p>
     </div>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 relative">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
       
-      <!-- Step 1 -->
-      <div class="glass-panel p-6 rounded-2xl border border-white/10 relative">
-        <span class="text-5xl font-black font-heading text-white/5 absolute top-4 right-4">01</span>
-        <div class="w-10 h-10 rounded-xl bg-[#ff6b00]/20 text-[#ff6b00] flex items-center justify-center font-bold mb-4">
-          01
-        </div>
-        <h4 class="font-heading font-bold text-lg text-white mb-2">Discovery & Brief</h4>
-        <p class="text-xs text-gray-400 leading-relaxed">
-          Deep-diving into your brand ethos, target demographics, and market competitors to establish clear goals.
-        </p>
-      </div>
-
-      <!-- Step 2 -->
-      <div class="glass-panel p-6 rounded-2xl border border-white/10 relative">
-        <span class="text-5xl font-black font-heading text-white/5 absolute top-4 right-4">02</span>
-        <div class="w-10 h-10 rounded-xl bg-[#ffaa00]/20 text-[#ffaa00] flex items-center justify-center font-bold mb-4">
-          02
-        </div>
-        <h4 class="font-heading font-bold text-lg text-white mb-2">Moodboard & Concepts</h4>
-        <p class="text-xs text-gray-400 leading-relaxed">
-          Curating visual directions, color palettes, and sketching rough compositional ideas to align vision.
-        </p>
-      </div>
-
-      <!-- Step 3 -->
-      <div class="glass-panel p-6 rounded-2xl border border-white/10 relative">
-        <span class="text-5xl font-black font-heading text-white/5 absolute top-4 right-4">03</span>
-        <div class="w-10 h-10 rounded-xl bg-[#ff8533]/20 text-[#ff8533] flex items-center justify-center font-bold mb-4">
-          03
-        </div>
-        <h4 class="font-heading font-bold text-lg text-white mb-2">Design & Crafting</h4>
-        <p class="text-xs text-gray-400 leading-relaxed">
-          Vectorizing logos, polishing dielines, rendering 3D mockups, and crafting responsive social banners.
-        </p>
-      </div>
-
-      <!-- Step 4 -->
-      <div class="glass-panel p-6 rounded-2xl border border-white/10 relative">
-        <span class="text-5xl font-black font-heading text-white/5 absolute top-4 right-4">04</span>
-        <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold mb-4">
-          04
-        </div>
-        <h4 class="font-heading font-bold text-lg text-white mb-2">Delivery & Support</h4>
-        <p class="text-xs text-gray-400 leading-relaxed">
-          Providing organized source files (AI, PSD, SVG, PDF) alongside complete guidelines and lifelong backup.
-        </p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Pricing Packages -->
-  <section id="pricing" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-white/10">
-    <div class="text-center max-w-3xl mx-auto mb-16">
-      <div class="inline-block px-3 py-1 rounded-md bg-[#ff6b00]/10 text-[#ffaa4d] border border-[#ff6b00]/30 text-xs font-bold uppercase tracking-wider mb-3">
-        Transparent Pricing
-      </div>
-      <h2 class="font-heading text-3xl sm:text-5xl font-extrabold text-white mb-4">
-        SERVICE PACKAGES
-      </h2>
-      <p class="text-gray-400 text-base sm:text-lg">
-        Tailored design tiers structured to match your project stage. Custom scopes available upon request.
-      </p>
-    </div>
-
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-      
-      <!-- Package 1: Social Media -->
-      <div class="glass-panel p-8 rounded-2xl border border-white/10 flex flex-col justify-between">
+      <!-- Tier 1: Social Media -->
+      <div class="editorial-card p-8 flex flex-col justify-between">
         <div>
-          <span class="text-xs font-bold uppercase tracking-wider text-gray-400">Social Media & Ads</span>
-          <h3 class="font-heading text-2xl font-bold text-white mt-2">Essential Campaign</h3>
-          <p class="text-xs text-gray-400 mt-2 mb-6">Designed for startups, e-commerce, and regular social promotional campaigns.</p>
-          <div class="text-4xl font-extrabold text-white font-heading mb-6">
+          <span class="text-xs font-bold uppercase tracking-wider text-gray-400">Social Media Ads</span>
+          <h3 class="font-heading text-xl font-bold text-white mt-1.5">Essential Campaign</h3>
+          <p class="text-xs text-gray-400 mt-2 mb-6">Designed for product launches, e-commerce drops, and promotional ad campaigns.</p>
+          <div class="text-3xl font-extrabold text-white font-heading mb-6">
             $45 <span class="text-xs font-normal text-gray-400">/ 3 Ad Banners</span>
           </div>
           <ul class="text-xs text-gray-300 space-y-3 mb-8">
@@ -728,21 +662,21 @@
             <li><i class="fa-solid fa-check text-[#ff6b00] mr-2"></i> Fast 48-Hour Delivery</li>
           </ul>
         </div>
-        <a href="mailto:Maashraf221@gmail.com?subject=Inquiry%20regarding%20Essential%20Campaign%20Pack" class="w-full py-3 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-sm text-center block transition-all">
+        <a href="mailto:Maashraf221@gmail.com?subject=Inquiry%20regarding%20Essential%20Campaign%20Pack" class="w-full py-3 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] text-white font-semibold text-xs text-center block border border-white/10 transition-all">
           Choose Essential
         </a>
       </div>
 
-      <!-- Package 2: Brand Identity (Most Popular) -->
-      <div class="glass-panel p-8 rounded-2xl border-2 border-[#ff6b00] relative flex flex-col justify-between shadow-2xl shadow-[#ff6b00]/20 bg-[#ff6b00]/5">
-        <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-[#ff6b00] to-[#ffaa00] text-white text-xs font-bold uppercase tracking-wider shadow-md">
-          Most Popular
+      <!-- Tier 2: Brand Identity (Most Popular) -->
+      <div class="editorial-card p-8 border-2 border-[#ff6b00] relative flex flex-col justify-between shadow-xl shadow-[#ff6b00]/15 bg-[#ff6b00]/[0.03]">
+        <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-3.5 py-0.5 rounded-full bg-[#ff6b00] text-white text-[10px] font-bold uppercase tracking-wider shadow-md">
+          Recommended
         </div>
         <div>
-          <span class="text-xs font-bold uppercase tracking-wider text-[#ffaa4d]">Logo & Visual System</span>
-          <h3 class="font-heading text-2xl font-bold text-white mt-2">Brand Identity Suite</h3>
+          <span class="text-xs font-bold uppercase tracking-wider text-[#ffaa4d]">Complete Visual System</span>
+          <h3 class="font-heading text-xl font-bold text-white mt-1.5">Brand Identity Suite</h3>
           <p class="text-xs text-gray-400 mt-2 mb-6">Everything required to launch a credible, standout commercial brand identity.</p>
-          <div class="text-4xl font-extrabold text-white font-heading mb-6">
+          <div class="text-3xl font-extrabold text-white font-heading mb-6">
             $120 <span class="text-xs font-normal text-gray-400">/ Full Identity</span>
           </div>
           <ul class="text-xs text-gray-300 space-y-3 mb-8">
@@ -750,21 +684,21 @@
             <li><i class="fa-solid fa-check text-[#ff6b00] mr-2"></i> Color Palette & Typography System</li>
             <li><i class="fa-solid fa-check text-[#ff6b00] mr-2"></i> Business Card, Letterhead & Social Kit</li>
             <li><i class="fa-solid fa-check text-[#ff6b00] mr-2"></i> Comprehensive Brand Styleguide PDF</li>
-            <li><i class="fa-solid fa-check text-[#ff6b00] mr-2"></i> All Master Source Files (AI, EPS, SVG)</li>
+            <li><i class="fa-solid fa-check text-[#ff6b00] mr-2"></i> Master Source Files (AI, EPS, SVG)</li>
           </ul>
         </div>
-        <a href="mailto:Maashraf221@gmail.com?subject=Inquiry%20regarding%20Brand%20Identity%20Suite" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-[#ff6b00] to-[#e05300] hover:from-[#ff7a1a] hover:to-[#ff5500] text-white font-bold text-sm text-center block shadow-lg shadow-[#ff6b00]/40 transition-all">
+        <a href="mailto:Maashraf221@gmail.com?subject=Inquiry%20regarding%20Brand%20Identity%20Suite" class="w-full py-3 rounded-xl bg-[#ff6b00] hover:bg-[#ff7a1a] text-white font-semibold text-xs text-center block shadow-md shadow-[#ff6b00]/25 transition-all">
           Choose Brand Suite
         </a>
       </div>
 
-      <!-- Package 3: Packaging & 3D -->
-      <div class="glass-panel p-8 rounded-2xl border border-white/10 flex flex-col justify-between">
+      <!-- Tier 3: Packaging -->
+      <div class="editorial-card p-8 flex flex-col justify-between">
         <div>
           <span class="text-xs font-bold uppercase tracking-wider text-gray-400">Packaging & Print</span>
-          <h3 class="font-heading text-2xl font-bold text-white mt-2">Commercial Packaging</h3>
+          <h3 class="font-heading text-xl font-bold text-white mt-1.5">Commercial Packaging</h3>
           <p class="text-xs text-gray-400 mt-2 mb-6">Production-ready packaging dielines with photorealistic 3D renders for retail & online.</p>
-          <div class="text-4xl font-extrabold text-white font-heading mb-6">
+          <div class="text-3xl font-extrabold text-white font-heading mb-6">
             $90 <span class="text-xs font-normal text-gray-400">/ Product Line</span>
           </div>
           <ul class="text-xs text-gray-300 space-y-3 mb-8">
@@ -774,7 +708,7 @@
             <li><i class="fa-solid fa-check text-[#ffaa00] mr-2"></i> Print-Ready CMYK (300+ DPI)</li>
           </ul>
         </div>
-        <a href="mailto:Maashraf221@gmail.com?subject=Inquiry%20regarding%20Packaging%20Pack" class="w-full py-3 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-sm text-center block transition-all">
+        <a href="mailto:Maashraf221@gmail.com?subject=Inquiry%20regarding%20Packaging%20Pack" class="w-full py-3 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] text-white font-semibold text-xs text-center block border border-white/10 transition-all">
           Choose Packaging
         </a>
       </div>
@@ -782,24 +716,24 @@
     </div>
   </section>
 
-  <!-- Client Reviews / Feedback Section -->
-  <section id="reviews" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-white/10">
+  <!-- Client Reviews -->
+  <section id="reviews" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-white/[0.08]">
     <div class="text-center max-w-3xl mx-auto mb-16">
-      <div class="inline-block px-3 py-1 rounded-md bg-[#ff6b00]/10 text-[#ffaa4d] border border-[#ff6b00]/30 text-xs font-bold uppercase tracking-wider mb-3">
-        Testimonials
+      <div class="inline-block px-3 py-1 rounded-full bg-[#ff6b00]/10 text-[#ffaa4d] border border-[#ff6b00]/25 text-xs font-semibold uppercase tracking-wider mb-3">
+        Client Testimonials
       </div>
-      <h2 class="font-heading text-3xl sm:text-5xl font-extrabold text-white mb-4">
-        WHAT CLIENTS SAY
+      <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-white mb-4">
+        What Clients Say
       </h2>
-      <p class="text-gray-400 text-base sm:text-lg">
-        Feedback from founders, marketing leads, and agency partners I've had the pleasure of collaborating with.
+      <p class="text-gray-400 text-base max-w-xl mx-auto">
+        Genuine feedback from business owners, marketing leads, and agency founders.
       </p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
       
       <!-- Review 1 -->
-      <div class="glass-panel p-6 rounded-2xl border border-white/10 flex flex-col justify-between">
+      <div class="editorial-card p-6 flex flex-col justify-between">
         <div>
           <div class="flex text-[#ffaa00] text-xs gap-1 mb-4">
             <i class="fa-solid fa-star"></i>
@@ -808,23 +742,23 @@
             <i class="fa-solid fa-star"></i>
             <i class="fa-solid fa-star"></i>
           </div>
-          <p class="text-gray-300 text-sm leading-relaxed mb-6">
+          <p class="text-gray-300 text-xs sm:text-sm leading-relaxed mb-6">
             “Muhammad Ashraf brought our brand identity to life with exceptional creativity. The logo and packaging design gave our product line an instant luxury feel on retail shelves!”
           </p>
         </div>
-        <div class="flex items-center gap-3 border-t border-white/5 pt-4">
-          <div class="w-10 h-10 rounded-full bg-[#ff6b00]/20 flex items-center justify-center font-bold text-[#ffaa4d]">
+        <div class="flex items-center gap-3 border-t border-white/[0.06] pt-4">
+          <div class="w-9 h-9 rounded-full bg-[#ff6b00]/15 flex items-center justify-center font-bold text-xs text-[#ffaa4d]">
             TA
           </div>
           <div>
-            <h5 class="font-heading font-bold text-sm text-white">Tanvir Ahmed</h5>
-            <span class="text-[11px] text-gray-400">Co-Founder, NextTech Retail</span>
+            <h5 class="font-heading font-bold text-xs text-white">Tanvir Ahmed</h5>
+            <span class="text-[10px] text-gray-400">Co-Founder, NextTech Retail</span>
           </div>
         </div>
       </div>
 
       <!-- Review 2 -->
-      <div class="glass-panel p-6 rounded-2xl border border-white/10 flex flex-col justify-between">
+      <div class="editorial-card p-6 flex flex-col justify-between">
         <div>
           <div class="flex text-[#ffaa00] text-xs gap-1 mb-4">
             <i class="fa-solid fa-star"></i>
@@ -833,23 +767,23 @@
             <i class="fa-solid fa-star"></i>
             <i class="fa-solid fa-star"></i>
           </div>
-          <p class="text-gray-300 text-sm leading-relaxed mb-6">
+          <p class="text-gray-300 text-xs sm:text-sm leading-relaxed mb-6">
             “Ashraf's social media creatives doubled our ad CTR on Meta. His understanding of typography, visual hierarchy, and fast turnaround make him our go-to designer.”
           </p>
         </div>
-        <div class="flex items-center gap-3 border-t border-white/5 pt-4">
-          <div class="w-10 h-10 rounded-full bg-[#ffaa00]/20 flex items-center justify-center font-bold text-[#ffaa00]">
+        <div class="flex items-center gap-3 border-t border-white/[0.06] pt-4">
+          <div class="w-9 h-9 rounded-full bg-[#ffaa00]/15 flex items-center justify-center font-bold text-xs text-[#ffaa00]">
             RH
           </div>
           <div>
-            <h5 class="font-heading font-bold text-sm text-white">Rakibul Hasan</h5>
-            <span class="text-[11px] text-gray-400">Marketing Lead, Dreamwear</span>
+            <h5 class="font-heading font-bold text-xs text-white">Rakibul Hasan</h5>
+            <span class="text-[10px] text-gray-400">Marketing Lead, Dreamwear</span>
           </div>
         </div>
       </div>
 
       <!-- Review 3 -->
-      <div class="glass-panel p-6 rounded-2xl border border-white/10 flex flex-col justify-between">
+      <div class="editorial-card p-6 flex flex-col justify-between">
         <div>
           <div class="flex text-[#ffaa00] text-xs gap-1 mb-4">
             <i class="fa-solid fa-star"></i>
@@ -858,17 +792,17 @@
             <i class="fa-solid fa-star"></i>
             <i class="fa-solid fa-star"></i>
           </div>
-          <p class="text-gray-300 text-sm leading-relaxed mb-6">
+          <p class="text-gray-300 text-xs sm:text-sm leading-relaxed mb-6">
             “Prompt communication, thoughtful design rationale, and top-tier aesthetic execution. Working with Muhammad was smooth and thoroughly professional.”
           </p>
         </div>
-        <div class="flex items-center gap-3 border-t border-white/5 pt-4">
-          <div class="w-10 h-10 rounded-full bg-[#ff8533]/20 flex items-center justify-center font-bold text-[#ff8533]">
+        <div class="flex items-center gap-3 border-t border-white/[0.06] pt-4">
+          <div class="w-9 h-9 rounded-full bg-[#ff8533]/15 flex items-center justify-center font-bold text-xs text-[#ff8533]">
             SA
           </div>
           <div>
-            <h5 class="font-heading font-bold text-sm text-white">Sadia Afrin</h5>
-            <span class="text-[11px] text-gray-400">Brand Director, Beverage Co.</span>
+            <h5 class="font-heading font-bold text-xs text-white">Sadia Afrin</h5>
+            <span class="text-[10px] text-gray-400">Brand Director, Beverage Co.</span>
           </div>
         </div>
       </div>
@@ -876,75 +810,75 @@
     </div>
   </section>
 
-  <!-- Contact Section with Ashraf's Direct Details -->
-  <section id="contact" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-white/10">
+  <!-- Contact Section -->
+  <section id="contact" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-white/[0.08]">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
       
       <div>
-        <div class="inline-block px-3 py-1 rounded-md bg-[#ff6b00]/10 text-[#ffaa4d] border border-[#ff6b00]/30 text-xs font-bold uppercase tracking-wider mb-3">
-          Get in Touch
+        <div class="inline-block px-3 py-1 rounded-full bg-[#ff6b00]/10 text-[#ffaa4d] border border-[#ff6b00]/25 text-xs font-semibold uppercase tracking-wider mb-3">
+          Contact Me
         </div>
-        <h2 class="font-heading text-3xl sm:text-5xl font-extrabold text-white mb-6">
-          HAVE A PROJECT IN MIND?
+        <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-white mb-5">
+          Have a Project in Mind?
         </h2>
-        <p class="text-gray-400 text-base sm:text-lg mb-8 leading-relaxed">
-          Whether you need a full brand overhaul, an iconic logo, retail packaging, or high-converting social media creatives, I'm here to bring your vision to reality. Let's discuss your project!
+        <p class="text-gray-400 text-sm sm:text-base mb-8 leading-relaxed">
+          Whether you're starting from scratch, rebranding, or launching a new product line, I'd love to hear your vision and help execute it with precision.
         </p>
 
         <div class="space-y-4 mb-8">
           <div class="flex items-center gap-4 text-gray-300">
-            <div class="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-[#ff6b00] text-lg">
+            <div class="w-11 h-11 rounded-xl bg-white/[0.03] border border-white/[0.08] flex items-center justify-center text-[#ff6b00]">
               <i class="fa-solid fa-envelope"></i>
             </div>
             <div>
-              <span class="text-xs text-gray-500 block uppercase font-semibold">Direct Email</span>
-              <a href="mailto:Maashraf221@gmail.com" class="text-sm font-bold text-white hover:text-[#ff6b00] transition-colors">Maashraf221@gmail.com</a>
+              <span class="text-[11px] text-gray-500 block uppercase font-medium">Direct Email</span>
+              <a href="mailto:Maashraf221@gmail.com" class="text-sm font-semibold text-white hover:text-[#ff6b00] transition-colors">Maashraf221@gmail.com</a>
             </div>
           </div>
 
           <div class="flex items-center gap-4 text-gray-300">
-            <div class="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-[#0057ff] text-lg">
+            <div class="w-11 h-11 rounded-xl bg-white/[0.03] border border-white/[0.08] flex items-center justify-center text-[#0057ff]">
               <i class="fa-brands fa-behance"></i>
             </div>
             <div>
-              <span class="text-xs text-gray-500 block uppercase font-semibold">Behance Portfolio</span>
-              <a href="https://www.behance.net/ashraf012" target="_blank" class="text-sm font-bold text-white hover:text-[#ff6b00] transition-colors">behance.net/ashraf012</a>
+              <span class="text-[11px] text-gray-500 block uppercase font-medium">Behance Portfolio</span>
+              <a href="https://www.behance.net/ashraf012" target="_blank" class="text-sm font-semibold text-white hover:text-[#ff6b00] transition-colors">behance.net/ashraf012</a>
             </div>
           </div>
 
           <div class="flex items-center gap-4 text-gray-300">
-            <div class="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-[#E60023] text-lg">
+            <div class="w-11 h-11 rounded-xl bg-white/[0.03] border border-white/[0.08] flex items-center justify-center text-[#E60023]">
               <i class="fa-brands fa-pinterest"></i>
             </div>
             <div>
-              <span class="text-xs text-gray-500 block uppercase font-semibold">Pinterest Boards</span>
-              <a href="https://www.pinterest.com/maashraf221/" target="_blank" class="text-sm font-bold text-white hover:text-[#ff6b00] transition-colors">pinterest.com/maashraf221</a>
+              <span class="text-[11px] text-gray-500 block uppercase font-medium">Pinterest Boards</span>
+              <a href="https://www.pinterest.com/maashraf221/" target="_blank" class="text-sm font-semibold text-white hover:text-[#ff6b00] transition-colors">pinterest.com/maashraf221</a>
             </div>
           </div>
 
           <div class="flex items-center gap-4 text-gray-300">
-            <div class="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-[#1877F2] text-lg">
+            <div class="w-11 h-11 rounded-xl bg-white/[0.03] border border-white/[0.08] flex items-center justify-center text-[#1877F2]">
               <i class="fa-brands fa-facebook"></i>
             </div>
             <div>
-              <span class="text-xs text-gray-500 block uppercase font-semibold">Facebook Profile</span>
-              <a href="https://www.facebook.com/muhammad.ashraf.707469" target="_blank" class="text-sm font-bold text-white hover:text-[#ff6b00] transition-colors">facebook.com/muhammad.ashraf.707469</a>
+              <span class="text-[11px] text-gray-500 block uppercase font-medium">Facebook Profile</span>
+              <a href="https://www.facebook.com/muhammad.ashraf.707469" target="_blank" class="text-sm font-semibold text-white hover:text-[#ff6b00] transition-colors">facebook.com/muhammad.ashraf.707469</a>
             </div>
           </div>
         </div>
 
         <!-- Social Icons Row -->
-        <div class="flex gap-3">
-          <a href="https://www.behance.net/ashraf012" target="_blank" class="w-11 h-11 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:bg-[#0057ff] hover:border-[#0057ff] transition-all" aria-label="Behance Profile">
+        <div class="flex gap-2.5">
+          <a href="https://www.behance.net/ashraf012" target="_blank" class="w-10 h-10 rounded-xl bg-white/[0.03] border border-white/[0.08] flex items-center justify-center text-gray-400 hover:text-white hover:bg-[#0057ff] transition-all" aria-label="Behance Profile">
             <i class="fa-brands fa-behance"></i>
           </a>
-          <a href="https://www.pinterest.com/maashraf221/" target="_blank" class="w-11 h-11 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:bg-[#E60023] hover:border-[#E60023] transition-all" aria-label="Pinterest Profile">
+          <a href="https://www.pinterest.com/maashraf221/" target="_blank" class="w-10 h-10 rounded-xl bg-white/[0.03] border border-white/[0.08] flex items-center justify-center text-gray-400 hover:text-white hover:bg-[#E60023] transition-all" aria-label="Pinterest Profile">
             <i class="fa-brands fa-pinterest"></i>
           </a>
-          <a href="https://www.facebook.com/muhammad.ashraf.707469" target="_blank" class="w-11 h-11 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:bg-[#1877F2] hover:border-[#1877F2] transition-all" aria-label="Facebook Profile">
+          <a href="https://www.facebook.com/muhammad.ashraf.707469" target="_blank" class="w-10 h-10 rounded-xl bg-white/[0.03] border border-white/[0.08] flex items-center justify-center text-gray-400 hover:text-white hover:bg-[#1877F2] transition-all" aria-label="Facebook Profile">
             <i class="fa-brands fa-facebook-f"></i>
           </a>
-          <a href="mailto:Maashraf221@gmail.com" class="w-11 h-11 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:bg-[#ff6b00] hover:border-[#ff6b00] transition-all" aria-label="Send Email">
+          <a href="mailto:Maashraf221@gmail.com" class="w-10 h-10 rounded-xl bg-white/[0.03] border border-white/[0.08] flex items-center justify-center text-gray-400 hover:text-white hover:bg-[#ff6b00] transition-all" aria-label="Send Direct Email">
             <i class="fa-solid fa-envelope"></i>
           </a>
         </div>
@@ -952,19 +886,19 @@
       </div>
 
       <!-- Quick Message Form -->
-      <div class="glass-panel p-8 rounded-3xl border border-white/10 relative">
-        <h3 class="font-heading text-2xl font-bold text-white mb-2">Send a Message</h3>
-        <p class="text-xs text-gray-400 mb-6">Fill out the brief below to start a conversation about your project scope.</p>
+      <div class="editorial-card p-8 relative">
+        <h3 class="font-heading text-xl font-bold text-white mb-1.5">Send a Message</h3>
+        <p class="text-xs text-gray-400 mb-6">Tell me a bit about your project and I'll get back to you promptly.</p>
 
         <form id="contactForm" class="space-y-4">
           <div>
-            <label class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-2">Your Name</label>
-            <input type="text" id="formName" required placeholder="e.g. John Doe / Client Name" class="w-full px-4 py-3 rounded-xl bg-black/50 border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-[#ff6b00] text-sm">
+            <label class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-1.5">Your Name</label>
+            <input type="text" id="formName" required placeholder="e.g. John Doe / Client Name" class="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/[0.08] text-white placeholder-gray-500 focus:outline-none focus:border-[#ff6b00] text-xs">
           </div>
 
           <div>
-            <label class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-2">Service Needed</label>
-            <select id="formService" class="w-full px-4 py-3 rounded-xl bg-black/50 border border-white/10 text-white focus:outline-none focus:border-[#ff6b00] text-sm">
+            <label class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-1.5">Service Needed</label>
+            <select id="formService" class="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/[0.08] text-white focus:outline-none focus:border-[#ff6b00] text-xs">
               <option value="Brand Identity & Logo Design">Brand Identity & Logo Design</option>
               <option value="Product Packaging & Mockups">Product Packaging & Mockups</option>
               <option value="Social Media Creatives & Ads">Social Media Creatives & Ads</option>
@@ -974,12 +908,12 @@
           </div>
 
           <div>
-            <label class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-2">Project Brief & Details</label>
-            <textarea id="formMessage" rows="4" required placeholder="Tell me about your brand, deadlines, deliverables, or inspiration..." class="w-full px-4 py-3 rounded-xl bg-black/50 border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-[#ff6b00] text-sm"></textarea>
+            <label class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-1.5">Project Brief</label>
+            <textarea id="formMessage" rows="4" required placeholder="Briefly describe your brand, deliverables, and estimated timeline..." class="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/[0.08] text-white placeholder-gray-500 focus:outline-none focus:border-[#ff6b00] text-xs"></textarea>
           </div>
 
-          <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-[#ff6b00] to-[#e05300] hover:from-[#ff7a1a] hover:to-[#ff5500] text-white font-bold text-sm shadow-xl shadow-[#ff6b00]/30 transition-all flex items-center justify-center gap-2">
-            <i class="fa-solid fa-paper-plane"></i>
+          <button type="submit" class="w-full py-3.5 rounded-xl bg-[#ff6b00] hover:bg-[#ff7a1a] text-white font-semibold text-xs shadow-lg shadow-[#ff6b00]/25 transition-all flex items-center justify-center gap-2">
+            <i class="fa-solid fa-paper-plane text-[10px]"></i>
             <span>Send Project Inquiry</span>
           </button>
         </form>
@@ -989,40 +923,40 @@
   </section>
 
   <!-- Footer -->
-  <footer class="border-t border-white/10 py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-    <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
+  <footer class="border-t border-white/[0.08] py-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
       <div class="flex items-center gap-3">
-        <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-[#ff6b00] to-[#ffaa00] p-[2px]">
-          <div class="w-full h-full bg-[#08080b] rounded-[6px] flex items-center justify-center font-black text-[#ff6b00] font-heading text-sm">
+        <div class="w-7 h-7 rounded-lg bg-gradient-to-tr from-[#ff6b00] to-[#ffaa00] p-[2px]">
+          <div class="w-full h-full bg-[#08080b] rounded-[5px] flex items-center justify-center font-bold text-[#ff6b00] font-heading text-xs">
             MA
           </div>
         </div>
-        <span class="text-sm font-semibold text-gray-300">Muhammad Ashraf — Brand Identity & Visual Designer</span>
+        <span class="text-xs font-semibold text-gray-300">Muhammad Ashraf — Brand Identity & Visual Designer</span>
       </div>
       <p class="text-xs text-gray-500 text-center sm:text-right">
-        © 2026 Muhammad Ashraf. All Rights Reserved. Crafted with Art of Design (AOD) Aesthetics.
+        © 2026 Muhammad Ashraf. All Rights Reserved.
       </p>
     </div>
   </footer>
 
   <!-- Lightbox Modal for Full View Artwork -->
   <div id="lightboxModal" class="lightbox-modal">
-    <div class="max-w-4xl w-full mx-4 glass-panel rounded-3xl border border-white/20 p-6 relative max-h-[90vh] overflow-y-auto">
-      <button id="lightboxClose" class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center text-lg z-10 transition-colors" aria-label="Close Preview">
+    <div class="max-w-4xl w-full mx-4 editorial-card p-6 relative max-h-[90vh] overflow-y-auto">
+      <button id="lightboxClose" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center text-sm z-10 transition-colors" aria-label="Close Preview">
         <i class="fa-solid fa-xmark"></i>
       </button>
 
-      <div class="rounded-xl overflow-hidden mb-6 bg-black">
+      <div class="rounded-xl overflow-hidden mb-5 bg-black">
         <img id="lightboxImg" src="" alt="Artwork Preview" class="w-full max-h-[60vh] object-contain mx-auto">
       </div>
 
       <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
         <div>
-          <span id="lightboxCategory" class="text-xs font-bold text-[#ffaa4d] uppercase tracking-wider block mb-1">Category</span>
-          <h3 id="lightboxTitle" class="font-heading text-2xl font-bold text-white mb-2">Artwork Title</h3>
+          <span id="lightboxCategory" class="text-xs font-bold text-[#ffaa4d] uppercase tracking-wider block mb-0.5">Category</span>
+          <h3 id="lightboxTitle" class="font-heading text-xl font-bold text-white mb-1.5">Artwork Title</h3>
           <p id="lightboxDesc" class="text-xs text-gray-400 max-w-xl">Project details and design concept breakdown.</p>
         </div>
-        <a id="lightboxBehance" href="https://www.behance.net/ashraf012" target="_blank" class="px-5 py-2.5 rounded-xl bg-[#ff6b00] hover:bg-[#e05300] text-white font-bold text-xs whitespace-nowrap flex items-center gap-2 transition-all">
+        <a id="lightboxBehance" href="https://www.behance.net/ashraf012" target="_blank" class="px-4 py-2 rounded-xl bg-[#ff6b00] hover:bg-[#ff7a1a] text-white font-semibold text-xs whitespace-nowrap flex items-center gap-2 transition-all">
           <i class="fa-brands fa-behance"></i> View on Behance
         </a>
       </div>

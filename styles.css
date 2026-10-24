@@ -1,17 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@600;700;800;900&family=Hind+Siliguri:wght@400;500;600;700&display=swap');
+/* ==========================================================
+   MUHAMMAD ASHRAF — BRAND & VISUAL DESIGNER PORTFOLIO
+   High-End Editorial Dark Theme (Awwwards-Standard)
+   ========================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap');
 
 :root {
-  --bg-main: #08080b;
-  --bg-card: rgba(18, 18, 23, 0.75);
-  --bg-card-hover: rgba(28, 28, 36, 0.9);
-  --border-color: rgba(255, 255, 255, 0.08);
-  --border-glow: rgba(255, 107, 0, 0.4);
-  --primary: #ff6b00;
-  --primary-glow: #ff8533;
-  --accent-amber: #ffaa00;
-  --accent-cyan: #38bdf8;
-  --text-main: #f4f4f7;
-  --text-muted: #9ca3af;
+  --bg-deep: #08080b;
+  --bg-surface: #101117;
+  --bg-card: rgba(18, 19, 26, 0.7);
+  --bg-card-hover: rgba(26, 28, 38, 0.85);
+  
+  --border-subtle: rgba(255, 255, 255, 0.07);
+  --border-focus: rgba(255, 107, 0, 0.45);
+  
+  --brand-orange: #ff6b00;
+  --brand-orange-hover: #ff7a1a;
+  --brand-amber: #ffaa00;
+  --brand-glow: rgba(255, 107, 0, 0.25);
+  
+  --text-primary: #ffffff;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
 }
 
 * {
@@ -25,139 +35,161 @@ html {
 }
 
 body {
-  font-family: 'Plus Jakarta Sans', 'Hind Siliguri', sans-serif;
-  background-color: var(--bg-main);
-  color: var(--text-main);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: var(--bg-deep);
+  color: var(--text-primary);
   overflow-x: hidden;
   line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 h1, h2, h3, h4, .font-heading {
-  font-family: 'Syne', 'Hind Siliguri', sans-serif;
+  font-family: 'Outfit', sans-serif;
+  letter-spacing: -0.025em;
 }
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 7px;
 }
 ::-webkit-scrollbar-track {
   background: #08080b;
 }
 ::-webkit-scrollbar-thumb {
-  background: #23232c;
+  background: #20222e;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #ff6b00;
+  background: var(--brand-orange);
 }
 
-/* Background Gradients & Grid */
-.bg-grid-pattern {
-  background-size: 40px 40px;
-  background-image: 
-    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-}
-
-.glow-orb {
+/* Background Atmosphere */
+.ambient-glow {
   position: absolute;
   border-radius: 50%;
-  filter: blur(130px);
+  filter: blur(140px);
   pointer-events: none;
   z-index: 0;
-  opacity: 0.35;
 }
 
-.glow-orb-orange {
-  background: radial-gradient(circle, #ff6b00 0%, rgba(255, 107, 0, 0) 70%);
+.ambient-glow-1 {
+  width: 650px;
+  height: 650px;
+  top: -120px;
+  right: -100px;
+  background: radial-gradient(circle, rgba(255, 107, 0, 0.18) 0%, rgba(255, 107, 0, 0) 70%);
 }
 
-.glow-orb-amber {
-  background: radial-gradient(circle, #ffaa00 0%, rgba(255, 170, 0, 0) 70%);
+.ambient-glow-2 {
+  width: 700px;
+  height: 700px;
+  top: 45%;
+  left: -200px;
+  background: radial-gradient(circle, rgba(255, 170, 0, 0.12) 0%, rgba(255, 170, 0, 0) 70%);
 }
 
-.glow-orb-dark {
-  background: radial-gradient(circle, #e05300 0%, rgba(0, 0, 0, 0) 70%);
+.ambient-glow-3 {
+  width: 600px;
+  height: 600px;
+  bottom: 5%;
+  right: -100px;
+  background: radial-gradient(circle, rgba(255, 107, 0, 0.14) 0%, rgba(255, 107, 0, 0) 70%);
 }
 
-/* Glassmorphism Classes */
-.glass-panel {
+.bg-dot-grid {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* Glassmorphism & Cards */
+.glass-nav {
+  background: rgba(8, 8, 11, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.editorial-card {
   background: var(--bg-card);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-  border: 1px solid var(--border-color);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-subtle);
+  border-radius: 1.5rem;
   transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.glass-panel:hover {
-  border-color: var(--border-glow);
-  box-shadow: 0 12px 35px -10px rgba(255, 107, 0, 0.25);
-}
-
-.glass-nav {
-  background: rgba(8, 8, 11, 0.88);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--border-color);
+.editorial-card:hover {
+  border-color: var(--border-focus);
+  box-shadow: 0 16px 40px -15px var(--brand-glow);
+  transform: translateY(-3px);
 }
 
 /* Gradient Text */
-.text-gradient {
-  background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 50%, #ff6b00 100%);
+.gradient-text-orange {
+  background: linear-gradient(135deg, #ffffff 20%, #ffaa4d 60%, #ff6b00 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.text-gradient-orange {
-  background: linear-gradient(135deg, #ff944d 0%, #ff6b00 50%, #e05300 100%);
+.gradient-text-gold {
+  background: linear-gradient(135deg, #ffcc00 0%, #ff6b00 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.text-gradient-amber {
-  background: linear-gradient(135deg, #ffcc00 0%, #ff7700 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+/* Clean Portrait Frame */
+.portrait-container {
+  position: relative;
 }
 
-/* Marquee / Infinite Ticker Animation */
+.portrait-container::after {
+  content: '';
+  position: absolute;
+  inset: -15px;
+  background: radial-gradient(circle at center, rgba(255, 107, 0, 0.35) 0%, transparent 70%);
+  z-index: -1;
+  border-radius: 2rem;
+  filter: blur(20px);
+}
+
+/* Infinite Ticker */
 .marquee-container {
   overflow: hidden;
   white-space: nowrap;
-  position: relative;
-  mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
-  -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
 }
 
-.marquee-content {
+.marquee-track {
   display: inline-flex;
-  gap: 2rem;
-  animation: marquee-scroll 25s linear infinite;
+  gap: 2.5rem;
+  animation: scroll-ticker 28s linear infinite;
 }
 
-.marquee-container:hover .marquee-content {
+.marquee-container:hover .marquee-track {
   animation-play-state: paused;
 }
 
-@keyframes marquee-scroll {
+@keyframes scroll-ticker {
   0% { transform: translateX(0%); }
   100% { transform: translateX(-50%); }
 }
 
-/* Before & After Interactive Slider */
-.ba-slider-container {
+/* Interactive Before & After Slider */
+.ba-container {
   position: relative;
   width: 100%;
   aspect-ratio: 16 / 9;
-  overflow: hidden;
   border-radius: 1.25rem;
+  overflow: hidden;
   user-select: none;
   touch-action: pan-y;
-  box-shadow: 0 20px 50px -15px rgba(0, 0, 0, 0.8);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--border-subtle);
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.9);
 }
 
-.ba-slider-image {
+.ba-image {
   position: absolute;
   top: 0;
   left: 0;
@@ -166,19 +198,18 @@ h1, h2, h3, h4, .font-heading {
   object-fit: cover;
 }
 
-.ba-slider-before {
+.ba-before-layer {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 50%;
   height: 100%;
   overflow: hidden;
-  width: 50%;
-  border-right: 2px solid #ff6b00;
-  box-shadow: 2px 0 20px rgba(255, 107, 0, 0.7);
+  border-right: 2px solid var(--brand-orange);
+  box-shadow: 2px 0 25px rgba(255, 107, 0, 0.7);
 }
 
-.ba-slider-before img {
+.ba-before-layer img {
   position: absolute;
   top: 0;
   left: 0;
@@ -186,98 +217,55 @@ h1, h2, h3, h4, .font-heading {
   max-width: none;
 }
 
-.ba-slider-handle {
+.ba-handle {
   position: absolute;
   top: 0;
   bottom: 0;
   left: 50%;
   width: 4px;
-  background: #ff8533;
-  cursor: ew-resize;
+  background: var(--brand-orange);
   transform: translateX(-50%);
+  cursor: ew-resize;
   z-index: 20;
 }
 
-.ba-slider-button {
+.ba-handle-btn {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 46px;
-  height: 46px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
-  background: #ff6b00;
-  color: #fff;
+  background: var(--brand-orange);
+  color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 0 25px rgba(255, 107, 0, 0.85), 0 0 0 3px rgba(255, 255, 255, 0.25);
-  cursor: ew-resize;
-  transition: transform 0.2s, background 0.2s;
+  box-shadow: 0 0 25px rgba(255, 107, 0, 0.8), 0 0 0 3px rgba(255, 255, 255, 0.2);
+  transition: transform 0.2s ease, background 0.2s ease;
 }
 
-.ba-slider-handle:hover .ba-slider-button,
-.ba-slider-container.active .ba-slider-button {
-  transform: translate(-50%, -50%) scale(1.15);
-  background: #e05300;
+.ba-handle:hover .ba-handle-btn,
+.ba-container.active .ba-handle-btn {
+  transform: translate(-50%, -50%) scale(1.12);
+  background: #ff7a1a;
 }
 
-.ba-badge {
-  position: absolute;
-  padding: 6px 14px;
-  border-radius: 9999px;
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  z-index: 10;
-  pointer-events: none;
-  backdrop-filter: blur(8px);
-}
-
-.ba-badge-before {
-  top: 1rem;
-  left: 1rem;
-  background: rgba(0, 0, 0, 0.7);
-  color: #e2e8f0;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-}
-
-.ba-badge-after {
-  top: 1rem;
-  right: 1rem;
-  background: rgba(255, 107, 0, 0.35);
-  color: #ffcc99;
-  border: 1px solid rgba(255, 107, 0, 0.5);
-}
-
-/* Profile Photo Glow Effect */
-.profile-frame {
-  position: relative;
-}
-
-.profile-frame::before {
-  content: '';
-  position: absolute;
-  inset: -4px;
-  background: linear-gradient(135deg, #ff6b00, #ffaa00, #ff3b00);
-  border-radius: 1.5rem;
-  z-index: -1;
-  filter: blur(15px);
-  opacity: 0.6;
-  transition: opacity 0.3s ease;
-}
-
-.profile-frame:hover::before {
-  opacity: 0.85;
-}
-
-/* Portfolio Card Hover Effects */
+/* Portfolio Card Hover */
 .portfolio-card {
   position: relative;
   border-radius: 1.25rem;
   overflow: hidden;
+  background: #0f1016;
+  border: 1px solid var(--border-subtle);
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.portfolio-card:hover {
+  border-color: var(--border-focus);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px -15px var(--brand-glow);
 }
 
 .portfolio-card img {
@@ -285,16 +273,16 @@ h1, h2, h3, h4, .font-heading {
 }
 
 .portfolio-card:hover img {
-  transform: scale(1.06);
+  transform: scale(1.05);
 }
 
-.portfolio-card .overlay {
-  background: linear-gradient(to top, rgba(8, 8, 11, 0.95) 0%, rgba(8, 8, 11, 0.4) 60%, transparent 100%);
+.portfolio-overlay {
+  background: linear-gradient(to top, rgba(8, 8, 11, 0.95) 0%, rgba(8, 8, 11, 0.5) 50%, transparent 100%);
   opacity: 0;
   transition: opacity 0.3s ease;
 }
 
-.portfolio-card:hover .overlay {
+.portfolio-card:hover .portfolio-overlay {
   opacity: 1;
 }
 
@@ -304,7 +292,7 @@ h1, h2, h3, h4, .font-heading {
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.94);
-  backdrop-filter: blur(14px);
+  backdrop-filter: blur(16px);
   z-index: 9999;
   align-items: center;
   justify-content: center;
@@ -314,50 +302,5 @@ h1, h2, h3, h4, .font-heading {
 
 .lightbox-modal.active {
   display: flex;
-  opacity: 1;
-}
-
-/* WhatsApp Floating Button */
-.whatsapp-float {
-  position: fixed;
-  bottom: 28px;
-  right: 28px;
-  width: 60px;
-  height: 60px;
-  background: #25D366;
-  color: white;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 30px;
-  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
-  z-index: 999;
-  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s;
-}
-
-.whatsapp-float:hover {
-  transform: scale(1.12) rotate(8deg);
-  box-shadow: 0 12px 30px rgba(37, 211, 102, 0.6);
-}
-
-.whatsapp-float .tooltip {
-  visibility: hidden;
-  position: absolute;
-  right: 72px;
-  background: #181820;
-  color: white;
-  padding: 6px 14px;
-  border-radius: 8px;
-  font-size: 0.85rem;
-  white-space: nowrap;
-  opacity: 0;
-  transition: opacity 0.3s;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-}
-
-.whatsapp-float:hover .tooltip {
-  visibility: visible;
   opacity: 1;
 }

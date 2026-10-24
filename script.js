@@ -16,9 +16,11 @@ function initBeforeAfterSlider() {
   const container = document.getElementById('baSlider');
   if (!container) return;
 
-  const beforeLayer = container.querySelector('.ba-slider-before');
-  const beforeImg = beforeLayer.querySelector('img');
-  const handle = container.querySelector('.ba-slider-handle');
+  const beforeLayer = container.querySelector('.ba-before-layer') || container.querySelector('.ba-slider-before');
+  const beforeImg = beforeLayer ? beforeLayer.querySelector('img') : null;
+  const handle = container.querySelector('.ba-handle') || container.querySelector('.ba-slider-handle');
+
+  if (!beforeLayer || !beforeImg || !handle) return;
 
   function updateImageWidth() {
     const width = container.offsetWidth;
