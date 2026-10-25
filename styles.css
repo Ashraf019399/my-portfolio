@@ -396,14 +396,25 @@ h1, h2, h3, h4, .font-heading {
 
 /* ==========================================================
    DESIGNMONKS-STYLE FLOATING SOCIAL PROOF MARQUEE CAPSULE
+   Electric Orange to Luminous Off-White Gradient (Brand Calibrated)
    ========================================================== */
 .social-proof-capsule {
-  background: #d8ff44; /* High-Contrast Neon Electric Lime */
+  background: linear-gradient(
+    105deg,
+    #ff6b00 0%,
+    #ff7f1a 14%,
+    #ffaa33 26%,
+    #ffffff 42%,
+    #fff8f0 54%,
+    #ffa938 72%,
+    #ff6b00 100%
+  );
   color: #08080b;
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.7);
   box-shadow: 
-    0 16px 45px -10px rgba(216, 255, 68, 0.4),
-    0 4px 15px rgba(0, 0, 0, 0.5);
+    0 18px 50px -10px rgba(255, 107, 0, 0.45),
+    0 4px 15px rgba(0, 0, 0, 0.5),
+    inset 0 1px 1.5px rgba(255, 255, 255, 0.85);
   position: relative;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -411,8 +422,9 @@ h1, h2, h3, h4, .font-heading {
 .social-proof-capsule:hover {
   transform: translateY(-2px);
   box-shadow: 
-    0 22px 55px -10px rgba(216, 255, 68, 0.55),
-    0 6px 20px rgba(0, 0, 0, 0.6);
+    0 24px 60px -10px rgba(255, 107, 0, 0.6),
+    0 6px 20px rgba(0, 0, 0, 0.6),
+    inset 0 1px 2px rgba(255, 255, 255, 0.95);
 }
 
 .marquee-capsule-track-wrap {
