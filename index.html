@@ -45,17 +45,24 @@
 </head>
 <body class="bg-[#08080b] text-[#f4f4f7] antialiased relative selection:bg-[#ff6b00] selection:text-white">
 
-  <!-- Ambient Glowing Atmosphere -->
-  <div class="ambient-glow ambient-glow-1"></div>
+  <!-- Top Atmospheric Aurora Gradient (Vyro 2026 Style in Electric Orange & Amber) -->
+  <div class="top-aurora-atmosphere">
+    <div class="aurora-header-sweep"></div>
+    <div class="aurora-glow-primary"></div>
+    <div class="aurora-glow-left"></div>
+    <div class="aurora-glow-right"></div>
+  </div>
+
+  <!-- Ambient Glowing Atmosphere (Middle & Bottom) -->
   <div class="ambient-glow ambient-glow-2"></div>
   <div class="ambient-glow ambient-glow-3"></div>
 
   <!-- Floating Island Capsule Header (VYRO / Awwwards 2026 Style) -->
-  <header class="fixed top-4 inset-x-0 z-50 px-4 sm:px-6 transition-all duration-300">
-    <div class="max-w-6xl mx-auto rounded-full floating-capsule-nav px-4 sm:px-6 h-16 flex items-center justify-between">
+  <header class="fixed top-5 inset-x-0 z-50 px-4 sm:px-6 transition-all duration-300">
+    <div class="max-w-6xl mx-auto rounded-full floating-capsule-nav px-5 sm:px-7 h-16 flex items-center justify-between">
       
       <!-- Brand Logo -->
-      <a href="#" class="flex items-center gap-2.5 group">
+      <a href="#" class="flex items-center gap-3 group">
         <div class="w-9 h-9 rounded-full bg-gradient-to-tr from-[#ff6b00] to-[#ffaa00] p-[2px] shadow-lg shadow-[#ff6b00]/30 group-hover:shadow-[#ff6b00]/60 transition-all">
           <div class="w-full h-full bg-[#08080b] rounded-full flex items-center justify-center font-bold text-[#ff6b00] font-heading text-sm">
             MA
@@ -69,8 +76,8 @@
         </div>
       </a>
 
-      <!-- Desktop Floating Pill Navigation (VYRO Capsule Style) -->
-      <nav class="hidden md:flex items-center gap-1 bg-white/[0.03] p-1 rounded-full border border-white/[0.06]">
+      <!-- Desktop Floating Pill Navigation Track (VYRO Capsule Style) -->
+      <nav class="hidden md:flex items-center gap-1 nav-pill-track">
         <a href="#home" class="nav-pill-item active">Home</a>
         <a href="#services" class="nav-pill-item">Services</a>
         <a href="#showcase" class="nav-pill-item">Portfolio</a>
@@ -79,11 +86,11 @@
         <a href="#reviews" class="nav-pill-item">Reviews</a>
       </nav>
 
-      <!-- CTA Button (Capsule Glassmorphism) -->
+      <!-- CTA Button (Vyro Pre-Order Pill Style with Orange Accent) -->
       <div class="hidden md:flex items-center">
-        <a href="#contact" class="glass-btn-primary !py-2 !px-5 !text-xs !shadow-md">
+        <a href="#contact" class="header-glass-cta">
+          <i class="fa-solid fa-paper-plane text-[11px] text-[#ff8533]"></i>
           <span>Let's Talk</span>
-          <i class="fa-solid fa-arrow-right text-[10px]"></i>
         </a>
       </div>
 
