@@ -394,6 +394,53 @@ h1, h2, h3, h4, .font-heading {
   filter: blur(20px);
 }
 
+/* ==========================================================
+   DESIGNMONKS-STYLE FLOATING SOCIAL PROOF MARQUEE CAPSULE
+   ========================================================== */
+.social-proof-capsule {
+  background: #d8ff44; /* High-Contrast Neon Electric Lime */
+  color: #08080b;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 
+    0 16px 45px -10px rgba(216, 255, 68, 0.4),
+    0 4px 15px rgba(0, 0, 0, 0.5);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-proof-capsule:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    0 22px 55px -10px rgba(216, 255, 68, 0.55),
+    0 6px 20px rgba(0, 0, 0, 0.6);
+}
+
+.marquee-capsule-track-wrap {
+  mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+}
+
+.marquee-capsule-track {
+  width: max-content;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  animation: runCapsuleMarquee 26s linear infinite;
+}
+
+.social-proof-capsule:hover .marquee-capsule-track {
+  animation-play-state: paused;
+}
+
+@keyframes runCapsuleMarquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
 /* Infinite Ticker (Marquee) */
 .marquee-container {
   overflow: hidden;
