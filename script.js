@@ -232,7 +232,7 @@ function initMobileMenu() {
 
   // Active floating pill highlight on scroll
   const sections = document.querySelectorAll('section[id]');
-  const navPills = document.querySelectorAll('.nav-pill-item');
+  const navPills = document.querySelectorAll('.vyro-nav-item, .nav-pill-item');
   if (navPills.length > 0 && sections.length > 0) {
     window.addEventListener('scroll', () => {
       let current = '';

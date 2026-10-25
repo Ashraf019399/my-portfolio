@@ -45,26 +45,26 @@
 </head>
 <body class="bg-[#08080b] text-[#f4f4f7] antialiased relative selection:bg-[#ff6b00] selection:text-white">
 
-  <!-- Top Atmospheric Aurora Gradient (Vyro 2026 Style in Electric Orange & Amber) -->
+  <!-- Ethereal Off-White & Warm Amber Aurora Gradient (VYRO Inspiration) -->
   <div class="top-aurora-atmosphere">
     <div class="aurora-header-sweep"></div>
-    <div class="aurora-glow-primary"></div>
-    <div class="aurora-glow-left"></div>
-    <div class="aurora-glow-right"></div>
+    <div class="aurora-offwhite-glow"></div>
+    <div class="aurora-glow-center"></div>
+    <div class="aurora-portrait-glow"></div>
   </div>
 
   <!-- Ambient Glowing Atmosphere (Middle & Bottom) -->
   <div class="ambient-glow ambient-glow-2"></div>
   <div class="ambient-glow ambient-glow-3"></div>
 
-  <!-- Floating Island Capsule Header (VYRO / Awwwards 2026 Style) -->
-  <header class="fixed top-5 inset-x-0 z-50 px-4 sm:px-6 transition-all duration-300">
-    <div class="max-w-6xl mx-auto rounded-full floating-capsule-nav px-5 sm:px-7 h-16 flex items-center justify-between">
+  <!-- Header: VYRO-Exact Transparent Float Layout (Logo Left, Glass Pill Center, Pill CTA Right) -->
+  <header class="fixed top-6 inset-x-0 z-50 px-4 sm:px-8 transition-all duration-300">
+    <div class="vyro-header-wrap">
       
-      <!-- Brand Logo -->
-      <a href="#" class="flex items-center gap-3 group">
-        <div class="w-9 h-9 rounded-full bg-gradient-to-tr from-[#ff6b00] to-[#ffaa00] p-[2px] shadow-lg shadow-[#ff6b00]/30 group-hover:shadow-[#ff6b00]/60 transition-all">
-          <div class="w-full h-full bg-[#08080b] rounded-full flex items-center justify-center font-bold text-[#ff6b00] font-heading text-sm">
+      <!-- 1. Left: Clean Standalone Brand Logo -->
+      <a href="#" class="flex items-center gap-2.5 group">
+        <div class="w-9 h-9 rounded-full bg-white/[0.08] border border-white/20 p-[2px] shadow-sm group-hover:border-[#ff6b00] transition-all">
+          <div class="w-full h-full bg-[#08080b] rounded-full flex items-center justify-center font-bold text-white font-heading text-xs group-hover:text-[#ff6b00] transition-colors">
             MA
           </div>
         </div>
@@ -76,26 +76,26 @@
         </div>
       </a>
 
-      <!-- Desktop Floating Pill Navigation Track (VYRO Capsule Style) -->
-      <nav class="hidden md:flex items-center gap-1 nav-pill-track">
-        <a href="#home" class="nav-pill-item active">Home</a>
-        <a href="#services" class="nav-pill-item">Services</a>
-        <a href="#showcase" class="nav-pill-item">Portfolio</a>
-        <a href="#before-after" class="nav-pill-item">Workflow</a>
-        <a href="#pricing" class="nav-pill-item">Packages</a>
-        <a href="#reviews" class="nav-pill-item">Reviews</a>
+      <!-- 2. Center: Dedicated Floating Glass Nav Capsule (Exact VYRO Style) -->
+      <nav class="hidden md:flex items-center gap-1 vyro-nav-capsule">
+        <a href="#home" class="vyro-nav-item active">Home</a>
+        <a href="#services" class="vyro-nav-item">Services</a>
+        <a href="#showcase" class="vyro-nav-item">Portfolio</a>
+        <a href="#before-after" class="vyro-nav-item">Workflow</a>
+        <a href="#pricing" class="vyro-nav-item">Packages</a>
+        <a href="#reviews" class="vyro-nav-item">Reviews</a>
       </nav>
 
-      <!-- CTA Button (Vyro Pre-Order Pill Style with Orange Accent) -->
+      <!-- 3. Right: Standalone Glass CTA Pill Button (Exact VYRO Style) -->
       <div class="hidden md:flex items-center">
-        <a href="#contact" class="header-glass-cta">
-          <i class="fa-solid fa-paper-plane text-[11px] text-[#ff8533]"></i>
+        <a href="#contact" class="vyro-cta-btn">
+          <i class="fa-solid fa-paper-plane text-[10px] text-[#ff8533]"></i>
           <span>Let's Talk</span>
         </a>
       </div>
 
       <!-- Mobile Menu Toggle Button -->
-      <button id="mobileMenuToggle" class="md:hidden text-gray-300 hover:text-white text-xl p-2 focus:outline-none" aria-label="Toggle Navigation">
+      <button id="mobileMenuToggle" class="md:hidden text-gray-300 hover:text-white text-lg p-2.5 rounded-full bg-white/[0.06] border border-white/10 backdrop-blur-md focus:outline-none" aria-label="Toggle Navigation">
         <i class="fa-solid fa-bars-staggered"></i>
       </button>
 
