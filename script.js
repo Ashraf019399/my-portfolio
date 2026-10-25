@@ -229,6 +229,29 @@ function initMobileMenu() {
       menu.classList.add('hidden');
     });
   });
+
+  // Active floating pill highlight on scroll
+  const sections = document.querySelectorAll('section[id]');
+  const navPills = document.querySelectorAll('.nav-pill-item');
+  if (navPills.length > 0 && sections.length > 0) {
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 140;
+        if (window.scrollY >= sectionTop) {
+          current = section.getAttribute('id');
+        }
+      });
+      if (current) {
+        navPills.forEach(pill => {
+          pill.classList.remove('active');
+          if (pill.getAttribute('href') === `#${current}`) {
+            pill.classList.add('active');
+          }
+        });
+      }
+    }, { passive: true });
+  }
 }
 
 /* ==========================================================

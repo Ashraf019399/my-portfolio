@@ -119,6 +119,38 @@ h1, h2, h3, h4, .font-heading {
   border-bottom: 1px solid var(--border-subtle);
 }
 
+/* Floating Island Capsule Header (VYRO / Awwwards Style) */
+.floating-capsule-nav {
+  background: rgba(14, 15, 23, 0.78);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 
+    0 20px 45px -10px rgba(0, 0, 0, 0.75),
+    inset 0 1px 1px rgba(255, 255, 255, 0.15);
+}
+
+.nav-pill-item {
+  color: #94a3b8;
+  font-size: 0.8125rem;
+  padding: 0.45rem 1rem;
+  border-radius: 9999px;
+  transition: all 0.25s ease;
+  text-decoration: none;
+}
+
+.nav-pill-item:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.nav-pill-item.active {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.2);
+}
+
 /* Editorial Glass Card */
 .editorial-card {
   background: var(--bg-card);

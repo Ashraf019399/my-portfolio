@@ -50,59 +50,59 @@
   <div class="ambient-glow ambient-glow-2"></div>
   <div class="ambient-glow ambient-glow-3"></div>
 
-  <!-- Header / Navigation -->
-  <header class="fixed top-0 left-0 right-0 z-50 glass-nav transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+  <!-- Floating Island Capsule Header (VYRO / Awwwards 2026 Style) -->
+  <header class="fixed top-4 inset-x-0 z-50 px-4 sm:px-6 transition-all duration-300">
+    <div class="max-w-6xl mx-auto rounded-full floating-capsule-nav px-4 sm:px-6 h-16 flex items-center justify-between">
       
       <!-- Brand Logo -->
-      <a href="#" class="flex items-center gap-3 group">
-        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#ff6b00] to-[#ffaa00] p-[2px] shadow-lg shadow-[#ff6b00]/25 group-hover:shadow-[#ff6b00]/50 transition-all">
-          <div class="w-full h-full bg-[#08080b] rounded-[10px] flex items-center justify-center font-bold text-[#ff6b00] font-heading text-lg">
+      <a href="#" class="flex items-center gap-2.5 group">
+        <div class="w-9 h-9 rounded-full bg-gradient-to-tr from-[#ff6b00] to-[#ffaa00] p-[2px] shadow-lg shadow-[#ff6b00]/30 group-hover:shadow-[#ff6b00]/60 transition-all">
+          <div class="w-full h-full bg-[#08080b] rounded-full flex items-center justify-center font-bold text-[#ff6b00] font-heading text-sm">
             MA
           </div>
         </div>
         <div class="flex flex-col">
-          <span class="font-heading font-bold text-lg tracking-tight text-white group-hover:text-[#ff6b00] transition-colors">
+          <span class="font-heading font-bold text-base tracking-tight text-white group-hover:text-[#ff6b00] transition-colors leading-none">
             ASHRAF<span class="text-[#ff6b00]">.</span>DESIGN
           </span>
-          <span class="text-[10px] font-semibold text-gray-400 tracking-wider uppercase">Brand Identity & Visuals</span>
+          <span class="text-[9px] font-semibold text-gray-400 tracking-wider uppercase mt-0.5">Brand & Visuals</span>
         </div>
       </a>
 
-      <!-- Desktop Navigation Links -->
-      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-300">
-        <a href="#home" class="hover:text-[#ff6b00] transition-colors">Home</a>
-        <a href="#services" class="hover:text-[#ff6b00] transition-colors">Services</a>
-        <a href="#showcase" class="hover:text-[#ff6b00] transition-colors">Portfolio</a>
-        <a href="#before-after" class="hover:text-[#ff6b00] transition-colors">Workflow</a>
-        <a href="#pricing" class="hover:text-[#ff6b00] transition-colors">Packages</a>
-        <a href="#reviews" class="hover:text-[#ff6b00] transition-colors">Reviews</a>
+      <!-- Desktop Floating Pill Navigation (VYRO Capsule Style) -->
+      <nav class="hidden md:flex items-center gap-1 bg-white/[0.03] p-1 rounded-full border border-white/[0.06]">
+        <a href="#home" class="nav-pill-item active">Home</a>
+        <a href="#services" class="nav-pill-item">Services</a>
+        <a href="#showcase" class="nav-pill-item">Portfolio</a>
+        <a href="#before-after" class="nav-pill-item">Workflow</a>
+        <a href="#pricing" class="nav-pill-item">Packages</a>
+        <a href="#reviews" class="nav-pill-item">Reviews</a>
       </nav>
 
-      <!-- CTA Button -->
-      <div class="hidden md:flex items-center gap-4">
-        <a href="#contact" class="glass-btn-primary !py-2 !px-5 !text-xs">
+      <!-- CTA Button (Capsule Glassmorphism) -->
+      <div class="hidden md:flex items-center">
+        <a href="#contact" class="glass-btn-primary !py-2 !px-5 !text-xs !shadow-md">
           <span>Let's Talk</span>
           <i class="fa-solid fa-arrow-right text-[10px]"></i>
         </a>
       </div>
 
       <!-- Mobile Menu Toggle Button -->
-      <button id="mobileMenuToggle" class="md:hidden text-gray-300 hover:text-white text-2xl focus:outline-none" aria-label="Toggle Navigation">
+      <button id="mobileMenuToggle" class="md:hidden text-gray-300 hover:text-white text-xl p-2 focus:outline-none" aria-label="Toggle Navigation">
         <i class="fa-solid fa-bars-staggered"></i>
       </button>
 
     </div>
 
     <!-- Mobile Dropdown Menu -->
-    <div id="mobileMenu" class="hidden md:hidden editorial-card border-t border-white/10 mx-4 mt-2 px-6 py-6 space-y-4">
-      <a href="#home" class="block text-gray-300 hover:text-[#ff6b00] font-medium">Home</a>
-      <a href="#services" class="block text-gray-300 hover:text-[#ff6b00] font-medium">Services</a>
-      <a href="#showcase" class="block text-gray-300 hover:text-[#ff6b00] font-medium">Portfolio</a>
-      <a href="#before-after" class="block text-gray-300 hover:text-[#ff6b00] font-medium">Workflow</a>
-      <a href="#pricing" class="block text-gray-300 hover:text-[#ff6b00] font-medium">Packages</a>
-      <a href="#reviews" class="block text-gray-300 hover:text-[#ff6b00] font-medium">Reviews</a>
-      <a href="#contact" class="block w-full text-center py-3 rounded-xl bg-[#ff6b00] text-white font-semibold shadow-md">
+    <div id="mobileMenu" class="hidden md:hidden editorial-card border border-white/10 max-w-lg mx-auto mt-2 px-6 py-6 space-y-4 rounded-2xl shadow-2xl bg-[#0e0f17]/95 backdrop-blur-2xl">
+      <a href="#home" class="block text-gray-300 hover:text-[#ff6b00] font-medium text-sm">Home</a>
+      <a href="#services" class="block text-gray-300 hover:text-[#ff6b00] font-medium text-sm">Services</a>
+      <a href="#showcase" class="block text-gray-300 hover:text-[#ff6b00] font-medium text-sm">Portfolio</a>
+      <a href="#before-after" class="block text-gray-300 hover:text-[#ff6b00] font-medium text-sm">Workflow</a>
+      <a href="#pricing" class="block text-gray-300 hover:text-[#ff6b00] font-medium text-sm">Packages</a>
+      <a href="#reviews" class="block text-gray-300 hover:text-[#ff6b00] font-medium text-sm">Reviews</a>
+      <a href="#contact" class="block w-full text-center py-2.5 rounded-full glass-btn-primary text-xs font-semibold shadow-md">
         Get in Touch
       </a>
     </div>
@@ -123,9 +123,9 @@
           </span>
         </div>
 
-        <!-- Master Headline with Lumina-Style Font Pairing -->
-        <h1 class="font-heading text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.1] mb-6 text-white">
-          Crafting <span class="font-serif-italic gradient-text-orange font-normal text-[1.18em] tracking-normal">Brand Identities</span> & High-Impact Visuals.
+        <!-- Master Headline with Lumina-Style Font Pairing (No hyphen, no period) -->
+        <h1 class="font-heading text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.12] mb-6 text-white">
+          Crafting <span class="font-serif-italic gradient-text-orange font-normal text-[1.18em] tracking-normal">Brand Identities</span> <br class="hidden sm:inline">& High Impact Visuals
         </h1>
 
         <!-- Subtitle -->
@@ -170,20 +170,20 @@
             <div class="relative aspect-[4/5] overflow-hidden bg-black">
               <img src="assets/profile.jpg" alt="Muhammad Ashraf — Brand & Visual Designer" class="w-full h-full object-cover">
               
-              <!-- Subtle Bottom Vignette & Metadata -->
-              <div class="absolute inset-x-0 bottom-0 p-5 bg-gradient-to-t from-[#08080b] via-[#08080b]/80 to-transparent">
-                <div class="flex items-center gap-2 mb-1">
-                  <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+              <!-- Subtle Bottom Vignette & Metadata (Full Visibility & Clean Typography) -->
+              <div class="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-[#08080b] via-[#08080b]/85 to-transparent">
+                <div class="flex items-center gap-2 mb-1.5">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
                   <span class="text-[11px] font-bold text-[#ffaa4d] uppercase tracking-wider">Brand & Visual Designer</span>
                 </div>
-                <h3 class="font-heading font-bold text-xl text-white">Muhammad Ashraf</h3>
+                <h3 class="font-heading font-bold text-2xl text-white tracking-tight">Muhammad Ashraf</h3>
                 <p class="text-xs text-gray-400 mt-0.5">2+ Years Industry Experience</p>
               </div>
             </div>
           </div>
 
-          <!-- Floating Rotating Circular Name Badge -->
-          <div class="absolute -bottom-8 -left-8 z-20 hidden sm:block">
+          <!-- Floating Rotating Circular Name Badge (Repositioned to Top-Right to prevent name overlap) -->
+          <div class="absolute -top-7 -right-7 z-20 hidden sm:block">
             <a href="#showcase" class="rotating-badge-wrap group" aria-label="Explore Portfolio Showcase">
               <div class="rotating-badge-container">
                 <svg class="rotating-svg" viewBox="0 0 200 200">
