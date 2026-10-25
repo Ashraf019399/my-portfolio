@@ -395,6 +395,53 @@ h1, h2, h3, h4, .font-heading {
 }
 
 /* ==========================================================
+   INTERACTIVE LIQUID PORTRAIT EFFECT (TAP & MOUSE)
+   Fluid wave displacement and expanding water ripple shockwaves
+   ========================================================== */
+.liquid-distortion-target {
+  filter: url(#liquidRippleFilter);
+  will-change: filter, transform;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#portraitCard:hover .liquid-distortion-target {
+  transform: scale(1.02);
+}
+
+.liquid-ripple-ring {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(0.1);
+  border: 2px solid rgba(255, 170, 77, 0.85);
+  box-shadow: 
+    0 0 25px rgba(255, 107, 0, 0.65),
+    inset 0 0 15px rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  animation: liquidRippleShockwave 0.85s cubic-bezier(0.1, 0.8, 0.25, 1) forwards;
+  z-index: 15;
+}
+
+@keyframes liquidRippleShockwave {
+  0% {
+    width: 0px;
+    height: 0px;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(0.2);
+  }
+  40% {
+    opacity: 0.85;
+  }
+  100% {
+    width: 450px;
+    height: 450px;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.5);
+  }
+}
+
+/* ==========================================================
    DESIGNMONKS-STYLE FLOATING SOCIAL PROOF MARQUEE CAPSULE
    Electric Orange to Luminous Off-White Gradient (Brand Calibrated)
    ========================================================== */

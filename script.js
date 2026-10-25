@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initCounters();
   initMobileMenu();
   initContactForm();
+  initLiquidPortrait();
 });
 
 /* ==========================================================
@@ -273,5 +274,76 @@ function initContactForm() {
 
     // Open email client
     window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+  });
+}
+
+/* ==========================================================
+   7. Interactive Liquid Portrait Distortion & Water Ripple
+   ========================================================== */
+function initLiquidPortrait() {
+  const wrapper = document.getElementById('portraitLiquidWrapper');
+  const turb = document.getElementById('liquidTurbulence');
+  const disp = document.getElementById('liquidDisplacement');
+  if (!wrapper || !turb || !disp) return;
+
+  let animationFrame = null;
+  let intensity = 0;
+  let targetIntensity = 0;
+  let phase = 0;
+
+  function updateLiquid() {
+    // Damped fluid wave physics
+    intensity += (targetIntensity - intensity) * 0.14;
+    targetIntensity *= 0.93; // liquid calming decay
+
+    if (intensity > 0.01) {
+      phase += 0.08;
+      const currentScale = intensity * 42; // maximum displacement scale
+      const freqX = 0.018 + Math.sin(phase) * 0.01;
+      const freqY = 0.022 + Math.cos(phase * 1.3) * 0.012;
+
+      disp.setAttribute('scale', currentScale.toFixed(2));
+      turb.setAttribute('baseFrequency', `${freqX.toFixed(4)} ${freqY.toFixed(4)}`);
+      animationFrame = requestAnimationFrame(updateLiquid);
+    } else {
+      disp.setAttribute('scale', '0');
+      animationFrame = null;
+    }
+  }
+
+  function triggerRipple(x, y, power = 1.0) {
+    targetIntensity = Math.min(targetIntensity + power, 2.0);
+    if (!animationFrame) {
+      animationFrame = requestAnimationFrame(updateLiquid);
+    }
+
+    // Spawn expanding water ripple shockwave ring at exact touch/click point
+    const rect = wrapper.getBoundingClientRect();
+    const ripple = document.createElement('div');
+    ripple.className = 'liquid-ripple-ring';
+    ripple.style.left = `${x - rect.left}px`;
+    ripple.style.top = `${y - rect.top}px`;
+    wrapper.appendChild(ripple);
+
+    setTimeout(() => {
+      ripple.remove();
+    }, 900);
+  }
+
+  // Pointerdown captures both mobile tap and mouse click
+  wrapper.addEventListener('pointerdown', (e) => {
+    triggerRipple(e.clientX, e.clientY, 1.3);
+  });
+
+  // Pointermove creates a subtle fluid wake as finger or cursor glides over
+  wrapper.addEventListener('pointermove', (e) => {
+    if (e.buttons === 1 || e.pointerType === 'touch') {
+      targetIntensity = Math.max(targetIntensity, 0.9);
+    } else {
+      targetIntensity = Math.max(targetIntensity, 0.35);
+    }
+    if (!animationFrame) {
+      animationFrame = requestAnimationFrame(updateLiquid);
+    }
   });
 }
