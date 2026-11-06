@@ -958,12 +958,38 @@ h1, h2, h3, h4, .font-heading {
   transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), 
               box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
               border-color 0.35s ease;
-  overflow: hidden;
+  overflow: visible; /* Allows floating top badge to sit on border cleanly */
 }
 
 .pricing-spotlight-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 20px 45px -15px rgba(0, 0, 0, 0.7);
+}
+
+/* Floating Recommended Halo Badge (DesignMonks Exact) */
+.pricing-popular-badge {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.35rem 1.15rem;
+  border-radius: 9999px;
+  font-size: 0.6875rem; /* 11px */
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: linear-gradient(135deg, #ff7a1a 0%, #ff6b00 100%);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  box-shadow: 
+    0 8px 25px -4px rgba(255, 107, 0, 0.65),
+    0 2px 6px rgba(0, 0, 0, 0.3),
+    inset 0 1px 1.5px rgba(255, 255, 255, 0.7);
+  white-space: nowrap;
+  z-index: 20;
 }
 
 /* Spotlight Surface Glow (Follows cursor smoothly) */
