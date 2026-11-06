@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initContactForm();
   initLiquidPortrait();
   initBackToTop();
+  initSmartHeader();
 });
 
 /* ==========================================================
@@ -372,4 +373,46 @@ function initBackToTop() {
       behavior: 'smooth'
     });
   });
+}
+
+/* ==========================================================
+   9. Smart Auto-Hide Floating Header
+   Scroll down -> Hide smoothly (Full clean screen for artwork)
+   Scroll up   -> Reveal instantly (Effortless navigation & CTA)
+   ========================================================== */
+function initSmartHeader() {
+  const header = document.getElementById('mainHeader') || document.querySelector('header');
+  const mobileMenu = document.getElementById('mobileMenu');
+  if (!header) return;
+
+  let lastScrollY = window.scrollY;
+  const scrollThreshold = 10; // minimum scroll delta
+
+  window.addEventListener('scroll', () => {
+    const currentScrollY = window.scrollY;
+
+    // Do not hide if mobile menu is currently open
+    if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+      lastScrollY = currentScrollY;
+      return;
+    }
+
+    // Always show header near the top of the page (< 80px)
+    if (currentScrollY < 80) {
+      header.classList.remove('header-hidden');
+      lastScrollY = currentScrollY;
+      return;
+    }
+
+    // Scroll Down -> Hide Header
+    if (currentScrollY > lastScrollY + scrollThreshold) {
+      header.classList.add('header-hidden');
+    } 
+    // Scroll Up -> Show Header
+    else if (currentScrollY < lastScrollY - scrollThreshold) {
+      header.classList.remove('header-hidden');
+    }
+
+    lastScrollY = currentScrollY;
+  }, { passive: true });
 }
