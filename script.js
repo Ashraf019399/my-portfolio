@@ -11,6 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initBackToTop();
   initSmartHeader();
   initPricingSpotlight();
+  initPricingSwitcher();
+  initFaqAccordion();
 });
 
 /* ==========================================================
@@ -447,6 +449,67 @@ function initPricingSpotlight() {
       // Return smoothly to center when mouse leaves
       card.style.setProperty('--mouse-x', `50%`);
       card.style.setProperty('--mouse-y', `50%`);
+    });
+  });
+}
+
+/* ==========================================================
+   11. DesignMonks Plan Switcher (One-Off vs Monthly Retainer)
+   ========================================================== */
+function initPricingSwitcher() {
+  const btnOneOff = document.getElementById('btnPlanOneOff');
+  const btnRetainer = document.getElementById('btnPlanRetainer');
+  const gridOneOff = document.getElementById('pricingGridOneOff');
+  const gridRetainer = document.getElementById('pricingGridRetainer');
+
+  if (!btnOneOff || !btnRetainer || !gridOneOff || !gridRetainer) return;
+
+  btnOneOff.addEventListener('click', () => {
+    if (btnOneOff.classList.contains('active')) return;
+    btnOneOff.classList.add('active');
+    btnRetainer.classList.remove('active');
+
+    gridRetainer.classList.add('hidden-pane');
+    gridOneOff.classList.remove('hidden-pane');
+
+    initPricingSpotlight();
+  });
+
+  btnRetainer.addEventListener('click', () => {
+    if (btnRetainer.classList.contains('active')) return;
+    btnRetainer.classList.add('active');
+    btnOneOff.classList.remove('active');
+
+    gridOneOff.classList.add('hidden-pane');
+    gridRetainer.classList.remove('hidden-pane');
+
+    initPricingSpotlight();
+  });
+}
+
+/* ==========================================================
+   12. DesignMonks-Style Pricing FAQ Accordion
+   ========================================================== */
+function initFaqAccordion() {
+  const triggers = document.querySelectorAll('.faq-trigger');
+  if (!triggers.length) return;
+
+  triggers.forEach(trigger => {
+    trigger.addEventListener('click', () => {
+      const currentItem = trigger.closest('.faq-item');
+      if (!currentItem) return;
+
+      const isOpen = currentItem.classList.contains('active');
+
+      // Close all items
+      document.querySelectorAll('.faq-item').forEach(item => {
+        item.classList.remove('active');
+      });
+
+      // Toggle clicked item
+      if (!isOpen) {
+        currentItem.classList.add('active');
+      }
     });
   });
 }
