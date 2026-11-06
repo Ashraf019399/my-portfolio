@@ -943,3 +943,202 @@ h1, h2, h3, h4, .font-heading {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+/* ==========================================================
+   DESIGNMONKS-GRADE PRICING SPOTLIGHT CARDS
+   Mouse-tracking radial glow + breathing neon border + magnetic CTA
+   ========================================================== */
+.pricing-spotlight-card {
+  position: relative;
+  border-radius: 1.75rem;
+  background: rgba(13, 14, 21, 0.78);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), 
+              box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.35s ease;
+  overflow: hidden;
+}
+
+.pricing-spotlight-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 45px -15px rgba(0, 0, 0, 0.7);
+}
+
+/* Spotlight Surface Glow (Follows cursor smoothly) */
+.pricing-spotlight-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(
+    600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(255, 107, 0, 0.09),
+    transparent 50%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.pricing-spotlight-card:hover::before {
+  opacity: 1;
+}
+
+/* Spotlight Border Illumination (Follows cursor along borders like DesignMonks/Framer) */
+.pricing-spotlight-card::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: radial-gradient(
+    450px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(255, 170, 77, 0.65),
+    transparent 50%
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.pricing-spotlight-card:hover::after {
+  opacity: 1;
+}
+
+/* Recommended Featured Card - Animated Breathing Halo Glow */
+.pricing-featured-card {
+  background: rgba(18, 19, 30, 0.9);
+  border: 1px solid rgba(255, 107, 0, 0.45);
+  animation: breathingPricingGlow 4s ease-in-out infinite;
+}
+
+@keyframes breathingPricingGlow {
+  0%, 100% {
+    box-shadow: 
+      0 20px 50px -15px rgba(255, 107, 0, 0.35),
+      0 0 30px -5px rgba(255, 107, 0, 0.18),
+      inset 0 1px 1.5px rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 107, 0, 0.45);
+  }
+  50% {
+    box-shadow: 
+      0 25px 65px -10px rgba(255, 140, 26, 0.55),
+      0 0 50px rgba(255, 140, 26, 0.32),
+      inset 0 1px 2px rgba(255, 255, 255, 0.45);
+    border-color: rgba(255, 170, 77, 0.85);
+  }
+}
+
+.pricing-featured-card:hover {
+  transform: translateY(-6px) scale(1.03);
+}
+
+/* Checklist Icon Pill */
+.pricing-check-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 9999px;
+  background: rgba(255, 107, 0, 0.12);
+  color: #ffaa4d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.65rem;
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+  border: 1px solid rgba(255, 107, 0, 0.25);
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.pricing-spotlight-card li:hover .pricing-check-icon {
+  transform: scale(1.15);
+  background: #ff6b00;
+  color: #ffffff;
+}
+
+.pricing-check-featured {
+  background: rgba(255, 107, 0, 0.25);
+  color: #ffffff;
+  border-color: rgba(255, 107, 0, 0.6);
+}
+
+/* Framer-Style Magnetic Arrow Buttons */
+.pricing-card-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  width: 100%;
+  padding: 0.95rem 1.5rem;
+  border-radius: 9999px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 5;
+}
+
+.pricing-card-btn .btn-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.15);
+  font-size: 10px;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s ease;
+}
+
+.pricing-card-btn:hover .btn-arrow {
+  transform: translateX(4px);
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.pricing-btn-primary {
+  color: #ffffff;
+  background: linear-gradient(135deg, #ff7a1a 0%, #ff6b00 100%);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 
+    0 10px 30px -5px rgba(255, 107, 0, 0.5),
+    inset 0 1px 1.5px rgba(255, 255, 255, 0.6);
+}
+
+.pricing-btn-primary:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #ff8c26 0%, #ff6b00 100%);
+  box-shadow: 
+    0 15px 40px -5px rgba(255, 107, 0, 0.7),
+    inset 0 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+.pricing-btn-secondary {
+  color: #f1f5f9;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.pricing-btn-secondary:hover {
+  transform: translateY(-2px);
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 107, 0, 0.5);
+  box-shadow: 
+    0 12px 30px -8px rgba(255, 107, 0, 0.35),
+    inset 0 1px 1.5px rgba(255, 255, 255, 0.25);
+}

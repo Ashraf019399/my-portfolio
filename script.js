@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initLiquidPortrait();
   initBackToTop();
   initSmartHeader();
+  initPricingSpotlight();
 });
 
 /* ==========================================================
@@ -422,4 +423,30 @@ function initSmartHeader() {
 
     lastScrollY = currentScrollY;
   }, { passive: true });
+}
+
+/* ==========================================================
+   10. DesignMonks-Grade Pricing Card Mouse Spotlight Glow
+   Tracks cursor coordinates across pricing cards and feeds
+   --mouse-x and --mouse-y CSS variables for reactive illumination
+   ========================================================== */
+function initPricingSpotlight() {
+  const cards = document.querySelectorAll('.pricing-spotlight-card');
+  if (!cards.length) return;
+
+  cards.forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      card.style.setProperty('--mouse-x', `${x}px`);
+      card.style.setProperty('--mouse-y', `${y}px`);
+    });
+
+    card.addEventListener('mouseleave', () => {
+      // Return smoothly to center when mouse leaves
+      card.style.setProperty('--mouse-x', `50%`);
+      card.style.setProperty('--mouse-y', `50%`);
+    });
+  });
 }
