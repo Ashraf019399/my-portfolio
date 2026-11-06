@@ -893,6 +893,48 @@ h1, h2, h3, h4, .font-heading {
   box-shadow: 0 8px 20px -4px rgba(0, 0, 0, 0.5);
 }
 
+/* Toolkit Running Marquee Capsule (একপাশ থেকে অন্যপাশে যাবে) */
+.toolkit-marquee-capsule {
+  position: relative;
+  background: rgba(12, 13, 20, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 16px 40px -10px rgba(0, 0, 0, 0.6), inset 0 1px 1px rgba(255, 255, 255, 0.06);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.toolkit-marquee-capsule:hover {
+  border-color: rgba(255, 107, 0, 0.3);
+  box-shadow: 0 20px 50px -10px rgba(255, 107, 0, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.1);
+}
+
+.toolkit-marquee-track-wrap {
+  mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
+}
+
+.toolkit-marquee-track {
+  width: max-content;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  animation: runToolkitMarquee 24s linear infinite;
+}
+
+.toolkit-marquee-capsule:hover .toolkit-marquee-track {
+  animation-play-state: paused; /* মাউস রাখলে থামবে */
+}
+
+@keyframes runToolkitMarquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
 /* Hide Scrollbar Helper */
 .no-scrollbar::-webkit-scrollbar {
   display: none;
