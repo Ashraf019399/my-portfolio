@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
   initContactForm();
   initLiquidPortrait();
+  initBackToTop();
 });
 
 /* ==========================================================
@@ -345,5 +346,30 @@ function initLiquidPortrait() {
     if (!animationFrame) {
       animationFrame = requestAnimationFrame(updateLiquid);
     }
+  });
+}
+
+/* ==========================================================
+   8. Bring To Top Floating Action Button
+   ========================================================== */
+function initBackToTop() {
+  const backToTopBtn = document.getElementById('backToTopBtn');
+  if (!backToTopBtn) return;
+
+  // Show button when scrolled down > 400px, smoothly hide at top
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 400) {
+      backToTopBtn.classList.add('back-to-top-visible');
+    } else {
+      backToTopBtn.classList.remove('back-to-top-visible');
+    }
+  }, { passive: true });
+
+  // Smooth scroll back to top on click
+  backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
   });
 }
