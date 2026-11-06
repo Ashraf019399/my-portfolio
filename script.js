@@ -261,23 +261,82 @@ function initMobileMenu() {
 }
 
 /* ==========================================================
-   6. Contact Form Email Inquiry Handler
+   6. Smart Contact Form with Instant WhatsApp Sync & Email
    ========================================================== */
 function initContactForm() {
   const form = document.getElementById('contactForm');
+  const btnWhatsApp = document.getElementById('btnSendWhatsApp');
+  const nameInput = document.getElementById('formName');
+  const serviceInput = document.getElementById('formService');
+  const budgetInput = document.getElementById('formBudget');
+  const messageInput = document.getElementById('formMessage');
+
   if (!form) return;
 
+  function validateInputs() {
+    let isValid = true;
+    [nameInput, messageInput].forEach(input => {
+      if (!input.value.trim()) {
+        input.classList.add('!border-red-500', 'animate-pulse');
+        setTimeout(() => input.classList.remove('animate-pulse'), 1000);
+        isValid = false;
+      } else {
+        input.classList.remove('!border-red-500');
+      }
+    });
+    return isValid;
+  }
+
+  // 1. Instant WhatsApp Direct Dispatch
+  if (btnWhatsApp) {
+    btnWhatsApp.addEventListener('click', (e) => {
+      e.preventDefault();
+      if (!validateInputs()) {
+        nameInput.focus();
+        return;
+      }
+
+      const name = nameInput.value.trim();
+      const service = serviceInput ? serviceInput.value : 'Graphic Design';
+      const budget = budgetInput ? budgetInput.value : 'Flexible';
+      const message = messageInput.value.trim();
+
+      const text = `👋 Hello Muhammad Ashraf!%0A%0A` +
+        `👤 *Name:* ${encodeURIComponent(name)}%0A` +
+        `🎨 *Service Needed:* ${encodeURIComponent(service)}%0A` +
+        `💰 *Estimated Budget:* ${encodeURIComponent(budget)}%0A%0A` +
+        `📝 *Project Brief:*%0A${encodeURIComponent(message)}%0A%0A` +
+        `Looking forward to collaborating with you!`;
+
+      const whatsappUrl = `https://wa.me/8801939981392?text=${text}`;
+      window.open(whatsappUrl, '_blank');
+    });
+  }
+
+  // 2. Direct Email Submission Handler
   form.addEventListener('submit', (e) => {
     e.preventDefault();
-    const name = document.getElementById('formName').value;
-    const service = document.getElementById('formService').value;
-    const message = document.getElementById('formMessage').value;
+    if (!validateInputs()) {
+      nameInput.focus();
+      return;
+    }
+
+    const name = nameInput.value.trim();
+    const service = serviceInput ? serviceInput.value : 'Graphic Design';
+    const budget = budgetInput ? budgetInput.value : 'Flexible';
+    const message = messageInput.value.trim();
 
     const email = "Maashraf221@gmail.com";
-    const subject = encodeURIComponent(`Project Inquiry: ${service} - from ${name}`);
-    const body = encodeURIComponent(`Hello Muhammad Ashraf,\n\nMy name is ${name}.\nI am interested in your ${service} service.\n\nProject Brief:\n${message}\n\nBest regards,\n${name}`);
+    const subject = encodeURIComponent(`Project Inquiry: ${service} [${budget}] - from ${name}`);
+    const body = encodeURIComponent(
+      `Hello Muhammad Ashraf,\n\n` +
+      `My name is ${name}.\n` +
+      `I would like to inquire about your ${service} services.\n` +
+      `Estimated Budget: ${budget}\n\n` +
+      `Project Brief:\n${message}\n\n` +
+      `Best regards,\n${name}`
+    );
 
-    // Open email client
     window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
   });
 }
@@ -433,7 +492,7 @@ function initSmartHeader() {
    --mouse-x and --mouse-y CSS variables for reactive illumination
    ========================================================== */
 function initPricingSpotlight() {
-  const cards = document.querySelectorAll('.pricing-spotlight-card');
+  const cards = document.querySelectorAll('.pricing-spotlight-card, .bento-card');
   if (!cards.length) return;
 
   cards.forEach(card => {
