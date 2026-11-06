@@ -391,6 +391,13 @@ function initSmartHeader() {
   window.addEventListener('scroll', () => {
     const currentScrollY = window.scrollY;
 
+    // Toggle frosted backdrop shield when scrolled down (> 40px) to prevent text bleed
+    if (currentScrollY > 40) {
+      header.classList.add('header-scrolled');
+    } else {
+      header.classList.remove('header-scrolled');
+    }
+
     // Do not hide if mobile menu is currently open
     if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
       lastScrollY = currentScrollY;
