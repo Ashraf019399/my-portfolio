@@ -229,7 +229,7 @@ h1, h2, h3, h4, .font-heading {
 
 .vyro-header-wrap {
   width: 100%;
-  max-width: 72rem; /* max-w-6xl */
+  max-width: 80rem; /* max-w-7xl (1280px) - Exact match to website grid */
   margin: 0 auto;
   display: flex;
   align-items: center;
