@@ -838,3 +838,27 @@ h1, h2, h3, h4, .font-heading {
   pointer-events: auto !important;
   transform: translateY(0) !important;
 }
+
+/* ==========================================================
+   TOOLKIT & NEXT-GEN AI ARSENAL DOCK
+   ========================================================== */
+.tech-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.85rem;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: default;
+}
+
+.tech-badge:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.22);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px -4px rgba(0, 0, 0, 0.5);
+}
