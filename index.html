@@ -61,6 +61,15 @@
 
   <!-- Custom Styles -->
   <link rel="stylesheet" href="styles.css">
+
+  <!-- Immediate pre-paint scroll check to prevent header overlap flicker on page refresh -->
+  <script>
+    try {
+      if (window.scrollY > 30) {
+        document.documentElement.classList.add('is-scrolled');
+      }
+    } catch(e) {}
+  </script>
 </head>
 <body class="bg-[#08080b] text-[#f4f4f7] antialiased relative selection:bg-[#ff6b00] selection:text-white">
 

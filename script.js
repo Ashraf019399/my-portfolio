@@ -256,41 +256,55 @@ function initMobileMenu() {
   const navPills = document.querySelectorAll('.vyro-nav-item, .nav-pill-item');
   const dockItems = document.querySelectorAll('.dm-dock-item[data-tab]');
 
+  function updateScrollSpy() {
+    let current = '';
+    const scrollPos = window.scrollY;
+
+    if (scrollPos < 250) {
+      current = 'home';
+    } else {
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 180;
+        if (scrollPos >= sectionTop) {
+          current = section.getAttribute('id');
+        }
+      });
+    }
+
+    if (current) {
+      // Desktop nav capsule pills
+      navPills.forEach(pill => {
+        if (pill.getAttribute('href') === `#${current}`) {
+          pill.classList.add('active');
+        } else {
+          pill.classList.remove('active');
+        }
+      });
+
+      // Mobile DesignMonks dock tabs
+      dockItems.forEach(item => {
+        const tab = item.getAttribute('data-tab');
+        if (tab === current) {
+          item.classList.add('active');
+        } else {
+          item.classList.remove('active');
+        }
+      });
+    }
+  }
+
   if (sections.length > 0) {
-    window.addEventListener('scroll', () => {
-      let current = '';
-      if (window.scrollY < 250) {
-        current = 'home';
-      } else {
-        sections.forEach(section => {
-          const sectionTop = section.offsetTop - 160;
-          if (window.scrollY >= sectionTop) {
-            current = section.getAttribute('id');
-          }
-        });
-      }
+    // Immediate evaluation on page load / refresh
+    updateScrollSpy();
 
-      if (current) {
-        // Desktop nav capsule pills
-        navPills.forEach(pill => {
-          if (pill.getAttribute('href') === `#${current}`) {
-            pill.classList.add('active');
-          } else {
-            pill.classList.remove('active');
-          }
-        });
+    // Listen to scroll events
+    window.addEventListener('scroll', updateScrollSpy, { passive: true });
 
-        // Mobile DesignMonks dock tabs
-        dockItems.forEach(item => {
-          const tab = item.getAttribute('data-tab');
-          if (tab === current) {
-            item.classList.add('active');
-          } else {
-            item.classList.remove('active');
-          }
-        });
-      }
-    }, { passive: true });
+    // Catch asynchronous scroll restorations by the browser
+    window.addEventListener('load', updateScrollSpy);
+    window.addEventListener('pageshow', updateScrollSpy);
+    setTimeout(updateScrollSpy, 60);
+    setTimeout(updateScrollSpy, 250);
   }
 }
 
@@ -453,14 +467,21 @@ function initBackToTop() {
   const backToTopBtn = document.getElementById('backToTopBtn');
   if (!backToTopBtn) return;
 
-  // Show button when scrolled down > 400px, smoothly hide at top
-  window.addEventListener('scroll', () => {
+  function updateBackToTop() {
     if (window.scrollY > 400) {
       backToTopBtn.classList.add('back-to-top-visible');
     } else {
       backToTopBtn.classList.remove('back-to-top-visible');
     }
-  }, { passive: true });
+  }
+
+  // Immediate evaluation on load / refresh
+  updateBackToTop();
+  window.addEventListener('scroll', updateBackToTop, { passive: true });
+  window.addEventListener('load', updateBackToTop);
+  window.addEventListener('pageshow', updateBackToTop);
+  setTimeout(updateBackToTop, 60);
+  setTimeout(updateBackToTop, 250);
 
   // Smooth scroll back to top on click
   backToTopBtn.addEventListener('click', () => {
@@ -484,14 +505,16 @@ function initSmartHeader() {
   let lastScrollY = window.scrollY;
   const scrollThreshold = 10; // minimum scroll delta
 
-  window.addEventListener('scroll', () => {
+  function updateHeaderState() {
     const currentScrollY = window.scrollY;
 
-    // Toggle frosted backdrop shield when scrolled down (> 40px) to prevent text bleed
-    if (currentScrollY > 40) {
+    // Toggle frosted backdrop shield when scrolled down (> 30px) to prevent text bleed
+    if (currentScrollY > 30) {
       header.classList.add('header-scrolled');
+      document.documentElement.classList.add('is-scrolled');
     } else {
       header.classList.remove('header-scrolled');
+      document.documentElement.classList.remove('is-scrolled');
     }
 
     // Do not hide if mobile menu is currently open
@@ -517,7 +540,19 @@ function initSmartHeader() {
     }
 
     lastScrollY = currentScrollY;
-  }, { passive: true });
+  }
+
+  // Immediate evaluation on load / refresh
+  updateHeaderState();
+
+  // Listen to scroll events
+  window.addEventListener('scroll', updateHeaderState, { passive: true });
+
+  // Catch delayed browser scroll restoration on refresh
+  window.addEventListener('load', updateHeaderState);
+  window.addEventListener('pageshow', updateHeaderState);
+  setTimeout(updateHeaderState, 60);
+  setTimeout(updateHeaderState, 250);
 }
 
 /* ==========================================================

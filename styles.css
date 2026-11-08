@@ -281,15 +281,43 @@ h1, h2, h3, h4, .font-heading {
 }
 
 /* When Scrolled: Unified Dark Frosted Glass Shield (Prevents text bleeding/overlap) */
+html.is-scrolled .smart-header,
 .smart-header.header-scrolled {
   top: 0 !important;
-  background: rgba(8, 8, 11, 0.92) !important;
-  backdrop-filter: blur(24px) !important;
-  -webkit-backdrop-filter: blur(24px) !important;
+  background: rgba(8, 8, 11, 0.96) !important;
+  backdrop-filter: blur(28px) !important;
+  -webkit-backdrop-filter: blur(28px) !important;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
-  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.8) !important;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.85) !important;
   padding-top: 0.75rem !important;
   padding-bottom: 0.75rem !important;
+}
+
+/* Scrolled Nav Capsule: Adaptive High-Contrast Dark Glass */
+html.is-scrolled .smart-header .vyro-nav-capsule,
+.smart-header.header-scrolled .vyro-nav-capsule {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.2);
+}
+
+html.is-scrolled .smart-header .vyro-nav-item,
+.smart-header.header-scrolled .vyro-nav-item {
+  color: #cbd5e1;
+}
+
+html.is-scrolled .smart-header .vyro-nav-item:hover,
+.smart-header.header-scrolled .vyro-nav-item:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+html.is-scrolled .smart-header .vyro-nav-item.active,
+.smart-header.header-scrolled .vyro-nav-item.active {
+  color: #ffffff;
+  background: #ff6b00;
+  border-color: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 4px 15px rgba(255, 107, 0, 0.45);
 }
 
 .vyro-header-wrap {
