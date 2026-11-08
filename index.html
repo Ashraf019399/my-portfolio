@@ -72,9 +72,11 @@
     <div class="aurora-portrait-glow"></div>
   </div>
 
-  <!-- Ambient Glowing Atmosphere (Middle & Bottom) -->
-  <div class="ambient-glow ambient-glow-2"></div>
-  <div class="ambient-glow ambient-glow-3"></div>
+  <!-- Ambient Glowing Atmosphere (Middle & Bottom) - Contained to prevent mobile overflow -->
+  <div class="ambient-atmosphere-wrap">
+    <div class="ambient-glow ambient-glow-2"></div>
+    <div class="ambient-glow ambient-glow-3"></div>
+  </div>
 
   <!-- Header: VYRO-Exact Transparent Float Layout (Logo Left, White Crystal Glass Pill Center, Pill CTA Right) -->
   <header id="mainHeader" class="fixed top-6 inset-x-0 z-50 smart-header">
@@ -114,7 +116,7 @@
       </div>
 
       <!-- Mobile Menu Toggle Button -->
-      <button id="mobileMenuToggle" class="md:hidden text-black bg-white/40 hover:bg-white border border-white/60 text-lg p-2.5 rounded-full backdrop-blur-md shadow-sm focus:outline-none" aria-label="Toggle Navigation">
+      <button id="mobileMenuToggle" class="md:hidden text-white bg-white/10 hover:bg-white/20 border border-white/25 text-base w-10 h-10 flex items-center justify-center rounded-full backdrop-blur-xl shadow-lg active:scale-95 transition-all focus:outline-none" aria-label="Toggle Navigation">
         <i class="fa-solid fa-bars-staggered"></i>
       </button>
 
@@ -137,7 +139,7 @@
   </header>
 
   <!-- Hero Section: Masterclass Balanced 2-Column Layout -->
-  <section id="home" class="relative pt-36 pb-16 md:pt-48 md:pb-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-dot-grid">
+  <section id="home" class="relative w-full pt-32 pb-16 md:pt-48 md:pb-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-dot-grid">
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
       
       <!-- Left Column: Editorial Headline & Value Proposition (7 Cols) -->
@@ -287,7 +289,7 @@
       </div>
 
       <!-- Running Right: Infinite Marquee Ticker -->
-      <div class="marquee-capsule-track-wrap overflow-hidden flex-1 relative">
+      <div class="marquee-capsule-track-wrap overflow-hidden flex-1 min-w-0 relative">
         <div class="marquee-capsule-track text-xs sm:text-sm font-semibold tracking-tight text-black">
           <span class="inline-flex items-center mx-5">
             ⚡ 100% Satisfaction & Guarantee. Don't Miss Out — Secure Your <span class="font-serif-italic font-bold text-sm sm:text-base mx-1.5 not-italic">Brand's Future</span> Today.
@@ -321,7 +323,7 @@
   </div>
 
   <!-- Services Section -->
-  <section id="services" class="py-20 sm:py-24 lg:py-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+  <section id="services" class="w-full py-20 sm:py-24 lg:py-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
     <div class="text-center max-w-3xl mx-auto mb-16 reveal-init">
       <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#ff6b00]/10 text-[#ffaa4d] border border-[#ff6b00]/25 text-xs font-semibold uppercase tracking-wider mb-3.5">
         <i class="fa-solid fa-shapes text-[11px]"></i>
@@ -435,7 +437,7 @@
       <!-- Running Marquee Capsule (একপাশ থেকে অন্যপাশে যাবে) -->
       <div class="max-w-4xl mx-auto px-4">
         <div class="toolkit-marquee-capsule flex items-center overflow-hidden rounded-full py-2.5 px-3 sm:px-4">
-          <div class="toolkit-marquee-track-wrap overflow-hidden flex-1 relative">
+          <div class="toolkit-marquee-track-wrap overflow-hidden flex-1 min-w-0 relative">
             <div class="toolkit-marquee-track flex items-center gap-3 pr-3">
           
           <!-- Photoshop -->
@@ -586,7 +588,7 @@
   </section>
 
   <!-- Interactive Before & After Showcase -->
-  <section id="before-after" class="py-20 sm:py-24 lg:py-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-white/[0.08]">
+  <section id="before-after" class="w-full py-20 sm:py-24 lg:py-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-white/[0.08]">
     <div class="text-center max-w-3xl mx-auto mb-14 reveal-init">
       <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#ff6b00]/10 text-[#ffaa4d] border border-[#ff6b00]/25 text-xs font-semibold uppercase tracking-wider mb-3.5">
         <i class="fa-solid fa-wand-magic-sparkles text-[11px]"></i>
@@ -671,7 +673,7 @@
   </section>
 
   <!-- Curated Portfolio Showcase -->
-  <section id="showcase" class="py-20 sm:py-24 lg:py-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-white/[0.08]">
+  <section id="showcase" class="w-full py-20 sm:py-24 lg:py-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-white/[0.08]">
     <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 sm:mb-16 gap-6 reveal-init">
       <div>
         <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#ff6b00]/10 text-[#ffaa4d] border border-[#ff6b00]/25 text-xs font-semibold uppercase tracking-wider mb-3.5">
@@ -893,7 +895,7 @@
   </section>
 
   <!-- Engagement Packages / Pricing (DesignMonks Framer-Grade Spotlight Cards) -->
-  <section id="pricing" class="py-20 sm:py-24 lg:py-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-white/[0.08]">
+  <section id="pricing" class="w-full py-20 sm:py-24 lg:py-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-white/[0.08]">
     <div class="text-center max-w-3xl mx-auto mb-16 reveal-init">
       <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#ff6b00]/10 text-[#ffaa4d] border border-[#ff6b00]/25 text-xs font-semibold uppercase tracking-wider mb-3.5">
         <i class="fa-solid fa-sparkles text-[10px]"></i>
@@ -1357,7 +1359,7 @@
   </section>
 
   <!-- Client Reviews with Infinite Running Marquee (একপাশ থেকে অন্যপাশে দৌড়াবে) -->
-  <section id="reviews" class="py-20 sm:py-24 lg:py-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-white/[0.08]">
+  <section id="reviews" class="w-full py-20 sm:py-24 lg:py-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-white/[0.08]">
     <div class="text-center max-w-3xl mx-auto mb-14 reveal-init">
       <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#ff6b00]/10 text-[#ffaa4d] border border-[#ff6b00]/25 text-xs font-semibold uppercase tracking-wider mb-3.5">
         <i class="fa-solid fa-comments text-[11px]"></i>
@@ -1553,7 +1555,7 @@
   </section>
 
   <!-- The Ashraf Advantage: Bento Grid System -->
-  <section id="why-me" class="py-20 sm:py-24 lg:py-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-white/[0.08]">
+  <section id="why-me" class="w-full py-20 sm:py-24 lg:py-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-white/[0.08]">
     <div class="text-center max-w-3xl mx-auto mb-16 reveal-init">
       <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#ff6b00]/10 text-[#ffaa4d] border border-[#ff6b00]/25 text-xs font-semibold uppercase tracking-wider mb-3.5">
         <i class="fa-solid fa-bolt text-[11px]"></i>
@@ -1700,7 +1702,7 @@
   </section>
 
   <!-- Contact Section (Smart WhatsApp & Email Inquiry Hub) -->
-  <section id="contact" class="py-20 sm:py-24 lg:py-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-white/[0.08]">
+  <section id="contact" class="w-full py-20 sm:py-24 lg:py-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-white/[0.08]">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
       
       <div class="reveal-init">
@@ -1828,7 +1830,7 @@
   </section>
 
   <!-- Footer -->
-  <footer class="border-t border-white/[0.08] py-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+  <footer class="w-full border-t border-white/[0.08] py-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
     <div class="flex flex-col md:flex-row items-center justify-between gap-6">
       
       <!-- Brand & Title -->

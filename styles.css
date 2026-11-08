@@ -33,6 +33,9 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
 }
 
 section[id] {
@@ -44,6 +47,9 @@ body {
   background-color: var(--bg-deep);
   color: var(--text-primary);
   overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
+  position: relative;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -86,6 +92,8 @@ h1, h2, h3, h4, .font-heading {
   top: 0;
   left: 0;
   right: 0;
+  width: 100%;
+  max-width: 100vw;
   height: 850px;
   pointer-events: none;
   z-index: 0;
@@ -99,6 +107,7 @@ h1, h2, h3, h4, .font-heading {
   left: 50%;
   transform: translateX(-50%);
   width: 1400px;
+  max-width: 100vw;
   height: 620px;
   background: radial-gradient(
     ellipse 75% 55% at 50% 28%,
@@ -117,6 +126,7 @@ h1, h2, h3, h4, .font-heading {
   top: -120px;
   left: -80px;
   width: 900px;
+  max-width: 100vw;
   height: 650px;
   background: radial-gradient(
     ellipse 65% 55% at 30% 25%,
@@ -134,6 +144,7 @@ h1, h2, h3, h4, .font-heading {
   top: 0;
   left: 0;
   right: 0;
+  width: 100%;
   height: 260px;
   background: linear-gradient(
     180deg,
@@ -149,6 +160,7 @@ h1, h2, h3, h4, .font-heading {
   top: -40px;
   right: -80px;
   width: 650px;
+  max-width: 100vw;
   height: 550px;
   background: radial-gradient(
     circle at 60% 35%,
@@ -157,6 +169,20 @@ h1, h2, h3, h4, .font-heading {
     transparent 75%
   );
   filter: blur(65px);
+}
+
+/* Ambient Atmosphere Wrapper - Prevents Mobile Bleeding / Off-Center Overflow */
+.ambient-atmosphere-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  max-width: 100vw;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
 }
 
 /* Background Atmosphere (Middle & Bottom) */
@@ -182,6 +208,41 @@ h1, h2, h3, h4, .font-heading {
   bottom: 5%;
   right: -100px;
   background: radial-gradient(circle, rgba(255, 107, 0, 0.1) 0%, rgba(255, 107, 0, 0) 70%);
+}
+
+@media (max-width: 768px) {
+  .top-aurora-atmosphere {
+    height: 580px;
+  }
+  .aurora-crystal-white {
+    width: 100%;
+    height: 380px;
+    top: -80px;
+    filter: blur(35px);
+  }
+  .aurora-offwhite-glow {
+    width: 100%;
+    left: 0;
+    height: 360px;
+    filter: blur(40px);
+  }
+  .aurora-portrait-glow {
+    width: 100%;
+    right: 0;
+    height: 340px;
+    top: 20px;
+    filter: blur(45px);
+  }
+  .ambient-glow-2 {
+    width: 300px;
+    height: 300px;
+    left: -50px;
+  }
+  .ambient-glow-3 {
+    width: 300px;
+    height: 300px;
+    right: 0;
+  }
 }
 
 .bg-dot-grid {
@@ -566,6 +627,7 @@ h1, h2, h3, h4, .font-heading {
 .reviews-marquee-wrapper {
   overflow: hidden;
   width: 100%;
+  max-width: 100%;
   position: relative;
   padding: 1rem 0;
   mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
@@ -1425,5 +1487,15 @@ select.form-input-premium option {
     transform: none !important;
     filter: none !important;
     transition: none !important;
+  }
+}
+
+/* Ensure zero horizontal scroll & perfect centering on mobile viewports */
+@media (max-width: 768px) {
+  html, body {
+    width: 100% !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+    position: relative !important;
   }
 }
