@@ -1830,7 +1830,7 @@
   </section>
 
   <!-- Footer -->
-  <footer class="w-full border-t border-white/[0.08] py-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+  <footer class="w-full border-t border-white/[0.08] py-10 pb-28 md:pb-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
     <div class="flex flex-col md:flex-row items-center justify-between gap-6">
       
       <!-- Brand & Title -->
@@ -1867,20 +1867,74 @@
 
   <!-- Bring to Top Floating Button (Smooth Scroll to Top) -->
   <button id="backToTopBtn" 
-          class="fixed bottom-20 right-6 z-40 w-11 h-11 rounded-full bg-[#0e1017]/90 backdrop-blur-xl border border-white/15 text-white shadow-xl shadow-black/60 hover:border-[#ff6b00] hover:text-[#ff6b00] hover:scale-110 active:scale-95 transition-all duration-300 opacity-0 pointer-events-none translate-y-3 flex items-center justify-center group" 
+          class="fixed bottom-24 right-4 md:bottom-20 md:right-6 z-40 w-11 h-11 rounded-full bg-[#0e1017]/90 backdrop-blur-xl border border-white/15 text-white shadow-xl shadow-black/60 hover:border-[#ff6b00] hover:text-[#ff6b00] hover:scale-110 active:scale-95 transition-all duration-300 opacity-0 pointer-events-none translate-y-3 flex items-center justify-center group" 
           aria-label="Bring to Top" 
           title="Bring to Top">
     <i class="fa-solid fa-arrow-up text-sm transition-transform group-hover:-translate-y-0.5"></i>
   </button>
 
-  <!-- Floating WhatsApp Quick Chat Button (Always accessible on Mobile & Desktop) -->
+  <!-- Floating WhatsApp Quick Chat Button (Always accessible on Desktop) -->
   <a href="https://wa.me/8801939981392?text=Hello%20Muhammad%20Ashraf,%20I%20am%20interested%20in%20your%20graphic%20design%20services." 
      target="_blank" 
-     class="fixed bottom-6 right-6 z-40 group flex items-center justify-center gap-2.5 w-12 h-12 rounded-full sm:w-auto sm:h-auto sm:px-5 sm:py-3.5 sm:rounded-full bg-[#25D366] text-white font-semibold text-xs shadow-xl shadow-[#25D366]/35 hover:shadow-[#25D366]/55 hover:scale-105 active:scale-95 transition-all duration-300"
+     class="hidden md:flex fixed bottom-6 right-6 z-40 group items-center justify-center gap-2.5 px-5 py-3.5 rounded-full bg-[#25D366] text-white font-semibold text-xs shadow-xl shadow-[#25D366]/35 hover:shadow-[#25D366]/55 hover:scale-105 active:scale-95 transition-all duration-300"
      aria-label="Chat directly on WhatsApp">
-    <i class="fa-brands fa-whatsapp text-xl sm:text-lg"></i>
-    <span class="hidden sm:inline font-bold">Chat on WhatsApp</span>
+    <i class="fa-brands fa-whatsapp text-lg"></i>
+    <span class="font-bold">Chat on WhatsApp</span>
   </a>
+
+  <!-- DesignMonks-Exact Mobile Luxury Bottom App Dock -->
+  <div class="fixed bottom-0 inset-x-0 z-40 md:hidden pointer-events-none dm-bottom-dock-wrap">
+    <nav class="dm-bottom-dock pointer-events-auto" aria-label="Mobile Navigation Dock">
+      
+      <!-- 1. Projects -->
+      <a href="#showcase" class="dm-dock-item" data-tab="showcase" aria-label="Projects Showcase">
+        <div class="dm-dock-icon">
+          <i class="fa-solid fa-layer-group"></i>
+        </div>
+        <span class="dm-dock-label">Projects</span>
+      </a>
+
+      <!-- 2. Services -->
+      <a href="#services" class="dm-dock-item" data-tab="services" aria-label="Services Breakdown">
+        <div class="dm-dock-icon">
+          <i class="fa-solid fa-shapes"></i>
+        </div>
+        <span class="dm-dock-label">Services</span>
+      </a>
+
+      <!-- 3. Elevated Center Chat Button (DesignMonks Exact Notch & Squircle) -->
+      <div class="dm-dock-center-notch">
+        <a href="https://wa.me/8801939981392?text=Hello%20Muhammad%20Ashraf,%20I%20am%20interested%20in%20your%20graphic%20design%20services." 
+           target="_blank" 
+           class="dm-dock-center-btn group" 
+           aria-label="Direct WhatsApp Chat">
+          <div class="dm-center-glow"></div>
+          <div class="dm-center-inner">
+            <i class="fa-brands fa-whatsapp text-2xl text-[#25D366] group-hover:scale-110 transition-transform"></i>
+            <span class="absolute -top-1 -right-1 w-3 h-3 bg-emerald-400 rounded-full border-2 border-[#0a0b10] animate-ping"></span>
+            <span class="absolute -top-1 -right-1 w-3 h-3 bg-emerald-400 rounded-full border-2 border-[#0a0b10]"></span>
+          </div>
+        </a>
+      </div>
+
+      <!-- 4. Pricing -->
+      <a href="#pricing" class="dm-dock-item" data-tab="pricing" aria-label="Pricing Packages">
+        <div class="dm-dock-icon">
+          <i class="fa-solid fa-tags"></i>
+        </div>
+        <span class="dm-dock-label">Pricing</span>
+      </a>
+
+      <!-- 5. More Menu Toggle -->
+      <button id="dockMoreToggle" class="dm-dock-item" aria-label="More Navigation">
+        <div class="dm-dock-icon">
+          <i class="fa-solid fa-bars-staggered"></i>
+        </div>
+        <span class="dm-dock-label">More</span>
+      </button>
+
+    </nav>
+  </div>
 
   <!-- Lightbox Modal for Full View Artwork -->
   <div id="lightboxModal" class="lightbox-modal">

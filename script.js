@@ -224,25 +224,39 @@ function initCounters() {
    ========================================================== */
 function initMobileMenu() {
   const toggleBtn = document.getElementById('mobileMenuToggle');
+  const dockMoreBtn = document.getElementById('dockMoreToggle');
   const menu = document.getElementById('mobileMenu');
   const links = menu ? menu.querySelectorAll('a') : [];
 
-  if (!toggleBtn || !menu) return;
+  if (menu) {
+    if (toggleBtn) {
+      toggleBtn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+      });
+    }
 
-  toggleBtn.addEventListener('click', () => {
-    menu.classList.toggle('hidden');
-  });
+    if (dockMoreBtn) {
+      dockMoreBtn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+        if (!menu.classList.contains('hidden')) {
+          menu.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+      });
+    }
 
-  links.forEach(link => {
-    link.addEventListener('click', () => {
-      menu.classList.add('hidden');
+    links.forEach(link => {
+      link.addEventListener('click', () => {
+        menu.classList.add('hidden');
+      });
     });
-  });
+  }
 
-  // Active floating pill highlight on scroll
+  // Active floating pill & mobile dock item highlight on scroll
   const sections = document.querySelectorAll('section[id]');
   const navPills = document.querySelectorAll('.vyro-nav-item, .nav-pill-item');
-  if (navPills.length > 0 && sections.length > 0) {
+  const dockItems = document.querySelectorAll('.dm-dock-item[data-tab]');
+
+  if (sections.length > 0) {
     window.addEventListener('scroll', () => {
       let current = '';
       if (window.scrollY < 250) {
@@ -257,11 +271,22 @@ function initMobileMenu() {
       }
 
       if (current) {
+        // Desktop nav capsule pills
         navPills.forEach(pill => {
           if (pill.getAttribute('href') === `#${current}`) {
             pill.classList.add('active');
           } else {
             pill.classList.remove('active');
+          }
+        });
+
+        // Mobile DesignMonks dock tabs
+        dockItems.forEach(item => {
+          const tab = item.getAttribute('data-tab');
+          if (tab === current) {
+            item.classList.add('active');
+          } else {
+            item.classList.remove('active');
           }
         });
       }

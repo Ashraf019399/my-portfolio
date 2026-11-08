@@ -1499,3 +1499,132 @@ select.form-input-premium option {
     position: relative !important;
   }
 }
+
+/* ==========================================================
+   DESIGNMONKS-EXACT MOBILE LUXURY BOTTOM APP DOCK
+   Curved native-app bar with elevated glowing center chat notch
+   ========================================================== */
+.dm-bottom-dock-wrap {
+  padding: 0 0.85rem 0.75rem 0.85rem;
+}
+
+.dm-bottom-dock {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 440px;
+  margin: 0 auto;
+  background: rgba(10, 11, 16, 0.92);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 2rem;
+  padding: 0.45rem 0.65rem 0.35rem 0.65rem;
+  box-shadow: 
+    0 -12px 35px -5px rgba(0, 0, 0, 0.7),
+    0 12px 30px -5px rgba(0, 0, 0, 0.85),
+    inset 0 1px 1.5px rgba(255, 255, 255, 0.18);
+}
+
+.dm-dock-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+  padding: 0.35rem 0.5rem;
+  color: #94a3b8;
+  text-decoration: none;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.6875rem; /* 11px */
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  border-radius: 0.75rem;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  min-width: 52px;
+}
+
+.dm-dock-item:active,
+.dm-dock-item:hover,
+.dm-dock-item.active {
+  color: #ffffff;
+}
+
+.dm-dock-item.active .dm-dock-icon {
+  color: #ff6b00;
+  transform: translateY(-2px);
+}
+
+.dm-dock-item.active .dm-dock-label {
+  color: #ffaa4d;
+  font-weight: 700;
+}
+
+.dm-dock-icon {
+  font-size: 1.15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 22px;
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.dm-dock-label {
+  line-height: 1;
+}
+
+/* Elevated Center Chat Notch & Button (DesignMonks Exact) */
+.dm-dock-center-notch {
+  position: relative;
+  width: 58px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dm-dock-center-btn {
+  position: absolute;
+  top: -24px;
+  width: 52px;
+  height: 52px;
+  border-radius: 1.25rem; /* Curved Squircle like DesignMonks */
+  background: #08080b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 
+    0 0 0 4px rgba(10, 11, 16, 0.94), /* Clean cutout border from dock */
+    0 0 25px rgba(255, 107, 0, 0.45),
+    0 8px 20px rgba(0, 0, 0, 0.6);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.dm-dock-center-btn:active {
+  transform: scale(0.92);
+}
+
+.dm-center-glow {
+  position: absolute;
+  inset: -1.5px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.85), rgba(255, 107, 0, 0.8), rgba(37, 211, 102, 0.7));
+  z-index: 1;
+  opacity: 0.9;
+}
+
+.dm-center-inner {
+  position: absolute;
+  inset: 2px;
+  border-radius: calc(1.25rem - 2px);
+  background: #0c0d14;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
