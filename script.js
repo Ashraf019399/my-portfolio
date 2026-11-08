@@ -138,18 +138,20 @@ function initLightbox() {
 
   if (!modal) return;
 
-  const openButtons = document.querySelectorAll('.open-lightbox');
-  openButtons.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      const parent = btn.closest('.portfolio-item');
-      if (!parent) return;
+  const portfolioCards = document.querySelectorAll('.portfolio-item');
+  portfolioCards.forEach(card => {
+    card.addEventListener('click', (e) => {
+      // If user clicked the Behance link, let external navigation proceed
+      if (e.target.closest('a[href*="behance.net"]') || e.target.closest('a[target="_blank"]')) {
+        return;
+      }
 
-      const img = parent.querySelector('img').src;
-      const title = parent.getAttribute('data-title') || 'Creative Artwork';
-      const category = parent.getAttribute('data-category-label') || 'Design Project';
-      const desc = parent.getAttribute('data-desc') || 'High-impact visual composition created with Adobe Photoshop & Illustrator.';
-      const behanceUrl = parent.getAttribute('data-behance') || 'https://behance.net';
+      e.preventDefault();
+      const img = card.querySelector('img') ? card.querySelector('img').src : '';
+      const title = card.getAttribute('data-title') || 'Creative Artwork';
+      const category = card.getAttribute('data-category-label') || 'Design Project';
+      const desc = card.getAttribute('data-desc') || 'High-impact visual composition created with Adobe Photoshop & Illustrator.';
+      const behanceUrl = card.getAttribute('data-behance') || 'https://www.behance.net/ashraf012';
 
       modalImg.src = img;
       modalTitle.textContent = title;
@@ -243,17 +245,23 @@ function initMobileMenu() {
   if (navPills.length > 0 && sections.length > 0) {
     window.addEventListener('scroll', () => {
       let current = '';
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop - 140;
-        if (window.scrollY >= sectionTop) {
-          current = section.getAttribute('id');
-        }
-      });
+      if (window.scrollY < 250) {
+        current = 'home';
+      } else {
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop - 160;
+          if (window.scrollY >= sectionTop) {
+            current = section.getAttribute('id');
+          }
+        });
+      }
+
       if (current) {
         navPills.forEach(pill => {
-          pill.classList.remove('active');
           if (pill.getAttribute('href') === `#${current}`) {
             pill.classList.add('active');
+          } else {
+            pill.classList.remove('active');
           }
         });
       }
@@ -302,14 +310,14 @@ function initContactForm() {
       const budget = budgetInput ? budgetInput.value : 'Flexible';
       const message = messageInput.value.trim();
 
-      const text = `👋 Hello Muhammad Ashraf!%0A%0A` +
-        `👤 *Name:* ${encodeURIComponent(name)}%0A` +
-        `🎨 *Service Needed:* ${encodeURIComponent(service)}%0A` +
-        `💰 *Estimated Budget:* ${encodeURIComponent(budget)}%0A%0A` +
-        `📝 *Project Brief:*%0A${encodeURIComponent(message)}%0A%0A` +
+      const rawText = `👋 Hello Muhammad Ashraf!\n\n` +
+        `👤 Name: ${name}\n` +
+        `🎨 Service Needed: ${service}\n` +
+        `💰 Estimated Budget: ${budget}\n\n` +
+        `📝 Project Brief:\n${message}\n\n` +
         `Looking forward to collaborating with you!`;
 
-      const whatsappUrl = `https://wa.me/8801939981392?text=${text}`;
+      const whatsappUrl = `https://wa.me/8801939981392?text=${encodeURIComponent(rawText)}`;
       window.open(whatsappUrl, '_blank');
     });
   }
