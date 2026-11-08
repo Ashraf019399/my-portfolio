@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initPricingSpotlight();
   initPricingSwitcher();
   initFaqAccordion();
+  initScrollReveal();
 });
 
 /* ==========================================================
@@ -530,6 +531,7 @@ function initPricingSwitcher() {
 
     gridRetainer.classList.add('hidden-pane');
     gridOneOff.classList.remove('hidden-pane');
+    gridOneOff.querySelectorAll('.reveal-init').forEach(el => el.classList.add('reveal-active'));
 
     initPricingSpotlight();
   });
@@ -541,6 +543,7 @@ function initPricingSwitcher() {
 
     gridOneOff.classList.add('hidden-pane');
     gridRetainer.classList.remove('hidden-pane');
+    gridRetainer.querySelectorAll('.reveal-init').forEach(el => el.classList.add('reveal-active'));
 
     initPricingSpotlight();
   });
@@ -570,5 +573,45 @@ function initFaqAccordion() {
         currentItem.classList.add('active');
       }
     });
+  });
+}
+
+/* ==========================================================
+   13. Framer / Apple Luxury Scroll-Reveal Engine
+   Progressive optical de-blur and staggered arrival choreography
+   ========================================================== */
+function initScrollReveal() {
+  const revealElements = document.querySelectorAll('.reveal-init');
+  if (!revealElements.length) return;
+
+  // Fallback for older browsers without IntersectionObserver
+  if (!('IntersectionObserver' in window)) {
+    revealElements.forEach(el => el.classList.add('reveal-active'));
+    return;
+  }
+
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px 0px -40px 0px',
+    threshold: 0.1
+  };
+
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const target = entry.target;
+        target.classList.add('reveal-active');
+        observer.unobserve(target); // Reveal smoothly once
+
+        // Clean up reveal classes after transition finishes to free GPU memory & preserve all native hover states
+        setTimeout(() => {
+          target.classList.remove('reveal-init', 'reveal-active', 'reveal-delay-1', 'reveal-delay-2', 'reveal-delay-3', 'reveal-delay-4');
+        }, 1400);
+      }
+    });
+  }, observerOptions);
+
+  revealElements.forEach(el => {
+    revealObserver.observe(el);
   });
 }
