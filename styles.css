@@ -568,36 +568,63 @@ html.is-scrolled .smart-header .vyro-nav-item.active,
 }
 
 /* ==========================================================
-   DESIGNMONKS-STYLE FLOATING SOCIAL PROOF MARQUEE CAPSULE
-   Electric Orange to Luminous Off-White Gradient (Brand Calibrated)
+   DESIGNMONKS / FRAMER ULTRA-LUXURY OBSIDIAN GLASS MARQUEE CAPSULE
+   Deep frosted glass + dynamic ambient neon orange rim light + glass reflection sheen
    ========================================================== */
 .social-proof-capsule {
-  background: linear-gradient(
-    105deg,
-    #ff6b00 0%,
-    #ff7f1a 14%,
-    #ffaa33 26%,
-    #ffffff 42%,
-    #fff8f0 54%,
-    #ffa938 72%,
-    #ff6b00 100%
-  );
-  color: #08080b;
-  border: 1px solid rgba(255, 255, 255, 0.7);
-  box-shadow: 
-    0 18px 50px -10px rgba(255, 107, 0, 0.45),
-    0 4px 15px rgba(0, 0, 0, 0.5),
-    inset 0 1px 1.5px rgba(255, 255, 255, 0.85);
   position: relative;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: rgba(13, 14, 22, 0.82);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 9999px;
+  box-shadow: 
+    0 16px 45px -10px rgba(0, 0, 0, 0.85),
+    0 0 35px -5px rgba(255, 107, 0, 0.28),
+    inset 0 1px 1.5px rgba(255, 255, 255, 0.25),
+    inset 0 -1px 2px rgba(255, 107, 0, 0.15);
+  overflow: hidden;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), 
+              box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), 
+              border-color 0.35s ease;
 }
 
 .social-proof-capsule:hover {
   transform: translateY(-2px);
+  border-color: rgba(255, 107, 0, 0.45);
   box-shadow: 
-    0 24px 60px -10px rgba(255, 107, 0, 0.6),
-    0 6px 20px rgba(0, 0, 0, 0.6),
-    inset 0 1px 2px rgba(255, 255, 255, 0.95);
+    0 22px 55px -10px rgba(0, 0, 0, 0.95),
+    0 0 45px -3px rgba(255, 107, 0, 0.45),
+    inset 0 1px 2px rgba(255, 255, 255, 0.4),
+    inset 0 -1px 3px rgba(255, 107, 0, 0.25);
+}
+
+/* Sweeping Dynamic Glass Sheen Reflection */
+.social-proof-capsule::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.08) 50%,
+    transparent 100%
+  );
+  transform: skewX(-25deg);
+  animation: capsuleGlassSheen 6s infinite ease-in-out;
+  pointer-events: none;
+}
+
+@keyframes capsuleGlassSheen {
+  0%, 40% {
+    left: -100%;
+  }
+  70%, 100% {
+    left: 200%;
+  }
 }
 
 .marquee-capsule-track-wrap {
