@@ -568,21 +568,31 @@ html.is-scrolled .smart-header .vyro-nav-item.active,
 }
 
 /* ==========================================================
-   DESIGNMONKS / FRAMER ULTRA-LUXURY OBSIDIAN GLASS MARQUEE CAPSULE
-   Deep frosted glass + dynamic ambient neon orange rim light + glass reflection sheen
+   DESIGNMONKS-STYLE RADIANT FROSTED GLASS MARQUEE CAPSULE
+   High-key luminous amber-white gradient with authentic crystal glass reflection & depth
    ========================================================== */
 .social-proof-capsule {
   position: relative;
-  background: rgba(13, 14, 22, 0.82);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: linear-gradient(
+    105deg,
+    rgba(255, 107, 0, 0.9) 0%,
+    rgba(255, 130, 26, 0.85) 14%,
+    rgba(255, 175, 45, 0.82) 26%,
+    rgba(255, 255, 255, 0.92) 44%,
+    rgba(255, 250, 240, 0.92) 56%,
+    rgba(255, 175, 45, 0.82) 74%,
+    rgba(255, 107, 0, 0.9) 100%
+  );
+  color: #08080b;
+  backdrop-filter: blur(28px) saturate(180%);
+  -webkit-backdrop-filter: blur(28px) saturate(180%);
+  border: 1.5px solid rgba(255, 255, 255, 0.85);
   border-radius: 9999px;
   box-shadow: 
-    0 16px 45px -10px rgba(0, 0, 0, 0.85),
-    0 0 35px -5px rgba(255, 107, 0, 0.28),
-    inset 0 1px 1.5px rgba(255, 255, 255, 0.25),
-    inset 0 -1px 2px rgba(255, 107, 0, 0.15);
+    0 18px 50px -10px rgba(255, 107, 0, 0.55),
+    0 6px 18px rgba(0, 0, 0, 0.4),
+    inset 0 1.5px 1.5px 0 rgba(255, 255, 255, 0.95), /* Razor-sharp crystal top rim reflection */
+    inset 0 -1.5px 2px 0 rgba(0, 0, 0, 0.2);        /* Bottom prism depth */
   overflow: hidden;
   transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), 
               box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), 
@@ -591,12 +601,12 @@ html.is-scrolled .smart-header .vyro-nav-item.active,
 
 .social-proof-capsule:hover {
   transform: translateY(-2px);
-  border-color: rgba(255, 107, 0, 0.45);
+  border-color: rgba(255, 255, 255, 1);
   box-shadow: 
-    0 22px 55px -10px rgba(0, 0, 0, 0.95),
-    0 0 45px -3px rgba(255, 107, 0, 0.45),
-    inset 0 1px 2px rgba(255, 255, 255, 0.4),
-    inset 0 -1px 3px rgba(255, 107, 0, 0.25);
+    0 24px 60px -10px rgba(255, 107, 0, 0.7),
+    0 8px 25px rgba(0, 0, 0, 0.5),
+    inset 0 2px 2px 0 rgba(255, 255, 255, 1),
+    inset 0 -2px 3px 0 rgba(0, 0, 0, 0.25);
 }
 
 /* Sweeping Dynamic Glass Sheen Reflection */
@@ -610,19 +620,19 @@ html.is-scrolled .smart-header .vyro-nav-item.active,
   background: linear-gradient(
     90deg,
     transparent 0%,
-    rgba(255, 255, 255, 0.08) 50%,
+    rgba(255, 255, 255, 0.45) 50%,
     transparent 100%
   );
   transform: skewX(-25deg);
-  animation: capsuleGlassSheen 6s infinite ease-in-out;
+  animation: capsuleGlassSheen 5s infinite ease-in-out;
   pointer-events: none;
 }
 
 @keyframes capsuleGlassSheen {
-  0%, 40% {
+  0%, 35% {
     left: -100%;
   }
-  70%, 100% {
+  65%, 100% {
     left: 200%;
   }
 }
