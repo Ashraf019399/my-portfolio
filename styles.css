@@ -84,8 +84,25 @@ h1, h2, h3, h4, .font-heading {
 }
 
 /* ==========================================================
-   LUMINOUS WHITE CRYSTAL-CLEAR TOP AURORA (VYRO EXACT)
-   High-key pristine white crystal glass radiance across the header
+   CINEMATIC BRAND GRADIENT ATMOSPHERE (POINT REFERENCE STYLE)
+   High-End Moody Burnt-Orange, Amber & Crimson Diffusion on Deep Space
+   ========================================================== */
+.top-aurora-atmosphere {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: 100vw;
+  height: 920px;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+/* ==========================================================
+   CINEMATIC BRAND GRADIENT ATMOSPHERE (POINT REFERENCE EXACT)
+   Pitch-Black Canvas with Localized Moody Burnt-Orange Spotlight
    ========================================================== */
 .top-aurora-atmosphere {
   position: absolute;
@@ -100,75 +117,53 @@ h1, h2, h3, h4, .font-heading {
   overflow: hidden;
 }
 
-/* 1. Pure White Crystal Flare (Directly across top header, where the red arrow points) */
+/* 1. Header sweep disabled to keep top edges and navbar crisp pitch-black */
+.aurora-header-sweep {
+  display: none;
+}
+
+/* 2. Focused Atmospheric Spotlight (Placed behind Center-Right / Focal Area like Point reference) */
 .aurora-crystal-white {
   position: absolute;
-  top: -180px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 1400px;
+  top: -60px;
+  left: 60%;
+  transform: translateX(-40%);
+  width: 950px;
   max-width: 100vw;
-  height: 620px;
+  height: 680px;
+  border-radius: 50%;
   background: radial-gradient(
-    ellipse 75% 55% at 50% 28%,
-    rgba(255, 255, 255, 0.72) 0%,
-    rgba(255, 255, 255, 0.42) 30%,
-    rgba(255, 245, 230, 0.16) 55%,
-    rgba(255, 120, 20, 0.08) 75%,
-    transparent 90%
+    ellipse 60% 50% at 50% 40%,
+    rgba(235, 75, 25, 0.42) 0%,
+    rgba(195, 52, 18, 0.26) 30%,
+    rgba(130, 32, 12, 0.12) 55%,
+    rgba(30, 8, 4, 0.02) 75%,
+    transparent 88%
   );
-  filter: blur(50px);
+  filter: blur(80px);
 }
 
-/* 2. Top-Left Luminous Studio Glow */
+/* 3. Deep Ambient Secondary Glow (Soft Diffusion into Deep Black) */
 .aurora-offwhite-glow {
   position: absolute;
-  top: -120px;
-  left: -80px;
-  width: 900px;
+  top: 60px;
+  right: 2%;
+  width: 750px;
   max-width: 100vw;
-  height: 650px;
+  height: 600px;
+  border-radius: 50%;
   background: radial-gradient(
-    ellipse 65% 55% at 30% 25%,
-    rgba(255, 255, 255, 0.58) 0%,
-    rgba(255, 248, 240, 0.28) 35%,
-    rgba(255, 170, 70, 0.12) 60%,
-    transparent 85%
-  );
-  filter: blur(55px);
-}
-
-/* 3. Top Horizontal Crystal Glass Sweep */
-.aurora-header-sweep {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 260px;
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.2) 0%,
-    rgba(255, 255, 255, 0.07) 45%,
-    transparent 100%
-  );
-}
-
-/* 4. Warm Amber & Orange Accent behind portrait */
-.aurora-portrait-glow {
-  position: absolute;
-  top: -40px;
-  right: -80px;
-  width: 650px;
-  max-width: 100vw;
-  height: 550px;
-  background: radial-gradient(
-    circle at 60% 35%,
-    rgba(255, 120, 20, 0.25) 0%,
-    rgba(255, 170, 0, 0.1) 45%,
+    circle at 50% 50%,
+    rgba(255, 115, 20, 0.22) 0%,
+    rgba(180, 48, 12, 0.12) 40%,
     transparent 75%
   );
-  filter: blur(65px);
+  filter: blur(95px);
+}
+
+/* 4. Extra glow disabled so left side text remains in high-contrast pitch-black */
+.aurora-portrait-glow {
+  display: none;
 }
 
 /* Ambient Atmosphere Wrapper - Prevents Mobile Bleeding / Off-Center Overflow */
@@ -212,26 +207,34 @@ h1, h2, h3, h4, .font-heading {
 
 @media (max-width: 768px) {
   .top-aurora-atmosphere {
-    height: 580px;
+    height: 620px;
   }
   .aurora-crystal-white {
-    width: 100%;
-    height: 380px;
-    top: -80px;
-    filter: blur(35px);
+    width: 115%;
+    height: 420px;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    filter: blur(45px);
+    background: radial-gradient(
+      circle at 50% 30%,
+      rgba(255, 95, 15, 0.35) 0%,
+      rgba(217, 72, 15, 0.2) 42%,
+      transparent 80%
+    );
   }
   .aurora-offwhite-glow {
     width: 100%;
     left: 0;
-    height: 360px;
-    filter: blur(40px);
+    height: 380px;
+    filter: blur(50px);
   }
   .aurora-portrait-glow {
     width: 100%;
     right: 0;
-    height: 340px;
-    top: 20px;
-    filter: blur(45px);
+    height: 360px;
+    top: 40px;
+    filter: blur(55px);
   }
   .ambient-glow-2 {
     width: 300px;
@@ -248,6 +251,39 @@ h1, h2, h3, h4, .font-heading {
 .bg-dot-grid {
   background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
   background-size: 32px 32px;
+}
+
+/* ==========================================================
+   CINEMATIC BACKDROP WORDMARK (POINT REFERENCE STYLE)
+   Subtle oversized typographic depth in hero background
+   ========================================================== */
+.hero-backdrop-wordmark {
+  position: absolute;
+  top: 10%;
+  left: -2%;
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(6.5rem, 18vw, 15.5rem);
+  font-weight: 900;
+  letter-spacing: -0.05em;
+  line-height: 0.85;
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.04);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 107, 0, 0.02) 65%, transparent 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+  opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+  .hero-backdrop-wordmark {
+    font-size: clamp(4.5rem, 22vw, 8rem);
+    top: 6%;
+    left: 0;
+    opacity: 0.4;
+  }
 }
 
 /* Glassmorphism Navigation */
@@ -329,22 +365,22 @@ html.is-scrolled .smart-header .vyro-nav-item.active,
   justify-content: space-between;
 }
 
-/* Central Floating White Crystal Frosted Glass Capsule */
+/* Central Floating Frosted Dark Glass Capsule (Moody Point Style) */
 .vyro-nav-capsule {
-  background: rgba(255, 255, 255, 0.22); /* True White Frosted Crystal Glass */
+  background: rgba(14, 15, 22, 0.75);
   backdrop-filter: blur(28px);
   -webkit-backdrop-filter: blur(28px);
-  border: 1px solid rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   padding: 4px;
   border-radius: 9999px;
   box-shadow: 
-    0 16px 40px -10px rgba(0, 0, 0, 0.35),
-    0 1px 3px rgba(0, 0, 0, 0.08),
-    inset 0 1px 1.5px 0 rgba(255, 255, 255, 0.9);
+    0 16px 40px -10px rgba(0, 0, 0, 0.6),
+    0 1px 3px rgba(0, 0, 0, 0.2),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.15);
 }
 
 .vyro-nav-item {
-  color: #0f172a; /* Razor sharp dark contrast against white crystal glass */
+  color: #94a3b8;
   font-size: 0.8125rem;
   font-weight: 600;
   padding: 0.45rem 1.15rem;
@@ -356,36 +392,36 @@ html.is-scrolled .smart-header .vyro-nav-item.active,
 }
 
 .vyro-nav-item:hover {
-  color: #000000;
-  background: rgba(255, 255, 255, 0.35);
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.08);
 }
 
-/* Active Pill (Exact [Product] in VYRO: Solid Black Pill with Sharp White Text) */
+/* Active Pill: High-contrast Brand Orange Pill with Subtle Glow */
 .vyro-nav-item.active {
   color: #ffffff;
-  background: #000000;
+  background: #ff6b00;
   border: 1px solid rgba(255, 255, 255, 0.25);
   box-shadow: 
-    0 3px 12px rgba(0, 0, 0, 0.5),
+    0 4px 15px rgba(255, 107, 0, 0.45),
     inset 0 1px 1px rgba(255, 255, 255, 0.3);
   font-weight: 700;
 }
 
-/* Standalone Pill CTA (Exact [Pre-Order Now] in VYRO: Solid Obsidian Pill) */
+/* Standalone Pill CTA */
 .vyro-cta-btn {
   display: inline-flex;
   align-items: center;
   gap: 0.55rem;
   padding: 0.55rem 1.45rem;
   border-radius: 9999px;
-  background: #000000;
+  background: rgba(255, 107, 0, 0.12);
   color: #ffffff;
   font-size: 0.8125rem;
   font-weight: 600;
-  border: 1px solid rgba(255, 255, 255, 0.35);
+  border: 1px solid rgba(255, 107, 0, 0.35);
   box-shadow: 
-    inset 0 1px 1.5px rgba(255, 255, 255, 0.4),
-    0 10px 28px -4px rgba(0, 0, 0, 0.6);
+    inset 0 1px 1.5px rgba(255, 255, 255, 0.2),
+    0 10px 24px -4px rgba(255, 107, 0, 0.2);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
@@ -393,15 +429,15 @@ html.is-scrolled .smart-header .vyro-nav-item.active,
 }
 
 .vyro-cta-btn:hover {
-  background: #ffffff;
-  color: #000000;
-  border-color: #ffffff;
-  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.45);
+  background: #ff6b00;
+  color: #ffffff;
+  border-color: #ff8533;
+  box-shadow: 0 10px 30px rgba(255, 107, 0, 0.5);
   transform: translateY(-1.5px);
 }
 
 .vyro-cta-btn:hover i {
-  color: #ff6b00;
+  color: #ffffff;
 }
 
 /* Editorial Glass Card */

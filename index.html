@@ -59,8 +59,8 @@
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-  <!-- Custom Styles -->
-  <link rel="stylesheet" href="styles.css">
+  <!-- Custom Styles (Cache buster updated) -->
+  <link rel="stylesheet" href="styles.css?v=2.0">
 
   <!-- Immediate pre-paint scroll check to prevent header overlap flicker on page refresh -->
   <script>
@@ -73,7 +73,7 @@
 </head>
 <body class="bg-[#08080b] text-[#f4f4f7] antialiased relative selection:bg-[#ff6b00] selection:text-white">
 
-  <!-- Luminous White Crystal & Warm Amber Aurora (VYRO Exact) -->
+  <!-- Cinematic Brand Aurora & Moody Amber Glow (Point Reference Style) -->
   <div class="top-aurora-atmosphere">
     <div class="aurora-header-sweep"></div>
     <div class="aurora-crystal-white"></div>
@@ -148,8 +148,14 @@
   </header>
 
   <!-- Hero Section: Masterclass Balanced 2-Column Layout -->
-  <section id="home" class="relative w-full pt-32 pb-16 md:pt-48 md:pb-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-dot-grid">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+  <section id="home" class="relative w-full pt-32 pb-16 md:pt-48 md:pb-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-dot-grid overflow-hidden">
+    
+    <!-- Cinematic Backdrop Typography (Reference Style: Deep Dark Ambient Wordmark) -->
+    <div class="hero-backdrop-wordmark select-none pointer-events-none" aria-hidden="true">
+      ASHRAF
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center relative z-10">
       
       <!-- Left Column: Editorial Headline & Value Proposition (7 Cols) -->
       <div class="lg:col-span-7 text-center lg:text-left">
@@ -163,7 +169,7 @@
         </div>
 
         <!-- Master Headline with Lumina-Style Font Pairing (No hyphen, no period) -->
-        <h1 class="font-heading text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.12] mb-6 text-white">
+        <h1 class="font-heading text-3xl sm:text-5xl lg:text-7xl font-extrabold tracking-tight leading-[1.15] mb-6 text-white">
           Crafting <span class="font-serif-italic gradient-text-orange font-normal text-[1.18em] tracking-normal">Brand Identities</span> <br class="hidden sm:inline">& High Impact Visuals
         </h1>
 
