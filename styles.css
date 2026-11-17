@@ -253,39 +253,6 @@ h1, h2, h3, h4, .font-heading {
   background-size: 32px 32px;
 }
 
-/* ==========================================================
-   CINEMATIC BACKDROP WORDMARK (POINT REFERENCE STYLE)
-   Subtle oversized typographic depth in hero background
-   ========================================================== */
-.hero-backdrop-wordmark {
-  position: absolute;
-  top: 10%;
-  left: -2%;
-  font-family: 'Outfit', sans-serif;
-  font-size: clamp(6.5rem, 18vw, 15.5rem);
-  font-weight: 900;
-  letter-spacing: -0.05em;
-  line-height: 0.85;
-  color: transparent;
-  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.04);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 107, 0, 0.02) 65%, transparent 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  pointer-events: none;
-  user-select: none;
-  z-index: 0;
-  opacity: 0.7;
-}
-
-@media (max-width: 768px) {
-  .hero-backdrop-wordmark {
-    font-size: clamp(4.5rem, 22vw, 8rem);
-    top: 6%;
-    left: 0;
-    opacity: 0.4;
-  }
-}
-
 /* Glassmorphism Navigation */
 .glass-nav {
   background: rgba(8, 8, 11, 0.8);
