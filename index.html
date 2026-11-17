@@ -71,144 +71,188 @@
     } catch(e) {}
   </script>
 </head>
-<body class="bg-[#fcfdfc] text-[#15291e] antialiased relative selection:bg-[#123824] selection:text-white">
+<body class="bg-[#08080b] text-[#f4f4f7] antialiased relative selection:bg-[#ff6b00] selection:text-white">
 
-  <!-- Header: All-in-One Floating Light Glass Nav Capsule (Reference Exact) -->
-  <header id="mainHeader" class="fixed top-5 inset-x-0 z-50 flex justify-center px-4 transition-all duration-300">
-    <div class="scenic-nav-capsule flex items-center justify-between gap-2 sm:gap-6 px-3 sm:px-5 py-2 rounded-full bg-white/90 backdrop-blur-2xl border border-gray-200/80 shadow-[0_10px_35px_rgba(0,0,0,0.06)] max-w-4xl w-full">
+  <!-- Cinematic Brand Aurora & Moody Amber Glow (Point Reference Style) -->
+  <div class="top-aurora-atmosphere">
+    <div class="aurora-header-sweep"></div>
+    <div class="aurora-crystal-white"></div>
+    <div class="aurora-offwhite-glow"></div>
+    <div class="aurora-portrait-glow"></div>
+  </div>
+
+  <!-- Ambient Glowing Atmosphere (Middle & Bottom) - Contained to prevent mobile overflow -->
+  <div class="ambient-atmosphere-wrap">
+    <div class="ambient-glow ambient-glow-2"></div>
+    <div class="ambient-glow ambient-glow-3"></div>
+  </div>
+
+  <!-- Header: VYRO-Exact Transparent Float Layout (Logo Left, White Crystal Glass Pill Center, Pill CTA Right) -->
+  <header id="mainHeader" class="fixed top-6 inset-x-0 z-50 smart-header">
+    <div class="vyro-header-wrap max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <!-- 1. Left: Monogram Badge & Brand Logo -->
-      <a href="#home" class="flex items-center gap-2 group shrink-0">
-        <div class="w-8 h-8 rounded-xl bg-[#123824] flex items-center justify-center text-white font-heading font-bold text-xs shadow-sm group-hover:scale-105 transition-transform">
-          MA
+      <!-- 1. Left: Clean Standalone Brand Logo (High-Contrast against White Crystal Aura) -->
+      <a href="#" class="flex items-center gap-2.5 group">
+        <div class="w-9 h-9 rounded-full bg-black border border-white/30 p-[2px] shadow-md group-hover:border-[#ff6b00] transition-all">
+          <div class="w-full h-full bg-[#08080b] rounded-full flex items-center justify-center font-bold text-white font-heading text-xs group-hover:text-[#ff6b00] transition-colors">
+            MA
+          </div>
         </div>
         <div class="flex flex-col">
-          <span class="font-heading font-extrabold text-xs sm:text-sm tracking-tight text-[#15291e] leading-none">
-            ASHRAF<span class="text-[#123824]">.</span>DESIGN
+          <span class="font-heading font-extrabold text-base tracking-tight text-white drop-shadow-[0_1px_4px_rgba(0,0,0,0.85)] group-hover:text-[#ff6b00] transition-colors leading-none">
+            ASHRAF<span class="text-[#ff6b00]">.</span>DESIGN
           </span>
-          <span class="text-[8px] sm:text-[8.5px] font-bold text-gray-500 tracking-wider uppercase mt-0.5">Brand & Visuals</span>
+          <span class="text-[9px] font-bold text-gray-200 drop-shadow-[0_1px_3px_rgba(0,0,0,0.85)] tracking-wider uppercase mt-0.5">Brand & Visuals</span>
         </div>
       </a>
 
-      <!-- 2. Center: Dedicated Navigation Links -->
-      <nav class="hidden md:flex items-center gap-1 text-xs font-semibold text-gray-600">
-        <a href="#home" class="scenic-nav-link active">Home</a>
-        <a href="#services" class="scenic-nav-link">Services</a>
-        <a href="#before-after" class="scenic-nav-link">Workflow</a>
-        <a href="#showcase" class="scenic-nav-link">Portfolio</a>
-        <a href="#pricing" class="scenic-nav-link">Packages</a>
-        <a href="#reviews" class="scenic-nav-link">Reviews</a>
+      <!-- 2. Center: Dedicated Floating White Crystal Glass Nav Capsule (Exact VYRO Style) -->
+      <nav class="hidden md:flex items-center gap-1 vyro-nav-capsule">
+        <a href="#home" class="vyro-nav-item active">Home</a>
+        <a href="#services" class="vyro-nav-item">Services</a>
+        <a href="#before-after" class="vyro-nav-item">Workflow</a>
+        <a href="#showcase" class="vyro-nav-item">Portfolio</a>
+        <a href="#pricing" class="vyro-nav-item">Packages</a>
+        <a href="#reviews" class="vyro-nav-item">Reviews</a>
       </nav>
 
-      <!-- 3. Right: Standalone Action CTA Pill Button -->
-      <div class="flex items-center gap-1.5 sm:gap-2 shrink-0">
-        <a href="#contact" class="inline-flex items-center justify-center gap-2 px-3 sm:px-4 py-2 rounded-full bg-[#123824] hover:bg-[#0c2618] text-white text-xs font-semibold transition-all shadow-sm active:scale-95">
-          <i class="fa-solid fa-paper-plane text-[10px]"></i>
-          <span class="hidden sm:inline">Let's Talk</span>
+      <!-- 3. Right: Standalone Glass CTA Pill Button (Exact VYRO Style) -->
+      <div class="hidden md:flex items-center">
+        <a href="#contact" class="vyro-cta-btn">
+          <i class="fa-solid fa-paper-plane text-[10px] text-[#ff8533]"></i>
+          <span>Let's Talk</span>
         </a>
-        
-        <!-- Mobile Menu Toggle Button -->
-        <button id="mobileMenuToggle" class="md:hidden text-gray-800 bg-gray-100 hover:bg-gray-200 text-sm w-8 h-8 flex items-center justify-center rounded-full transition-all focus:outline-none" aria-label="Toggle Navigation">
-          <i class="fa-solid fa-bars-staggered"></i>
-        </button>
       </div>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button id="mobileMenuToggle" class="md:hidden text-white bg-white/10 hover:bg-white/20 border border-white/25 text-base w-10 h-10 flex items-center justify-center rounded-full backdrop-blur-xl shadow-lg active:scale-95 transition-all focus:outline-none" aria-label="Toggle Navigation">
+        <i class="fa-solid fa-bars-staggered"></i>
+      </button>
 
     </div>
 
     <!-- Mobile Dropdown Menu -->
-    <div id="mobileMenu" class="hidden md:hidden fixed top-20 inset-x-4 max-w-sm mx-auto p-4 space-y-1 rounded-2xl shadow-2xl bg-white/95 backdrop-blur-2xl border border-gray-200 z-50">
-      <a href="#home" class="block text-gray-800 hover:text-[#123824] hover:bg-gray-100 font-medium text-sm py-2 px-3.5 rounded-xl transition-all">Home</a>
-      <a href="#services" class="block text-gray-800 hover:text-[#123824] hover:bg-gray-100 font-medium text-sm py-2 px-3.5 rounded-xl transition-all">Services</a>
-      <a href="#before-after" class="block text-gray-800 hover:text-[#123824] hover:bg-gray-100 font-medium text-sm py-2 px-3.5 rounded-xl transition-all">Workflow</a>
-      <a href="#showcase" class="block text-gray-800 hover:text-[#123824] hover:bg-gray-100 font-medium text-sm py-2 px-3.5 rounded-xl transition-all">Portfolio</a>
-      <a href="#pricing" class="block text-gray-800 hover:text-[#123824] hover:bg-gray-100 font-medium text-sm py-2 px-3.5 rounded-xl transition-all">Packages</a>
-      <a href="#reviews" class="block text-gray-800 hover:text-[#123824] hover:bg-gray-100 font-medium text-sm py-2 px-3.5 rounded-xl transition-all">Reviews</a>
+    <div id="mobileMenu" class="hidden md:hidden editorial-card border border-white/10 max-w-lg mx-auto mt-2 px-5 py-5 space-y-1.5 rounded-2xl shadow-2xl bg-[#0e0f17]/95 backdrop-blur-2xl">
+      <a href="#home" class="block text-gray-300 hover:text-[#ff6b00] hover:bg-white/[0.04] font-medium text-sm py-2 px-3.5 rounded-xl transition-all">Home</a>
+      <a href="#services" class="block text-gray-300 hover:text-[#ff6b00] hover:bg-white/[0.04] font-medium text-sm py-2 px-3.5 rounded-xl transition-all">Services</a>
+      <a href="#before-after" class="block text-gray-300 hover:text-[#ff6b00] hover:bg-white/[0.04] font-medium text-sm py-2 px-3.5 rounded-xl transition-all">Workflow</a>
+      <a href="#showcase" class="block text-gray-300 hover:text-[#ff6b00] hover:bg-white/[0.04] font-medium text-sm py-2 px-3.5 rounded-xl transition-all">Portfolio</a>
+      <a href="#pricing" class="block text-gray-300 hover:text-[#ff6b00] hover:bg-white/[0.04] font-medium text-sm py-2 px-3.5 rounded-xl transition-all">Packages</a>
+      <a href="#reviews" class="block text-gray-300 hover:text-[#ff6b00] hover:bg-white/[0.04] font-medium text-sm py-2 px-3.5 rounded-xl transition-all">Reviews</a>
       <div class="pt-2">
-        <a href="#contact" class="block w-full text-center py-2.5 rounded-full bg-[#123824] text-white text-xs font-semibold shadow-sm">
+        <a href="#contact" class="block w-full text-center py-3 rounded-full glass-btn-primary text-xs font-semibold shadow-md">
           Get in Touch
         </a>
       </div>
     </div>
   </header>
 
-  <!-- Hero Section: Modern Minimalist & Scenic Nature Blend (Reference Exact) -->
-  <section id="home" class="relative w-full pt-24 sm:pt-32 pb-0 px-4 sm:px-6 lg:px-8 overflow-hidden bg-[#fcfdfc]">
-    
-    <!-- Content Column: Center-Aligned Editorial Typography -->
-    <div class="max-w-4xl mx-auto text-center relative z-10">
+  <!-- Hero Section: Masterclass Balanced 2-Column Layout -->
+  <section id="home" class="relative w-full pt-32 pb-16 md:pt-48 md:pb-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-dot-grid">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center relative z-10">
       
-      <!-- Status Pill -->
-      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/90 border border-gray-200/90 shadow-sm backdrop-blur-md mb-4">
-        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-        <span class="text-xs font-semibold tracking-wide text-gray-700">
-          Available for Brand Identity & Packaging Projects
-        </span>
-      </div>
+      <!-- Left Column: Editorial Headline & Value Proposition (7 Cols) -->
+      <div class="lg:col-span-7 text-center lg:text-left">
+        
+        <!-- Status Pill -->
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.04] border border-white/10 backdrop-blur-md mb-6">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span class="text-xs font-semibold tracking-wide text-gray-300">
+            Available for Brand Identity & Packaging Projects
+          </span>
+        </div>
 
-      <!-- Master Headline with Luxury Serif Pairing (Reference Style) -->
-      <h1 class="font-heading text-3xl sm:text-5xl lg:text-[4.5rem] font-medium tracking-tight leading-[1.18] mb-4 text-[#15291e]">
-        Crafting <span class="font-serif-italic font-normal text-[#123824] text-[1.12em]">Brand Identities</span>,<br>
-        One Pixel at a Time!
-      </h1>
+        <!-- Master Headline with Lumina-Style Font Pairing (No hyphen, no period) -->
+        <h1 class="font-heading text-3xl sm:text-5xl lg:text-7xl font-extrabold tracking-tight leading-[1.15] mb-6 text-white">
+          Crafting <span class="font-serif-italic gradient-text-orange font-normal text-[1.18em] tracking-normal">Brand Identities</span> <br class="hidden sm:inline">& High Impact Visuals
+        </h1>
 
-      <!-- Subtitle -->
-      <p class="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto font-normal leading-relaxed mb-6">
-        I'm <strong class="text-gray-900 font-semibold">Muhammad Ashraf</strong>, a graphic designer with 2+ years of professional experience specializing in timeless logos, comprehensive visual identities, retail packaging, and stop-scrolling social media creatives.
-      </p>
-
-      <!-- Central CTA Buttons -->
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-3.5 mb-8">
-        <a href="#showcase" class="inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-full bg-[#123824] hover:bg-[#0c2618] text-white font-semibold text-sm shadow-[0_8px_25px_rgba(18,56,36,0.25)] transition-all active:scale-95 group">
-          <i class="fa-solid fa-shapes text-xs group-hover:rotate-12 transition-transform"></i>
-          <span>Explore Portfolio</span>
-          <i class="fa-solid fa-arrow-down text-xs"></i>
-        </a>
-        <a href="#contact" class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-white/95 hover:bg-white text-gray-800 font-semibold text-sm border border-gray-200/90 shadow-sm transition-all hover:border-gray-300">
-          <i class="fa-solid fa-envelope text-gray-500"></i>
-          <span>Get in Touch</span>
-        </a>
-      </div>
-
-    </div>
-
-    <!-- Scenic Nature Backdrop & Client Trust Strip (Exact Reference Scenery Blend) -->
-    <div class="relative w-full -mt-2 min-h-[300px] sm:min-h-[340px] flex flex-col justify-end pb-8 sm:pb-12 overflow-hidden">
-      
-      <!-- Scenic Pine Forest Image with Top Soft Fog Fade -->
-      <div class="absolute inset-0 z-0">
-        <img src="assets/scenery-forest.jpg" alt="Scenic Pine Forest Nature Scenery" class="w-full h-full object-cover object-top opacity-95">
-        <div class="absolute inset-0 bg-gradient-to-b from-[#fcfdfc] via-[#fcfdfc]/60 to-transparent h-44 sm:h-56"></div>
-        <div class="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#08080b] to-transparent"></div>
-      </div>
-
-      <!-- Trust Banner & Client Logos Floating Directly Over Scenery (Reference Exact Style) -->
-      <div class="relative z-10 max-w-5xl mx-auto px-4 text-center">
-        <p class="text-xs sm:text-sm font-medium text-white/95 drop-shadow-[0_2px_6px_rgba(0,0,0,0.85)] tracking-wide mb-4">
-          Trusted by growing brands, retail businesses, and digital entrepreneurs
+        <!-- Subtitle -->
+        <p class="text-base sm:text-lg text-gray-300 max-w-2xl font-normal leading-relaxed mb-8">
+          I'm <strong class="text-white font-semibold">Muhammad Ashraf</strong>, a graphic designer with 2+ years of professional experience specializing in timeless logos, comprehensive visual identities, retail packaging, and stop-scrolling social media creatives.
         </p>
 
-        <!-- Floating Clean Client Logo Strip (Directly over scenery without heavy box) -->
-        <div class="flex flex-wrap items-center justify-center gap-7 sm:gap-12 py-2 px-4 max-w-4xl mx-auto">
-          <div class="flex items-center gap-2 text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.85)] font-heading font-bold text-xs sm:text-sm tracking-wide opacity-90 hover:opacity-100 transition-opacity">
-            <i class="fa-solid fa-bag-shopping text-emerald-400"></i>
-            <span>Baby Mart</span>
+        <!-- CTA Buttons with Ultra-Premium Glassmorphism -->
+        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-10">
+          <a href="#showcase" class="w-full sm:w-auto glass-btn-primary">
+            <span>Explore Portfolio</span>
+            <i class="fa-solid fa-arrow-down text-xs"></i>
+          </a>
+          <a href="#contact" class="w-full sm:w-auto glass-btn-secondary">
+            <i class="fa-solid fa-envelope text-[#ff6b00]"></i>
+            <span>Get in Touch</span>
+          </a>
+        </div>
+
+        <!-- Social Links Strip -->
+        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3">
+          <span class="text-xs font-medium text-gray-400 mr-1">Profiles:</span>
+          <a href="https://www.behance.net/ashraf012" target="_blank" class="px-3 py-1.5 rounded-lg bg-white/[0.03] hover:bg-[#0057ff] border border-white/[0.08] text-xs font-medium text-gray-300 hover:text-white transition-all flex items-center gap-2">
+            <i class="fa-brands fa-behance"></i> Behance
+          </a>
+          <a href="https://www.pinterest.com/maashraf221/" target="_blank" class="px-3 py-1.5 rounded-lg bg-white/[0.03] hover:bg-[#E60023] border border-white/[0.08] text-xs font-medium text-gray-300 hover:text-white transition-all flex items-center gap-2">
+            <i class="fa-brands fa-pinterest"></i> Pinterest
+          </a>
+          <a href="https://www.facebook.com/muhammad.ashraf.707469" target="_blank" class="px-3 py-1.5 rounded-lg bg-white/[0.03] hover:bg-[#1877F2] border border-white/[0.08] text-xs font-medium text-gray-300 hover:text-white transition-all flex items-center gap-2">
+            <i class="fa-brands fa-facebook-f"></i> Facebook
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Right Column: Cinematic Portrait Presentation (5 Cols) -->
+      <div class="lg:col-span-5 flex justify-center">
+        <div class="portrait-container w-full max-w-sm sm:max-w-md relative">
+          
+          <!-- Portrait Card with Interactive Liquid Ripple Effect -->
+          <div class="relative rounded-3xl overflow-hidden bg-[#111218] border border-white/10 shadow-2xl cursor-pointer group select-none" id="portraitCard">
+            <div class="relative aspect-[4/5] overflow-hidden bg-black" id="portraitLiquidWrapper">
+              <img id="portraitImg" src="assets/profile.jpg" alt="Muhammad Ashraf — Brand & Visual Designer" class="w-full h-full object-cover liquid-distortion-target select-none pointer-events-none">
+              
+              <!-- Subtle Bottom Vignette & Metadata (Full Visibility & Clean Typography) -->
+              <div class="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-[#08080b] via-[#08080b]/85 to-transparent pointer-events-none z-10">
+                <div class="flex items-center gap-2 mb-1.5">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                  <span class="text-[11px] font-bold text-[#ffaa4d] uppercase tracking-wider">Brand & Visual Designer</span>
+                </div>
+                <h3 class="font-heading font-bold text-2xl text-white tracking-tight">Muhammad Ashraf</h3>
+                <p class="text-xs text-gray-400 mt-0.5 flex items-center justify-between">
+                  <span>2+ Years Industry Experience</span>
+                  <span class="text-[9px] text-[#ffaa4d] uppercase font-bold tracking-wider opacity-0 group-hover:opacity-100 transition-opacity">⚡ Tap Liquid</span>
+                </p>
+              </div>
+            </div>
           </div>
-          <div class="flex items-center gap-2 text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.85)] font-heading font-bold text-xs sm:text-sm tracking-wide opacity-90 hover:opacity-100 transition-opacity">
-            <i class="fa-solid fa-leaf text-emerald-400"></i>
-            <span>Falaq Moringa</span>
+
+          <!-- SVG Filter for Liquid Distortion Dynamics -->
+          <svg class="absolute w-0 h-0 overflow-hidden pointer-events-none" aria-hidden="true">
+            <defs>
+              <filter id="liquidRippleFilter" x="-20%" y="-20%" width="140%" height="140%">
+                <feTurbulence id="liquidTurbulence" type="fractalNoise" baseFrequency="0.02 0.025" numOctaves="2" result="noise" />
+                <feDisplacementMap id="liquidDisplacement" in="SourceGraphic" in2="noise" scale="0" xChannelSelector="R" yChannelSelector="G" />
+              </filter>
+            </defs>
+          </svg>
+
+          <!-- Floating Rotating Circular Name Badge (Repositioned to Top-Right to prevent name overlap) -->
+          <div class="absolute -top-7 -right-7 z-20 hidden sm:block">
+            <a href="#showcase" class="rotating-badge-wrap group" aria-label="Explore Portfolio Showcase">
+              <div class="rotating-badge-container">
+                <svg class="rotating-svg" viewBox="0 0 200 200">
+                  <path id="nameCirclePath" d="M 100, 100 m -68, 0 a 68,68 0 1,1 136,0 a 68,68 0 1,1 -136,0" fill="none" />
+                  <text>
+                    <textPath href="#nameCirclePath" startOffset="0%">
+                      • MUHAMMAD ASHRAF • BRAND DESIGNER 
+                    </textPath>
+                  </text>
+                </svg>
+                <div class="badge-center-btn">
+                  <i class="fa-solid fa-arrow-down-long text-sm"></i>
+                </div>
+              </div>
+            </a>
           </div>
-          <div class="flex items-center gap-2 text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.85)] font-heading font-bold text-xs sm:text-sm tracking-wide opacity-90 hover:opacity-100 transition-opacity">
-            <i class="fa-solid fa-store text-emerald-400"></i>
-            <span>Ghorer Bazar</span>
-          </div>
-          <div class="flex items-center gap-2 text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.85)] font-heading font-bold text-xs sm:text-sm tracking-wide opacity-90 hover:opacity-100 transition-opacity">
-            <i class="fa-solid fa-spa text-emerald-400"></i>
-            <span>Brighten Beauty</span>
-          </div>
-          <div class="flex items-center gap-2 text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.85)] font-heading font-bold text-xs sm:text-sm tracking-wide opacity-90 hover:opacity-100 transition-opacity">
-            <i class="fa-solid fa-book-quran text-emerald-400"></i>
-            <span>Quran Academy</span>
-          </div>
+
         </div>
       </div>
 
