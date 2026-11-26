@@ -495,6 +495,68 @@ html.is-scrolled .smart-header .vyro-nav-item.active,
     0 12px 30px -8px rgba(255, 107, 0, 0.3);
 }
 
+/* ==========================================================
+   HERO EDITORIAL CTA & MINIMAL PROFILE LINKS
+   Light, airy, high-contrast studio hierarchy (no button bloat)
+   ========================================================== */
+.hero-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  padding: 0.75rem 1.55rem;
+  border-radius: 9999px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: #08080b;
+  background: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 8px 24px -8px rgba(255, 255, 255, 0.22);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.hero-btn-primary:hover {
+  transform: translateY(-1.5px);
+  color: #ffffff;
+  background: #ff6b00;
+  border-color: #ff7a1a;
+  box-shadow: 0 12px 28px -8px rgba(255, 107, 0, 0.45);
+}
+
+.hero-link-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.25rem;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: #e2e8f0;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.hero-link-secondary:hover {
+  color: #ffffff;
+}
+
+.hero-social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #94a3b8;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.hero-social-link:hover {
+  color: #ffffff;
+}
+
 /* Gradient Text */
 .gradient-text-orange {
   background: linear-gradient(135deg, #ffffff 20%, #ffaa4d 60%, #ff6b00 100%);
